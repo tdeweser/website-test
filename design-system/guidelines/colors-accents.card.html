@@ -1,0 +1,51 @@
+<!-- @dsCard group="Colors" viewport="700x330" name="Accents & graph variants" subtitle="Vijf accenten; grafiekvarianten alleen van accent 1 en 2" -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-sans); }
+.rows { display: flex; flex-direction: column; gap: 18px; }
+.row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.sw { display: flex; flex-direction: column; gap: 6px; }
+.chip { height: 52px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); }
+.name { font: var(--fw-semibold) 12px/1.2 var(--font-sans); color: var(--text-body); }
+.hex { font: 400 11px/1.2 var(--font-mono); color: var(--text-muted); }
+.label { font: 400 11px/1 var(--font-mono); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+<div class="rows">
+<div>
+<span class="label">Accenten</span>
+<div class="row" style="margin-top:8px">
+<div class="sw"><div class="chip" style="background:var(--ipe-red)"></div><span class="name">Accent 1 · Red</span><span class="hex">#d63f44</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-navy)"></div><span class="name">Accent 2 · Navy</span><span class="hex">#1d3354</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-gray)"></div><span class="name">Accent 3 · Gray</span><span class="hex">#9f9f9f</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-aqua)"></div><span class="name">Accent 4 · Aqua</span><span class="hex">#4790b1</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-green)"></div><span class="name">Accent 5 · Green</span><span class="hex">#00843b</span></div>
+</div>
+</div>
+<div>
+<span class="label">Grafiekvarianten — accent 1 &amp; 2 (PowerPoint-standaard)</span>
+<div class="row" style="margin-top:8px">
+<div class="sw"><div class="chip" style="background:var(--ipe-red-l80)"></div><span class="name">L80</span><span class="hex">#f7d9da</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-red-l60)"></div><span class="name">L60</span><span class="hex">#efb2b4</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-red-l40)"></div><span class="name">L40</span><span class="hex">#e68c8f</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-red)"></div><span class="name">Red</span><span class="hex">#d63f44</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-red-d25)"></div><span class="name">D25</span><span class="hex">#a12f33</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-red-d50)"></div><span class="name">D50</span><span class="hex">#6b2022</span></div>
+</div>
+<div class="row" style="margin-top:12px">
+<div class="sw"><div class="chip" style="background:var(--ipe-navy-l80)"></div><span class="name">L80</span><span class="hex">#d2d6dd</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-navy-l60)"></div><span class="name">L60</span><span class="hex">#a5adbb</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-navy-l40)"></div><span class="name">L40</span><span class="hex">#778598</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-navy)"></div><span class="name">Navy</span><span class="hex">#1d3354</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-navy-d25)"></div><span class="name">D25</span><span class="hex">#16263f</span></div>
+<div class="sw"><div class="chip" style="background:var(--ipe-navy-d50)"></div><span class="name">D50</span><span class="hex">#0f1a2a</span></div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "fonts": {
+      "files": {},
+      "name": "fonts",
+      "order": []
+    },
+    "logo": {
+      "files": {},
+      "name": "logo",
+      "order": []
+    },
+    "notes": {
+      "files": {},
+      "name": "notes",
+      "order": []
+    },
+    "photos": {
+      "files": {},
+      "name": "photos",
+      "order": []
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-11-06T11:56:25.323Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": [
+      "project/templates/website/README.md"
+    ]
+  },
+  "editing": "off",
+  "groups": [
+    "fonts",
+    "logo",
+    "notes",
+    "photos"
+  ],
+  "layout": "files",
+  "libraries": [],
+  "namespace": "IPEDesignSystem_e09975",
+  "sections": {},
+  "source": {
+    "app": "claude-design",
+    "exportedAt": "2026-11-06T11:56:25.323Z",
+    "map": "project/migration-map.json",
+    "projectId": "e09975ad-1642-42d6-91ec-75d8c4a674ef",
+    "url": "https://claude.ai/design/p/e09975ad-1642-42d6-91ec-75d8c4a674ef",
+    "v": 1
+  },
+  "title": "IPE Design System"
+}

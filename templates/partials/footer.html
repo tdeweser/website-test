@@ -1,0 +1,34 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <img src="/assets/ds/assets/logo/ipe-logo-vertical.png" alt="{{ site.title }}" width="120" height="94">
+      <p class="site-footer__address">
+        {{ site.contact.organisation }}<br>
+        {{ site.contact.street }}<br>
+        {{ site.contact.postcode_city }}<br>
+        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+      </p>
+    </div>
+    <div>
+      <h2 class="mono-label">Bevalt onze inhoud?</h2>
+      <p>Schrijf je in voor onze <a href="{{ site.newsletter.url }}" target="_blank" rel="noopener">nieuwsbrief</a>.</p>
+      <div class="embed embed--newsletter"><iframe src="{{ site.newsletter.embed }}" title="Aanmelden voor de nieuwsbrief" loading="lazy"></iframe></div>
+    </div>
+    <div>
+      <h2 class="mono-label">Steun ons</h2>
+      <p><a href="{{ site.donate.url }}">Doneer hier</a> en help ons de overheid in beweging te brengen.</p>
+      <h2 class="mono-label">Volg ons</h2>
+      <ul class="plain-list">
+        {% for s in site.social %}<li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.title }}</a></li>{% endfor %}
+        <li><a href="/feed.xml">RSS-feed</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <p>{{ site.anbi_note }}</p>
+    <p>
+      {% for l in site.footer_links %}<a href="{{ l.url }}">{{ l.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+      · © IPE {{ now.year }}
+    </p>
+  </div>
+</footer>

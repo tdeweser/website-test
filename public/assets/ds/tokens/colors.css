@@ -1,0 +1,78 @@
+/* ============================================================
+   IPE — Colors
+   Official theme palette (PowerPoint template juni 2026).
+   Nine theme colours only; graph variants are the default
+   PowerPoint variants (lighter 80/60/40 %, darker 25/50 %)
+   of Accent 1 (red) and Accent 2 (navy).
+   ============================================================ */
+:root {
+  /* ---- Theme palette ---- */
+  --ipe-white: #ffffff;   /* Background 1 */
+  --ipe-black: #000000;   /* Text 1 */
+  --ipe-beige: #f4ede3;   /* Background 2 — warm alt background */
+  --ipe-ink-40: #404040;  /* Text 2 — PowerPoint/Word body gray */
+  --ipe-red:   #d63f44;   /* Accent 1 — hoofdkleur logo */
+  --ipe-navy:  #1d3354;   /* Accent 2 — onderste balk website */
+  --ipe-gray:  #9f9f9f;   /* Accent 3 — muted UI */
+  --ipe-aqua:  #4790b1;   /* Accent 4 */
+  --ipe-green: #00843b;   /* Accent 5 */
+
+  /* ---- Graph variants — PowerPoint defaults of Accent 1 & 2 ---- */
+  --ipe-red-l80: #f7d9da;  /* lighter 80% */
+  --ipe-red-l60: #efb2b4;  /* lighter 60% */
+  --ipe-red-l40: #e68c8f;  /* lighter 40% */
+  --ipe-red-d25: #a12f33;  /* darker 25% */
+  --ipe-red-d50: #6b2022;  /* darker 50% */
+  --ipe-navy-l80: #d2d6dd;
+  --ipe-navy-l60: #a5adbb;
+  --ipe-navy-l40: #778598;
+  --ipe-navy-d25: #16263f;
+  --ipe-navy-d50: #0f1a2a;
+
+  /* ---- Functional neutrals (tints of Accent 3, UI chrome only) ---- */
+  --ipe-gray-40: #d9d9d9;
+  --ipe-gray-20: #ececec;
+
+  /* ---- Chart series — accents 1 & 2 first, then their variants ---- */
+  --chart-1: var(--ipe-red);
+  --chart-2: var(--ipe-navy);
+  --chart-3: var(--ipe-red-l60);
+  --chart-4: var(--ipe-navy-l60);
+  --chart-5: var(--ipe-red-d25);
+  --chart-6: var(--ipe-navy-d25);
+
+  /* ============================================================
+     Semantic aliases — prefer these in product UI.
+     ============================================================ */
+  --brand:            var(--ipe-red);
+  --brand-hover:      #c2383c;       /* red darkened ~8% for hover */
+  --brand-active:     #ab3034;       /* deeper for press */
+  --brand-tint:       var(--ipe-red-l80);
+
+  --surface-page:     var(--ipe-white);
+  --surface-alt:      var(--ipe-beige);   /* warm alt background */
+  --surface-card:     var(--ipe-white);
+  --surface-inverse:  var(--ipe-black);
+  --surface-sunken:   #faf6f0;            /* beige, lightened */
+
+  --text-body:        var(--ipe-black);
+  --text-muted:       var(--ipe-gray);
+  --text-soft:        var(--ipe-ink-40);
+  --text-on-brand:    var(--ipe-white);
+  --text-on-dark:     var(--ipe-white);
+
+  --border:           var(--ipe-gray-40);
+  --border-strong:    var(--ipe-gray);
+  --border-subtle:    var(--ipe-gray-20);
+
+  --accent-aqua:      var(--ipe-aqua);
+  --accent-green:     var(--ipe-green);
+  --accent-navy:      var(--ipe-navy);
+
+  --focus-ring:       var(--ipe-aqua);
+
+  /* status — derived from the accent set */
+  --status-positive:  var(--ipe-green);
+  --status-info:      var(--ipe-aqua);
+  --status-critical:  var(--ipe-red);
+}

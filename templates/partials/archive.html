@@ -1,0 +1,21 @@
+<div class="archive" data-archive>
+  <label class="archive__search">
+    <span class="mono-label">Zoeken</span>
+    <input type="search" placeholder="Zoek op titel …" data-archive-search>
+  </label>
+  {% for month, items in months %}
+  <section class="archive__month">
+    <h2 class="archive__heading">{{ month }}</h2>
+    <ul class="archive__items">
+      {% for d in items %}
+      <li data-archive-item>
+        <time class="mono-label mono-label--muted" datetime="{{ d.date.isoformat() }}">{{ d.date | nl_date(true) }}</time>
+        <a href="{{ d.url }}">{{ d.title }}</a>
+        {% if d.label %}<span class="mono-label">{{ d.label }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  <p class="listing__empty" data-archive-empty hidden>Geen resultaten gevonden.</p>
+</div>

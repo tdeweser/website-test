@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.url == "/" %}{{ site.title }}{% else %}{{ page.title }} — {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.meta.get('description') or page.meta.get('excerpt') or site.description | trim }}">
+  {% if site.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page.title }}">
+  {% if page.meta.get('image') %}<meta property="og:image" content="{{ site.base_url }}{{ page.meta.image }}">{% endif %}
+  {% if favicon %}<link rel="icon" href="{{ favicon }}">{% endif %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+  <link rel="stylesheet" href="/assets/ds/styles.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip-link" href="#inhoud">Direct naar de inhoud</a>
+  {% include "partials/header.html" %}
+  <main id="inhoud">
+    {% block main %}{% endblock %}
+  </main>
+  {% include "partials/footer.html" %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- @dsCard group="Spacing" viewport="700x280" name="Spacing scale" subtitle="4px base — space-1 … space-10" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-sans); color: var(--text-body); }
+  .stack { display: flex; flex-direction: column; gap: 8px; }
+  .row { display: flex; align-items: center; gap: 14px; }
+  .tag { font: 400 11px/1 var(--font-mono); color: var(--text-muted); width: 150px; flex: 0 0 auto; }
+  .bar { height: 16px; background: var(--ipe-red-l60); border-left: 2px solid var(--brand); }
+</style>
+</head>
+<body>
+<div class="stack">
+  <div class="row"><span class="tag">--space-1 · 4px</span><span class="bar" style="width:4px"></span></div>
+  <div class="row"><span class="tag">--space-2 · 8px</span><span class="bar" style="width:8px"></span></div>
+  <div class="row"><span class="tag">--space-3 · 12px</span><span class="bar" style="width:12px"></span></div>
+  <div class="row"><span class="tag">--space-4 · 16px</span><span class="bar" style="width:16px"></span></div>
+  <div class="row"><span class="tag">--space-5 · 24px</span><span class="bar" style="width:24px"></span></div>
+  <div class="row"><span class="tag">--space-6 · 32px</span><span class="bar" style="width:32px"></span></div>
+  <div class="row"><span class="tag">--space-7 · 48px</span><span class="bar" style="width:48px"></span></div>
+  <div class="row"><span class="tag">--space-8 · 64px</span><span class="bar" style="width:64px"></span></div>
+  <div class="row"><span class="tag">--space-9 · 96px</span><span class="bar" style="width:96px"></span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- @dsCard group="Spacing" viewport="700x200" name="Radius & Shadow" subtitle="Tight rectilinear radii, restrained shadows" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-sans); color: var(--text-body); }
+  .grid { display: flex; gap: 28px; flex-wrap: wrap; }
+  .item { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+  .box { width: 88px; height: 64px; background: var(--surface-card); border: 1px solid var(--border); }
+  .tag { font: 400 11px/1 var(--font-mono); color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="item"><div class="box" style="border-radius:var(--radius-none)"></div><span class="tag">none</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-sm)"></div><span class="tag">sm · 4px</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-md)"></div><span class="tag">md · 6px</span></div>
+  <div class="item"><div class="box" style="border-radius:var(--radius-lg)"></div><span class="tag">lg · 10px</span></div>
+  <div class="item"><div class="box" style="border:none;box-shadow:var(--shadow-sm)"></div><span class="tag">shadow-sm</span></div>
+  <div class="item"><div class="box" style="border:none;box-shadow:var(--shadow-md)"></div><span class="tag">shadow-md</span></div>
+  <div class="item"><div class="box" style="border:none;box-shadow:var(--shadow-lg)"></div><span class="tag">shadow-lg</span></div>
+</div>
+</body>
+</html>

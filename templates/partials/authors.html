@@ -1,0 +1,14 @@
+<div class="authors">
+  <p class="mono-label mono-label--bullet">Auteurs</p>
+  <ul class="authors__list">
+    {% for p in people %}
+    <li class="author">
+      {% if p.get('photo') %}<img class="author__photo" src="{{ p.photo }}" alt="" loading="lazy">{% endif %}
+      <div>
+        <a class="author__name" href="{{ p.url }}">{{ p.name }}</a>
+        {% if p.get('role') %}<span class="author__role">{{ p.role }}</span>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

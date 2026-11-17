@@ -1,0 +1,26 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Neutrals — Black / Gray / Beige / White" subtitle="Text, structure and the warm alt background" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-sans); }
+  .swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+  .sw { display: flex; flex-direction: column; gap: 8px; }
+  .chip { height: 72px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); }
+  .name { font: var(--fw-semibold) 12px/1.2 var(--font-sans); color: var(--text-body); }
+  .hex { font: 400 11px/1.2 var(--font-mono); color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="swatches">
+  <div class="sw"><div class="chip" style="background:var(--ipe-black)"></div><span class="name">Black</span><span class="hex">#000000</span></div>
+  <div class="sw"><div class="chip" style="background:var(--ipe-ink-40)"></div><span class="name">Text 2</span><span class="hex">#404040</span></div>
+  <div class="sw"><div class="chip" style="background:var(--ipe-gray)"></div><span class="name">Gray</span><span class="hex">#9f9f9f</span></div>
+  <div class="sw"><div class="chip" style="background:var(--ipe-gray-20)"></div><span class="name">Gray 20</span><span class="hex">#ececec</span></div>
+  <div class="sw"><div class="chip" style="background:var(--ipe-beige)"></div><span class="name">Beige</span><span class="hex">#f4ede3</span></div>
+  <div class="sw"><div class="chip" style="background:var(--ipe-white)"></div><span class="name">White</span><span class="hex">#ffffff</span></div>
+</div>
+</body>
+</html>

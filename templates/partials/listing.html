@@ -1,0 +1,28 @@
+{# Shared by the listing() shortcode, listing pages and "Lees ook".
+   Expects: items, layout (carousel | list | grid | autogrid | autocolumns), title, more, empty #}
+{% set kind = 'cards' if layout in ('carousel', 'grid', 'autogrid', 'autocolumns') else 'rows' %}
+<div class="listing listing--{{ 'carousel' if layout == 'carousel' else kind }}">
+  {% if title %}<h3 class="listing__title">{{ title }}</h3>{% endif %}
+  {% if items %}
+  <ul class="listing__items">
+    {% for d in items %}
+    <li class="card{% if not d.meta.get('image') %} card--no-image{% endif %}">
+      {% if d.meta.get('image') %}
+      <a class="card__image" href="{{ d.url }}" tabindex="-1" aria-hidden="true"><img src="{{ d.meta.image }}" alt="" loading="lazy"></a>
+      {% endif %}
+      <div class="card__body">
+        <p class="card__meta">
+          {% if d.label %}<span class="mono-label">{{ d.label }}</span>{% endif %}
+          {% if d.date %}<time class="mono-label mono-label--muted" datetime="{{ d.date.isoformat() }}">{{ d.date | nl_date(true) }}</time>{% endif %}
+        </p>
+        <h4 class="card__title"><a href="{{ d.url }}">{{ d.title }}</a></h4>
+        {% if kind == 'rows' and d.meta.get('excerpt') %}<p class="card__excerpt">{{ d.meta.excerpt | truncate(180) }}</p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="listing__empty">{{ empty }}</p>
+  {% endif %}
+  {% if more and items %}<p class="listing__more"><a href="{{ more }}">Alle publicaties →</a></p>{% endif %}
+</div>

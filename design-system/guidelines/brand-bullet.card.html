@@ -1,0 +1,32 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Red bullet & mono label" subtitle="The signature list marker and eyebrow style" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-sans); color: var(--text-body); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .label { font: var(--fw-medium) 12px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand); display: inline-flex; align-items: center; gap: 8px; }
+  .label .sq { width: 8px; height: 8px; background: var(--brand); }
+  ul { list-style: none; margin: 14px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font: var(--type-body); }
+  li { display: flex; gap: 12px; align-items: baseline; }
+  li .sq { width: 10px; height: 10px; background: var(--brand); flex: 0 0 auto; position: relative; top: 1px; }
+</style>
+</head>
+<body>
+<div class="cols">
+  <div>
+    <span class="label"><span class="sq"></span>Onderzoek · 2026</span>
+    <ul>
+      <li><span class="sq"></span><span>Landelijke basis</span></li>
+      <li><span class="sq"></span><span>Lokaal maatwerk</span></li>
+      <li><span class="sq"></span><span>Eerlijker en eenvoudiger</span></li>
+    </ul>
+  </div>
+  <div style="font: var(--type-small); color: var(--text-soft);">
+    <p style="margin:0">The red square (▪) is the brand's list glyph — sized to the x-height, never a round dot. DM Mono sets eyebrows, labels and data.</p>
+  </div>
+</div>
+</body>
+</html>

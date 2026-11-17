@@ -1,0 +1,29 @@
+<!-- @dsCard group="Type" viewport="700x240" name="Mono & Data — DM Mono" subtitle="Labels, tabular figures and the logo font" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-sans); color: var(--text-body); }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+  .label { font: var(--fw-medium) 12px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand); }
+  table { border-collapse: collapse; font: 400 14px/1 var(--font-mono); }
+  td, th { padding: 6px 16px 6px 0; text-align: right; }
+  th { color: var(--text-muted); font-weight: 500; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; }
+  td:first-child, th:first-child { text-align: left; }
+  tr + tr td { border-top: 1px solid var(--border-subtle); }
+</style>
+</head>
+<body>
+<div class="stack">
+  <span class="label">▪ Mono label · onderzoek 2026</span>
+  <table>
+    <tr><th>Regio</th><th>Woningen</th><th>Aandeel</th></tr>
+    <tr><td>Randstad</td><td>148.302</td><td>52,5%</td></tr>
+    <tr><td>Noord</td><td>76.119</td><td>27,0%</td></tr>
+    <tr><td>Zuid</td><td>58.000</td><td>20,5%</td></tr>
+  </table>
+</div>
+</body>
+</html>

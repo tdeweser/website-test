@@ -1,0 +1,72 @@
+// IPE website — sample content (publications, themes). Fictional but on-brand.
+window.IPE_DATA = {
+  themes: [
+    { name: "Armoede & bestaanszekerheid", color: "var(--ipe-red)" },
+    { name: "Wonen", color: "var(--ipe-aqua)" },
+    { name: "Arbeidsmarkt", color: "var(--ipe-green)" },
+    { name: "Klimaat & energie", color: "var(--ipe-navy)" },
+    { name: "Belastingen", color: "var(--ipe-red)" },
+    { name: "Zorg", color: "var(--ipe-aqua)" },
+  ],
+  publications: [
+    {
+      id: "armoedebeleid",
+      kicker: "Rapport · 2026",
+      title: "Eerlijker en eenvoudiger armoedebeleid",
+      subtitle: "Landelijke basis, lokaal maatwerk",
+      theme: "Armoede & bestaanszekerheid",
+      color: "var(--ipe-red)",
+      authors: ["Jasper J. van Dijk", "Yannick Feld", "Julia van Rijn"],
+      date: "12 juni 2026",
+      excerpt: "Het huidige armoedebeleid is een doolhof van regelingen. Wij stellen een landelijke basis voor met ruimte voor lokaal maatwerk — eerlijker voor mensen, eenvoudiger voor gemeenten.",
+      featured: true,
+    },
+    {
+      id: "private-huur",
+      kicker: "Policy paper · 2026",
+      title: "De prijs van wonen in de vrije sector",
+      subtitle: "Wat 282.421 huurwoningen ons leren",
+      theme: "Wonen",
+      color: "var(--ipe-aqua)",
+      authors: ["Yannick Feld"],
+      date: "28 mei 2026",
+      excerpt: "Een analyse op basis van CBS micro-data laat zien waar de druk op de private huurmarkt het grootst is — en welke knoppen beleidsmakers werkelijk kunnen omzetten.",
+    },
+    {
+      id: "arbeidsmarkt",
+      kicker: "Onderzoek · 2026",
+      title: "Werk dat loont",
+      subtitle: "De marginale druk voor middeninkomens",
+      theme: "Arbeidsmarkt",
+      color: "var(--ipe-green)",
+      authors: ["Julia van Rijn", "Jasper J. van Dijk"],
+      date: "9 april 2026",
+      excerpt: "Voor wie net iets meer gaat verdienen, verdampt een groot deel van het extra inkomen. Wij brengen de marginale druk in kaart en doen concrete voorstellen.",
+    },
+    {
+      id: "klimaatsubsidies",
+      kicker: "Policy paper · 2025",
+      title: "Klimaatsubsidies die werken",
+      subtitle: "Meer reductie per euro",
+      theme: "Klimaat & energie",
+      color: "var(--ipe-navy)",
+      authors: ["Yannick Feld", "Julia van Rijn"],
+      date: "18 december 2025",
+      excerpt: "Niet elke subsidie levert evenveel CO₂-reductie op. Een ranglijst van maatregelen naar effectiviteit, en wat dat betekent voor het volgende klimaatpakket.",
+    },
+  ],
+  stats: [
+    { value: "282.421", label: "geanalyseerde huurwoningen", source: "Bron: CBS micro-data" },
+    { value: "12%", label: "lagere armoede in het voorstel", source: "Modelschatting IPE" },
+    { value: "3", label: "ministeries adviseerden wij in 2026", source: "" },
+  ],
+  // Official mission copy (from the IPE report templates)
+  about: {
+    intro: "Het Instituut voor Publieke Economie (IPE) is een onafhankelijke denktank. Wij publiceren onderzoek en analyses over economisch beleid. Zo maken we complexe onderwerpen toegankelijk, brengen we nieuwe ideeën onder de aandacht en mengen we ons in het debat.",
+    pillars: [
+      { title: "Wij maken complexe onderwerpen toegankelijk", body: "Informatie blijft nu vaak besloten binnen ministeries. Wij vinden dat richtinggevende keuzes een open debat verdienen — beter begrip leidt tot betere politiek." },
+      { title: "Wij werken nieuwe ideeën uit", body: "Die ruimte hebben we, omdat we niet gebonden zijn aan Haagse besluitvorming. We richten ons op de lange termijn, die te vaak ondergaat in het hier en nu." },
+      { title: "Wij komen op voor het publieke belang", body: "Beleid wordt beïnvloed door deelbelangen. Daarom melden wij ons, als het publieke belang erom vraagt — en zo versterken wij onze democratie." },
+    ],
+  },
+};

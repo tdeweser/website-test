@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block body_class %}layout-listing{% endblock %}
+{% block main %}
+<section class="band band--alt listing-header">
+  <div class="container">
+    {% if person %}
+    <div class="person">
+      {% if person.get('photo') %}<img class="person__photo" src="{{ person.photo }}" alt="">{% endif %}
+      <div>
+        <p class="mono-label mono-label--bullet">Auteur</p>
+        <h1>{{ person.name }}</h1>
+        {% if person.get('role') %}<p class="person__role">{{ person.role }}</p>{% endif %}
+        {% if person.get('email') %}<p><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>{% endif %}
+      </div>
+    </div>
+    {% else %}
+    <p class="mono-label mono-label--bullet">Publicaties</p>
+    <h1>{{ page.title }}</h1>
+    {% endif %}
+    {% if intro %}<p class="lead">{{ intro }}</p>{% endif %}
+    {% if filters %}
+    <ul class="tag-list" aria-label="Filter op categorie">
+      <li><a class="tag {% if page.url == '/highlights/' %}tag--solid{% else %}tag--gray{% endif %}" href="/highlights/">Alles</a></li>
+      {% for name, url in filters %}
+      <li><a class="tag {% if page.url == url %}tag--solid{% else %}tag--gray{% endif %}" href="{{ url }}">{{ name }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+<section class="band">
+  <div class="container">
+    {% with layout="list", title=None, more=None, empty="Geen publicaties in de afgelopen drie maanden." %}{% include "partials/listing.html" %}{% endwith %}
+  </div>
+</section>
+{% endblock %}

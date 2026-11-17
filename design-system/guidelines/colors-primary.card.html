@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Primary — Red" subtitle="Hoofdkleur logo #d63f44 (Accent 1)" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: #fff; font-family: var(--font-sans); }
+  .swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .sw { display: flex; flex-direction: column; gap: 8px; }
+  .chip { height: 72px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); }
+  .name { font: var(--fw-semibold) 13px/1.2 var(--font-sans); color: var(--text-body); }
+  .hex { font: 400 11px/1.2 var(--font-mono); color: var(--text-muted); letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+<div class="swatches">
+  <div class="sw"><div class="chip" style="background:var(--ipe-red)"></div><span class="name">Red</span><span class="hex">#d63f44</span></div>
+  <div class="sw"><div class="chip" style="background:var(--ipe-red-l60)"></div><span class="name">Lighter 60%</span><span class="hex">#efb2b4</span></div>
+  <div class="sw"><div class="chip" style="background:var(--ipe-red-l80)"></div><span class="name">Lighter 80%</span><span class="hex">#f7d9da</span></div>
+  <div class="sw"><div class="chip" style="background:var(--ipe-red-d25)"></div><span class="name">Darker 25%</span><span class="hex">#a12f33</span></div>
+  <div class="sw"><div class="chip" style="background:var(--brand-hover)"></div><span class="name">Hover</span><span class="hex">#c2383c</span></div>
+</div>
+</body>
+</html>

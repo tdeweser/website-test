@@ -1,0 +1,112 @@
+# Site-wide settings. Edited by hand; read by scripts/scrape.py, build.py and check.py.
+# See docs/CONTENT-GUIDE.md for what each key does.
+
+title: Instituut voor Publieke Economie
+short_title: IPE
+description: >-
+  Het Instituut voor Publieke Economie (IPE) is een onafhankelijke denktank. Wij
+  publiceren onderzoek en analyses over economisch beleid. Zo maken we complexe
+  onderwerpen toegankelijk, brengen we nieuwe ideeën onder de aandacht en mengen
+  we ons in het debat.
+language: nl
+# Public address of this copy (used for absolute links in /feed.xml).
+base_url: https://ipe-dza.pages.dev
+
+# Test copy: keep search engines away so it never competes with the real site.
+noindex: true
+
+# --- Scrape scope (scripts/scrape.py) -------------------------------------------
+scrape:
+  # Articles and events published on/after this date are "in the window": they
+  # appear in listings. Older pages are only included when an in-scope page links
+  # to them (one level deep) and never appear in listings.
+  window_start: 2026-08-16
+  # Permanent pages, always scraped (old-site path -> same path in the copy).
+  pages:
+    - /
+    - /macro-economie
+    - /sociaalbeleid-belastingen
+    - /europese-unie
+    - /functioneren-overheid
+    - /archief
+    - /over-ons/over-ipe
+    - /onze-mensen
+    - /events
+    - /vacatures
+    - /contact
+    - /english
+    - /steun-ons
+    - /privacy
+    - /copyright
+    - /media
+    - /armoede-dashboard
+    - /sectoren-dashboard
+  # Page titles where the old site's <title> is wrong or unhelpful.
+  titles:
+    /over-ons/over-ipe: Over IPE
+    /onze-mensen: Onze mensen
+    /events: Evenementen
+    /armoede-dashboard: Armoededashboard
+    /sectoren-dashboard: Sectoren van de toekomst
+  # Blog-style collections on the old site.
+  collections:
+    - /highlights
+    - /evenementen
+  # Collection holding author cards (name - role, photo, e-mail). Scraped into
+  # content/people/authors.yml; author links go to the generated tag page.
+  authors: /auteurs
+  # Old-site paths that are never followed (Squarespace system pages).
+  ignore_paths:
+    - /cart
+    - /search
+    - /account
+    - /config
+    - /api
+    - /static
+    - /onderwerpen
+    - /55c1c005-0af9-4b76-9ec7-faee39d63d9e
+
+# --- Navigation ------------------------------------------------------------------
+nav:
+  - title: Onderwerpen
+    items:
+      - { title: Macro-economie, url: /macro-economie/ }
+      - { title: Sociaal beleid, url: /sociaalbeleid-belastingen/ }
+      - { title: Europese Unie, url: /europese-unie/ }
+      - { title: Functioneren overheid, url: /functioneren-overheid/ }
+      - { title: Archief, url: /archief/ }
+  - title: Over ons
+    items:
+      - { title: Over IPE, url: /over-ons/over-ipe/ }
+      - { title: Onze mensen, url: /onze-mensen/ }
+      - { title: Evenementen, url: /events/ }
+      - { title: Vacatures, url: /vacatures/ }
+      - { title: Contact, url: /contact/ }
+      - { title: English, url: /english/ }
+      - { title: Steun ons, url: /steun-ons/ }
+
+cta: { title: Steun ons, url: /steun-ons/ }
+
+# --- Footer ----------------------------------------------------------------------
+contact:
+  organisation: Stichting Instituut voor Publieke Economie
+  street: Plein 17
+  postcode_city: 2511 CS Den Haag
+  email: info@ipe.nl
+
+newsletter:
+  url: https://instituutpe.substack.com/
+  embed: https://instituutpe.substack.com/embed
+
+donate:
+  url: /steun-ons/
+
+social:
+  - { title: LinkedIn, url: "https://www.linkedin.com/company/instituut-voor-publieke-economie" }
+  - { title: X (Twitter), url: "https://twitter.com/InstituutPE" }
+
+footer_links:
+  - { title: Privacy, url: /privacy/ }
+  - { title: Copyright, url: /copyright/ }
+
+anbi_note: Stichting Instituut voor Publieke Economie is aangemerkt als Algemeen Nut Beogende Instelling (ANBI).
