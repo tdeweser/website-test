@@ -19,9 +19,11 @@ source: https://www.ipe.nl/highlights/gemeentepolis
 
 ***Landelijk alternatief voor de versnipperde gemeentepolis***
 
-<p class="button-row"><a class="button" href="/media/files/ipe-gelijke-toegang-tot-zorg-voor-minima-web.pdf">Download Rapport</a></p>
+<p class="button-row align-center"><a class="button" href="/media/files/ipe-gelijke-toegang-tot-zorg-voor-minima-web.pdf">Download Rapport</a></p>
 
 {{ authors(["Jasper J. van Dijk", "Janine Wegh"]) }}
+
+<div class="text-large" markdown="1">
 
 ## In de media
 
@@ -38,11 +40,13 @@ source: https://www.ipe.nl/highlights/gemeentepolis
 - NRC schrijft een [artikel](https://www.nrc.nl/nieuws/2026/09/21/hoger-eigen-risico-raakt-160-000-minima-extra-hard-steeds-minder-gemeenten-bieden-vangnet-voor-zorgkosten-a4936592) over de gemeentepolis en verwijst naar dit rapport
 - De Telegraaf schrijft een [artikel](https://www.telegraaf.nl/financieel/een-postcode-mag-niet-bepalen-of-iemand-noodzakelijke-zorg-kan-betalen/161769029.html) over de gemeentepolis
 
+</div>
+
 <hr>
 
 ![](/media/img/infographic-gemeentepolis-web-a306759f.png)
 
-## Samenvatting
+<h2 class="text-accent"><span>Samenvatting</span></h2>
 
 **Het is in ieders belang dat toegang tot zorg gegarandeerd is, ongeacht iemands portemonnee.** Mensen in armoede gaan minder vaak naar de dokter**.** Ook is hun gezondheid gemiddeld slechter en belanden ze vaker in de schulden wanneer ze wel naar de dokter moeten. Dit is niet alleen schadelijk voor henzelf, maar ook voor de rest van de maatschappij. Zieke mensen werken minder, uitgestelde zorg is vaak veel duurder, en schulden leiden tot grote maatschappelijke kosten.
 

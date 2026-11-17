@@ -9,7 +9,6 @@ tags:
 - IPE in de media
 - Jasper J. van Dijk
 author: Vinzenz Ziesemer
-image: /media/files/file.png
 external_url: https://www.ad.nl/praat-mee/opinie-zorgverzekering-via-gemeenten-werkt-niet~a8da9380/
 source: https://www.ipe.nl/highlights/jasperjvandijk/gemeentpolis-ad
 ---

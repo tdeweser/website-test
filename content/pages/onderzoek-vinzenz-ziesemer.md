@@ -2,16 +2,16 @@
 title: Onderzoek Vinzenz Ziesemer
 url: /onderzoek-vinzenz-ziesemer/
 layout: page
-linked_only: true
+linked_only: false
 source: https://www.ipe.nl/onderzoek-vinzenz-ziesemer
 description: Vinzenz Ziesemer is Directeur van het Instituut voor Publieke Economie. Vinzenz is geaffilieerd met het Erasmus University College. Hiervoor leidde hij een team van economisch adviseurs bij het ministerie van Financiën. Vinzenz behaalde een PhD in economie aan het European University Institute in Florence. Hij studeerde econometrie, economie en filosofie aan de Erasmus Universiteit in Rotterdam.
 ---
 
-<section class="band" markdown="1">
+<section class="band theme-white height-medium" markdown="1">
 
-<div class="cols" style="--cols: 6fr 6fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 1 / 13" markdown="1">
 
 ## Vinzenz Ziesemer
 
@@ -51,7 +51,7 @@ Other:
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 13 / 25" markdown="1">
 
 ##
 

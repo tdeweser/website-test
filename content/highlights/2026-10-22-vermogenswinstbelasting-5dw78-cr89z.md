@@ -10,7 +10,7 @@ tags:
 - Vinzenz Ziesemer
 - Belastingen
 author: Vinzenz Ziesemer
-image: /media/files/file.png
+listing_image: /media/img/webgrafiek-ipe-94d50007.png
 excerpt: Het retrospectief belasten van rendementen in plaats van euro’s vermindert uitstelgedrag en vermeerdert belastinginkomsten..
 source: https://www.ipe.nl/highlights/vermogenswinstbelasting-5dw78-cr89z
 ---
@@ -57,6 +57,10 @@ Neem de ‘gemiddelderendementsheffing’. Een ingewikkelde term voor een simpel
 
 Hoe je dat doet? Voor de liefhebber staan de formules hieronder.
 
+<div class="block-bg" markdown="1">
+
+<div class="text-black" markdown="1">
+
 *Vermogenswinstbelasting:*
 
 Te betalen belasting in euro’s = Tarief * (Verkoopwaarde − Aankoopwaarde).
@@ -64,6 +68,10 @@ Te betalen belasting in euro’s = Tarief * (Verkoopwaarde − Aankoopwaarde).
 *Gemiddelderendementsheffing:*
 
 Te betalen belasting in euro’s = Verkoopwaarde * (1−(Verkoopwaarde/Aankoopwaarde)-^Tarief).
+
+</div>
+
+</div>
 
 Er verandert verder niets ten opzichte van een vermogenswinstbelasting. Je hebt dezelfde informatie nodig, de uitvoering voor de belastingdienst is hetzelfde en het betaalmoment is hetzelfde. Alleen deze formule en het resulterende bedrag is anders.[1]
 

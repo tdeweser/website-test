@@ -125,7 +125,23 @@ class Inventory:
         print(f"  authors: {len(self.authors)} author cards")
 
     def in_window(self, item: dict) -> bool:
+        if item.get("_collection") in self.cfg["scrape"].get("always_listed", []):
+            return True  # not articles (e.g. events): listed regardless of date
         return ms_to_date(item["publishOn"]) >= self.window_start
+
+    def sitemap_pages(self) -> list[str]:
+        """Every plain page in the old sitemap (not posts in a collection)."""
+        xml = fetch(SITE + "/sitemap.xml", use_cache=FETCH_CACHE)
+        colls = [c.lower() for c in self.collections] + [str(self.cfg["scrape"].get("authors", "")).lower()]
+        out = []
+        for loc in re.findall(r"<loc>([^<]+)</loc>", xml):
+            path = site_path(htmllib.unescape(loc))
+            low = path.lower()
+            if (low in ("/", "/home") or self.ignored(path)
+                    or any(low == c or low.startswith(c + "/") for c in colls if c)):
+                continue
+            out.append(path)
+        return out
 
     def add(self, entry: Entry):
         self.entries[entry.path.lower()] = entry
@@ -229,6 +245,9 @@ class LinkContext:
             return re.sub(r"@(?:www\.)?instituut-pe\.nl", "@ipe.nl", href, flags=re.I)
         if not href or href.startswith(("tel:", "#", "javascript:")):
             return href or None
+        if href.lower().startswith("file:"):
+            REPORT.unlinked.append((self.source, text, href[:120], "link to a file on the author's own computer"))
+            return None
         href = _abs(href) if href.startswith(("/", "//")) else href
         parts = urllib.parse.urlsplit(href)
         host = parts.netloc.lower()
@@ -244,7 +263,7 @@ class LinkContext:
 
         path = site_path(href)
         query = urllib.parse.parse_qs(parts.query)
-        frag = f"#{parts.fragment}" if parts.fragment else ""
+        frag = f"#{parts.fragment}" if parts.fragment and not parts.fragment.startswith(":~:") else ""
         low = path.lower()
 
         if low.startswith("/s/"):
@@ -349,6 +368,8 @@ def clean_rich_text(el: Tag, ctx: LinkContext) -> str:
     for h in el.find_all(["h1", "h2", "h3", "h4", "h5", "h6"]):
         for b in h.find_all(["strong", "b", "em"]):
             b.unwrap()
+    link_plain_urls(el, ctx)
+    colored = element_colors(el)
     for t in el.find_all(True):
         keep = KEEP_ATTRS.get(t.name, set())
         for attr in list(t.attrs):
@@ -357,7 +378,61 @@ def clean_rich_text(el: Tag, ctx: LinkContext) -> str:
     for p in el.find_all("p"):
         if not p.get_text(strip=True) and not p.find("img"):
             p.decompose()
-    return md(str(el))
+    # Paragraphs/headings with their own text colour stay raw HTML with a class.
+    raw = {}
+    for i, (node, color) in enumerate(colored):
+        if node.parent is None:
+            continue
+        token = f"IPERAWBLOCK{i}X"
+        raw[token] = f'<{node.name} class="text-{color}">{node.decode_contents().strip()}</{node.name}>'
+        node.replace_with(BeautifulSoup(f"<p>{token}</p>", "html.parser"))
+    out = md(str(el))
+    for token, html in raw.items():
+        out = out.replace(token, html)
+    return out
+
+
+def element_colors(el: Tag) -> list[tuple[Tag, str]]:
+    """Text blocks coloured by the editor (sqsrte-text-color--x), when not every block in
+    the fragment has that colour (a uniform colour is handled as a block class)."""
+    found, blocks = [], [b for b in el.find_all(["p", "h1", "h2", "h3", "h4"]) if not b.find_parent("li")]
+    for b in blocks:
+        holder = b if "sqsrte-text-color" in " ".join(b.get("class") or []) else b.select_one('[class*="sqsrte-text-color--"]')
+        if holder is None or holder.get_text(strip=True) != b.get_text(strip=True):
+            continue
+        m = re.search(r"sqsrte-text-color--(\w+)", " ".join(holder.get("class") or []))
+        if m and m.group(1) in ("accent", "white", "black", "darkAccent", "lightAccent"):
+            found.append((b, m.group(1).lower()))
+    if found and len(found) == len(blocks) and len({c for _, c in found}) == 1:
+        return []
+    return found
+
+
+PLAIN_OLD_URL = re.compile(r"https?://(?:www\.)?(?:ipe|instituut-pe)\.nl[^\s<>\"')\]]*", re.I)
+
+
+def link_plain_urls(el: Tag, ctx: LinkContext):
+    """Old-site URLs typed as plain text: link them to the local copy, or, when the page
+    is not in the copy, replace the URL by the title of what it pointed to."""
+    for node in list(el.find_all(string=PLAIN_OLD_URL)):
+        if node.find_parent("a"):
+            continue
+        html_parts, last = [], 0
+        text = str(node)
+        for m in PLAIN_OLD_URL.finditer(text):
+            url = m.group(0).rstrip(".,;:")
+            html_parts.append(htmllib.escape(text[last:m.start()]))
+            item = INV.index.get(site_path(url).lower())
+            label = htmllib.unescape(item["title"]) if item else site_path(url)
+            local = ctx.rewrite(url, label)
+            if local:
+                html_parts.append(f'<a href="{htmllib.escape(local)}">{htmllib.escape(label)}</a>')
+            else:
+                html_parts.append(htmllib.escape(f"“{label}”" if item else label))
+            html_parts.append(htmllib.escape(m.group(0)[len(url):]))
+            last = m.end()
+        html_parts.append(htmllib.escape(text[last:]))
+        node.replace_with(BeautifulSoup("".join(html_parts), "html.parser"))
 
 
 def clean_raw_html(el: Tag, ctx: LinkContext, *, keep_scripts: bool = True) -> str:
@@ -398,12 +473,46 @@ def block_type(sb: Tag) -> str:
 
 
 def convert_block(sb: Tag, ctx: LinkContext) -> str:
+    text = _convert_block(sb, ctx)
+    if text.strip() and "sqs-background-enabled" in (sb.get("class") or []):
+        # Blocks with "background" switched on: a padded box in the theme's accent colour.
+        text = f'<div class="block-bg" markdown="1">\n\n{text}\n\n</div>'
+    return text
+
+
+def text_style_classes(el: Tag) -> list[str]:
+    """Alignment and size the editor applied to (most of) a text block."""
+    paras = el.find_all(["p", "h1", "h2", "h3", "h4", "li"])
+    if not paras:
+        return []
+    classes = []
+    for align in ("center", "right"):
+        n = sum(1 for p in paras if f"text-align: {align}" in (p.get("style") or "").replace("text-align:", "text-align: ").replace("  ", " "))
+        if n * 2 > len(paras):
+            classes.append(f"align-{align}")
+    for color in ("white", "black", "accent"):  # whole block in one colour
+        n = sum(1 for p in paras if p.select_one(f".sqsrte-text-color--{color}") or f"sqsrte-text-color--{color}" in " ".join(p.get("class") or []))
+        if n == len(paras):
+            classes.append(f"text-{color}")
+    ps = [p for p in paras if p.name == "p"]
+    for size in ("large", "small"):
+        n = sum(1 for p in ps if f"sqsrte-{size}" in " ".join(p.get("class") or []))
+        if ps and n * 2 > len(ps):
+            classes.append(f"text-{size}")
+    return classes
+
+
+def _convert_block(sb: Tag, ctx: LinkContext) -> str:
     t = block_type(sb)
     content = sb.select_one(".sqs-block-content") or sb
 
     if t in ("html", "text"):
         inner = sb.select_one(".sqs-html-content") or content
-        return clean_rich_text(inner, ctx)
+        text = clean_rich_text(inner, ctx)
+        classes = text_style_classes(inner)
+        if classes and text.strip():
+            text = f'<div class="{" ".join(classes)}" markdown="1">\n\n{text}\n\n</div>'
+        return text
 
     if t in ("imageFluid", "image", "imageLayout"):
         img = sb.find("img")
@@ -436,6 +545,22 @@ def convert_block(sb: Tag, ctx: LinkContext) -> str:
         if not frames:
             REPORT.unknown_blocks.append((ctx.source, t, "embed without iframe"))
             return ""
+        scripts = [s for s in sb.find_all("script", src=True) if not is_old_site(_abs(s["src"]))]
+        if scripts:
+            # Provider widget (e.g. Donorbox widget.js) that sizes its own iframe:
+            # keep the iframe's own attributes and the script, no ratio box.
+            out = []
+            for fr in frames:
+                if is_old_site(_abs(fr.get("src", ""))):
+                    continue
+                fr.attrs = {k: v for k, v in fr.attrs.items() if not k.startswith("data-")}
+                fr["loading"] = "lazy"
+                out.append(str(fr))
+            for s in scripts:
+                REPORT.scripts.append((ctx.source, f'<script src="{s["src"]}">'))
+                attrs = "".join(f' {k}="{htmllib.escape(v)}"' for k, v in s.attrs.items() if isinstance(v, str))
+                out.append(f"<script{attrs}></script>")
+            return '<div class="embed-raw">' + "".join(out) + "</div>"
         return embed_html(frames, ctx)
 
     if t == "code":
@@ -509,7 +634,13 @@ def convert_other(t: str, sb: Tag, content: Tag, ctx: LinkContext) -> str:
         if not href:
             return ""
         ext = ' target="_blank" rel="noopener"' if href.startswith("http") else ""
-        return f'<p class="button-row"><a class="button" href="{htmllib.escape(href)}"{ext}>{htmllib.escape(label)}</a></p>'
+        box = sb.select_one(".sqs-block-button-container")
+        align = "left"
+        for c in (box.get("class") if box else []):
+            if c.startswith("sqs-block-button-container--"):
+                align = c.rsplit("--", 1)[1]
+        return (f'<p class="button-row align-{align}"><a class="button" href="{htmllib.escape(href)}"{ext}>'
+                f'{htmllib.escape(label)}</a></p>')
 
     if t == "map":
         holder = sb.find(attrs={"data-context": True})
@@ -554,6 +685,36 @@ def social_label(href: str | None, local_img: str) -> str | None:
     return None
 
 
+def summary_display(wrapper: Tag | None) -> dict:
+    """Display settings of a summary block, read from its wrapper's setting classes."""
+    if wrapper is None:
+        return {}
+    cls = " ".join(wrapper.get("class") or [])
+
+    def setting(name, default):
+        m = re.search(rf"summary-block-setting-{name}-([a-z-]+?)(?:\s|$)", cls + " ")
+        return m.group(1) if m else default
+
+    out = {
+        "meta1": setting("primary-metadata", "date"),
+        "meta2": setting("secondary-metadata", "none"),
+        "meta_pos": setting("metadata-position", "below-title"),
+        "thumbs": "summary-block-setting-show-thumbnail" in cls,
+        "excerpt": "summary-block-setting-show-excerpt" in cls,
+    }
+    if wrapper.get("data-slides-per-row"):
+        out["per_row"] = int(wrapper["data-slides-per-row"])
+    try:
+        ratio = float(wrapper.get("data-image-aspect-ratio") or 0)
+        if ratio:
+            out["ratio"] = ratio
+    except ValueError:
+        pass
+    if "design-list-thumbnail-right" in cls:
+        out["thumb_side"] = "right"
+    return out
+
+
 def summary_directive(sb: Tag, ctx: LinkContext) -> str:
     """Turn a Squarespace summary (auto-listing) block into a {{ listing() }} call.
 
@@ -573,15 +734,12 @@ def summary_directive(sb: Tag, ctx: LinkContext) -> str:
         p = site_path(_abs(a["href"])).lower()
         if p not in hrefs and p in INV.index:
             hrefs.append(p)
-    title_el = sb.select_one(".summary-collection-title")
-    heading = title_el.get_text(" ", strip=True) if title_el else ""
     wrapper = sb.select_one(".summary-block-wrapper")
     design = wrapper.get("data-design", "list") if wrapper else "list"
     items = [INV.index[h] for h in hrefs]
     limit = max(3, min(len(items) or 6, 30 if design == "list" else 12))
     args = {"limit": limit, "layout": design}
-    if heading and heading not in ("Alle publicaties",):
-        args["title"] = heading
+    args.update(summary_display(wrapper))
 
     if items:
         coll = items[0]["_collection"]
@@ -678,12 +836,20 @@ def fluid_section(section: Tag, ctx: LinkContext) -> str:
     return grid_to_markdown(blocks)
 
 
+ROW_TOLERANCE = 2  # Squarespace lets blocks overlap a row or two; that is not "side by side".
+
+
 def grid_to_markdown(blocks):
-    """Group positioned blocks into rows (overlapping row spans) and columns."""
+    """Rebuild the old site's 24-column grid.
+
+    Blocks whose row spans overlap (beyond ROW_TOLERANCE) form a row; within a row,
+    blocks whose column spans overlap form one cell. Each cell keeps its exact desktop
+    column range (`--c: start / end` on a 24-column grid, see .fe-row in site.css).
+    """
     blocks.sort(key=lambda b: (b[0], b[1]))
     rows, cur, cur_end = [], [], 0
     for b in blocks:
-        if cur and b[0] >= cur_end:
+        if cur and b[0] >= cur_end - ROW_TOLERANCE and not _same_cell(cur, b):
             rows.append(cur)
             cur, cur_end = [], 0
         cur.append(b)
@@ -702,17 +868,24 @@ def grid_to_markdown(blocks):
             col_end = max(col_end, b[3])
         if col:
             cols.append(col)
-        if len(cols) == 1:
-            out.extend(b[4] for b in sorted(cols[0], key=lambda b: b[0]))
-            continue
-        spans = [max(b[3] for b in c) - min(b[1] for b in c) for c in cols]
-        tmpl = " ".join(f"{s}fr" for s in spans)
         cells = []
         for c in cols:
+            start = max(1, min(b[1] for b in c) - 1)
+            end = min(25, max(b[3] for b in c) - 1)
             inner = "\n\n".join(b[4] for b in sorted(c, key=lambda b: b[0]))
-            cells.append(f'<div class="cols__cell" markdown="1">\n\n{inner}\n\n</div>')
-        out.append(f'<div class="cols" style="--cols: {tmpl}" markdown="1">\n\n' + "\n\n".join(cells) + "\n\n</div>")
+            cells.append(f'<div class="fe-cell" style="--c: {start} / {end}" markdown="1">\n\n{inner}\n\n</div>')
+        out.append('<div class="fe-row" markdown="1">\n\n' + "\n\n".join(cells) + "\n\n</div>")
     return "\n\n".join(out)
+
+
+def _same_cell(row, b) -> bool:
+    """Keep stacking `b` into the current row when it sits under one existing column
+    while a neighbouring column is still running (e.g. a button under a heading
+    next to a long text). Otherwise rows break normally."""
+    overlapping = [x for x in row if not (b[3] <= x[1] or b[1] >= x[3])]
+    others = [x for x in row if x not in overlapping]
+    return bool(overlapping) and all(x[1] == b[1] for x in overlapping) \
+        and any(x[2] > b[0] for x in others)
 
 
 def classic_layout(el: Tag, ctx: LinkContext) -> str:
@@ -732,13 +905,14 @@ def classic_layout(el: Tag, ctx: LinkContext) -> str:
             rendered = [(c, t) for c, t in rendered if t.strip()]
             if len(rendered) <= 1:
                 out.extend(t for _, t in rendered)
-            else:
-                spans = []
-                for c, _ in rendered:
+            else:  # classic 12-column grid -> same 24-column .fe-row as fluid sections
+                cells, pos = [], 1
+                for c, t in rendered:
                     m = re.search(r"span-(\d+)", " ".join(c.get("class", [])))
-                    spans.append(f"{m.group(1) if m else 1}fr")
-                cells = "\n\n".join(f'<div class="cols__cell" markdown="1">\n\n{t}\n\n</div>' for _, t in rendered)
-                out.append(f'<div class="cols" style="--cols: {" ".join(spans)}" markdown="1">\n\n{cells}\n\n</div>')
+                    span = 2 * int(m.group(1)) if m else 24 // len(rendered)
+                    cells.append(f'<div class="fe-cell" style="--c: {pos} / {min(25, pos + span)}" markdown="1">\n\n{t}\n\n</div>')
+                    pos += span
+                out.append('<div class="fe-row" markdown="1">\n\n' + "\n\n".join(cells) + "\n\n</div>")
         else:
             text = classic_layout(child, ctx)
             if text.strip():
@@ -746,9 +920,16 @@ def classic_layout(el: Tag, ctx: LinkContext) -> str:
     return "\n\n".join(out)
 
 
-THEMES = {"white": "", "white-bold": "", "light": "band--alt", "light-bold": "band--alt",
-          "dark": "band--dark", "dark-bold": "band--dark", "black": "band--dark",
-          "black-bold": "band--dark", "bright": "band--brand", "bright-inverse": "band--brand"}
+KNOWN_THEMES = {"white", "white-bold", "light", "light-bold", "dark", "dark-bold",
+                "black", "black-bold", "bright", "bright-inverse"}
+
+
+def section_settings(sec: Tag) -> dict:
+    """Section design settings Squarespace stores as JSON on the <section>."""
+    try:
+        return json.loads(sec.get("data-current-styles") or "{}")
+    except ValueError:
+        return {}
 
 
 def page_body(soup: BeautifulSoup, ctx: LinkContext) -> str:
@@ -756,14 +937,17 @@ def page_body(soup: BeautifulSoup, ctx: LinkContext) -> str:
     sections = [s for s in main.find_all("section") if "page-section" in (s.get("class") or [])]
     out = []
     for sec in sections:
-        theme = sec.get("data-section-theme", "")
-        cls = THEMES.get(theme, "")
-        if theme and theme not in THEMES:
+        theme = sec.get("data-section-theme", "") or "white"
+        if theme not in KNOWN_THEMES:
             REPORT.notes.append(f"{ctx.source}: unknown section theme '{theme}'")
+        st = section_settings(sec)
         bg = None
-        bg_img = sec.select_one(".section-background img")
-        if bg_img and img_src(bg_img):
-            bg = download_asset(img_src(bg_img))
+        bg_asset = (st.get("backgroundImage") or {}).get("assetUrl") if st.get("backgroundMode", "image") == "image" else None
+        if not bg_asset:
+            bg_img = sec.select_one(".section-background img")
+            bg_asset = img_src(bg_img) if bg_img else None
+        if bg_asset:
+            bg = download_asset(bg_asset)
         if sec.select_one(".fluid-engine"):
             body = fluid_section(sec, ctx)
         else:
@@ -771,11 +955,18 @@ def page_body(soup: BeautifulSoup, ctx: LinkContext) -> str:
             body = classic_layout(layout, ctx) if layout else ""
             if not layout and sec.select(".sqs-block"):
                 body = "\n\n".join(convert_block(b, ctx) for b in sec.select(".sqs-block"))
-        if not body.strip():
+        if not body.strip() and not bg:
             continue
-        classes = " ".join(c for c in ("band", cls, "band--image" if bg else "") if c)
-        style = f' style="--band-image: url({bg})"' if bg else ""
-        out.append(f'<section class="{classes}"{style} markdown="1">\n\n{body}\n\n</section>')
+        height = (st.get("sectionHeight") or "section-height--small").replace("section-height--", "")
+        classes = ["band", f"theme-{theme}", f"height-{height}"]
+        style = ""
+        if bg:
+            classes.append("band--image")
+            overlay = st.get("imageOverlayOpacity", 0) or 0
+            style = f' style="--band-image: url({bg}); --overlay: {overlay}"'
+        if not body.strip():
+            classes.append("band--image-only")
+        out.append(f'<section class="{" ".join(classes)}"{style} markdown="1">\n\n{body}\n\n</section>')
     if not sections:
         layout = main.select_one(".sqs-layout")
         if layout:
@@ -854,6 +1045,26 @@ def fix_dead_anchors(body: str, source: str) -> str:
     return re.sub(r"\[((?:[^\[\]]|\[[^\]]*\])*)\]\(#([^)\s]+)\)", repl, body)
 
 
+def thumbnail_url(it: dict) -> str | None:
+    """The item's thumbnail, as Squarespace shows it in listings.
+
+    Items without their own thumbnail get a placeholder assetUrl that ends in '/'
+    (it serves a blank tile). Squarespace then uses the first image in the post body,
+    skipping images inside listing blocks such as the author cards.
+    """
+    asset = it.get("assetUrl") or ""
+    if asset and not asset.endswith("/"):
+        return asset
+    soup = BeautifulSoup(it.get("body") or "", "html.parser")
+    for t in soup.select(".sqs-block-summary-v2, .summary-block"):
+        t.decompose()
+    for img in soup.find_all("img"):
+        src = img_src(img)
+        if src and "squarespace-cdn.com" in src:
+            return src
+    return None
+
+
 def article_filename(path: str, d: date) -> str:
     rest = path.split("/", 2)[2] if path.count("/") >= 2 else path
     return f"{d.isoformat()}-{'--'.join(slugify(p) for p in rest.split('/'))}.md"
@@ -868,7 +1079,10 @@ def write_item(e: Entry, folder: str):
     body = classic_layout(layout, ctx) if layout else clean_rich_text(soup, ctx)
     body = fix_dead_anchors(body, e.path)
     d = ms_to_date(it["publishOn"])
-    image = download_asset(it["assetUrl"]) if it.get("assetUrl") else None
+    own = it.get("assetUrl") or ""
+    image = download_asset(own) if own and not own.endswith("/") else None
+    thumb = thumbnail_url(it)
+    listing_image = download_asset(thumb) if thumb and thumb != own else None
     excerpt = BeautifulSoup(it.get("excerpt") or "", "html.parser").get_text(" ", strip=True)
     author = (it.get("author") or {}).get("displayName")
     front = {
@@ -880,7 +1094,8 @@ def write_item(e: Entry, folder: str):
         "tags": it.get("tags") or [],
         "author": author,
         "featured": bool(it.get("starred")) or None,
-        "image": image,
+        "image": image,                  # own thumbnail (blog index, social preview)
+        "listing_image": listing_image,  # fallback used by summary blocks: first body image
         "excerpt": excerpt,
         "external_url": it.get("sourceUrl") or None,
         "source": SITE + e.path,
@@ -972,8 +1187,15 @@ def main():
     INV.load_authors()
 
     print("Fetching permanent pages ...")
-    for path in cfg["scrape"]["pages"]:
-        INV.add(Entry(path, "page", html=fetch(SITE + path, use_cache=FETCH_CACHE)))
+    pages = list(cfg["scrape"]["pages"])
+    if cfg["scrape"].get("include_sitemap_pages"):
+        pages += [p for p in INV.sitemap_pages() if p.lower() not in {x.lower() for x in pages}]
+    for path in pages:
+        try:
+            INV.add(Entry(path, "page", html=fetch(SITE + urllib.parse.quote(path), use_cache=FETCH_CACHE)))
+        except urllib.error.HTTPError as err:
+            REPORT.broken.append(("(sitemap)", SITE + path, f"HTTP {err.code}"))
+    print(f"  {len(pages)} pages")
     for low, it in INV.index.items():
         if INV.in_window(it):
             kind = "event" if it["_collection"] == "evenementen" else "article"
@@ -1008,14 +1230,22 @@ def main():
         + yaml.safe_dump(people, allow_unicode=True, sort_keys=False, width=1000),
         encoding="utf-8")
 
-    # Site-wide assets: favicon.
+    # Site-wide assets under fixed names, used by the templates:
+    # favicon, the header logo and the donation QR code from the footer.
     home = BeautifulSoup(INV.entries["/"].html, "html.parser")
-    icon = home.find("link", rel="icon")
-    if icon and icon.get("href"):
-        local = download_asset(icon["href"])
+
+    def keep_as(url, name):
+        local = download_asset(url) if url else None
         if local:
             src = MEDIA / local.removeprefix("/media/")
-            shutil.copyfile(src, MEDIA / ("favicon" + src.suffix))
+            shutil.copyfile(src, MEDIA / (name + src.suffix))
+
+    icon = home.find("link", rel="icon")
+    keep_as(icon.get("href") if icon else None, "favicon")
+    logo = home.select_one("header .header-title-logo img")
+    keep_as(img_src(logo) if logo else None, "logo-header")
+    qr = home.select_one("footer .sqs-block-image img, footer [data-definition-name$='imageFluid'] img")
+    keep_as(img_src(qr) if qr else None, "qr-doneren")
     write_report(INV)
     print(f"Done: {len(INV.entries)} pages/articles, {len(REPORT.assets)} assets, "
           f"{len(REPORT.unlinked)} links removed. See docs/SCRAPE-REPORT.md")

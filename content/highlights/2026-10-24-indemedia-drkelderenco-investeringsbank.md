@@ -9,7 +9,6 @@ tags:
 - IPE in de media
 - Vinzenz Ziesemer
 author: Vinzenz Ziesemer
-image: /media/files/file.png
 external_url: https://open.spotify.com/episode/5H8OAyoubtCgdS3gLsqjKj?si=8C-9yyegSQqmf_-zB5RE3A&utm_source=copy-link&nd=1&dlsi=81ecf952f7ba411b
 source: https://www.ipe.nl/highlights/indemedia-drkelderenco-investeringsbank
 ---

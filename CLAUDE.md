@@ -14,7 +14,13 @@ Read [README.md](README.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) fir
 - **No links to the old site.** Nothing in `public/` may point at ipe.nl, instituut-pe.nl or
   Squarespace (mailto `@ipe.nl` excepted). Download new images/PDFs into `static/media/` and
   link them as `/media/...`. `check.py` enforces this.
+- **The website copies the look of the original ipe.nl** (user decision, 2026-11-17): beige
+  header with hanging logo, Work Sans + DM Sans, red titles, red footer band. Stay as close to
+  the original as possible; measured values are in `static/assets/css/site.css` and
+  docs/ARCHITECTURE.md → Styling. The design system below applies to *new* designs and
+  mock-ups, not to restyling this site.
 - Listings show only `in_window: true` items (the 3-month window, `content/site.yml`).
+  Non-article content (pages, events) is taken regardless of date.
 - Shortcodes available in content: `listing()`, `authors()`, `archive()`, `map()`,
   `social_links()` (see docs/ARCHITECTURE.md).
 - `scripts/scrape.py` overwrites `content/pages|highlights|events`, `content/people/authors.yml`
@@ -22,10 +28,11 @@ Read [README.md](README.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) fir
 - Keep this site `noindex` (`content/site.yml`) until the user says it goes live.
 - How to add content: [docs/CONTENT-GUIDE.md](docs/CONTENT-GUIDE.md). Deploy: [docs/DEPLOY.md](docs/DEPLOY.md).
 
-## Design: always use the IPE design system
+## Design: use the IPE design system for new designs
 
-Every HTML page, mock-up or component made in this project follows the IPE
-design system in [design-system/](design-system/). Before designing anything:
+Every new HTML design, mock-up or component made in this project follows the IPE
+design system in [design-system/](design-system/) (the website itself mirrors the original
+ipe.nl, see above). Before designing anything:
 
 1. Read [design-system/README.md](design-system/README.md) — content
    fundamentals (tone, Dutch copy, boilerplate), visual foundations, iconography.
@@ -43,10 +50,9 @@ Address and domain are the exception: use **ipe.nl** and **Plein 17, 2511 CS Den
 
 ### How to wire it into a page
 
-- On this site the build publishes the tokens at `/assets/ds/styles.css` (already linked in
-  `templates/base.html`); site components live in `static/assets/css/site.css`. For a
-  standalone mock-up outside the site, link `design-system/styles.css` instead.
-  It loads the self-hosted DM Sans / DM Mono fonts and all tokens.
+- For a standalone mock-up, link `design-system/styles.css`. It loads the self-hosted
+  DM Sans / DM Mono fonts and all tokens. (The website build also publishes it at
+  `/assets/ds/styles.css`, used there only for the DM Sans fonts.)
 - Use the CSS custom properties, never raw hex values: `var(--brand)`,
   `var(--surface-alt)`, `var(--font-mono)`, `var(--space-6)`, `var(--type-h1)` etc.
   (see [design-system/tokens/](design-system/tokens/)).

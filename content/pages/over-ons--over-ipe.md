@@ -7,15 +7,27 @@ source: https://www.ipe.nl/over-ons/over-ipe
 description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo maken we complexe onderwerpen toegankelijk, brengen we vernieuwende ideeën onder de aandacht, en mengen we ons in het debat. We werken daarbij samen met academische, journalistieke, ambtelijke en politieke instellingen. Het IPE is opgericht in 2022 en gevestigd te Den Haag.
 ---
 
-<section class="band band--image" style="--band-image: url(/media/img/achtergrond-over-ons-a4d32ca9.png)" markdown="1">
+<section class="band theme-white-bold height-small band--image" style="--band-image: url(/media/img/achtergrond-over-ons-a4d32ca9.png); --overlay: 0.15" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 5 / 22" markdown="1">
+
+<div class="text-large" markdown="1">
 
 # IPE is een onafhankelijke denktank, gericht op vooruitgang
 
 Het Instituut voor Publieke Economie (IPE) publiceert onderzoek en analyse over economisch beleid. Zo maken we complexe onderwerpen toegankelijk, brengen we nieuwe ideeën onder de aandacht, en mengen we ons in het debat. We werken daarbij samen met academische, journalistieke, ambtelijke en politieke instellingen. IPE is opgericht in 2022 en gevestigd te Den Haag.
 
-<div class="cols" style="--cols: 8fr 8fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 5 / 13" markdown="1">
 
 **Nederland heeft behoefte aan onafhankelijke analyse.** Op tal van onderwerpen zien we beleid dat stuurloos lijkt. Denk aan het toeslagenstelsel, dat al decennia toe is aan herziening. Of de woonopgave, waar politieke ideologie het telkens wint van praktische vooruitgang. En ook de economie van de toekomst vraagt om denkkracht, bijvoorbeeld als het gaat om onderwijs en innovatie.
 
@@ -23,7 +35,7 @@ Het Instituut voor Publieke Economie (IPE) publiceert onderzoek en analyse over 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 22" markdown="1">
 
 **Wij werken nieuwe beleidsvoorstellen uit.** Die ruimte hebben we, omdat we niet gebonden zijn aan Haagse besluitvorming. Omdat we onafhankelijk zijn van politiek of ambtenarij, kunnen we ons eigen oordeel vormen. Daarbij richten we ons op de lange termijn, die te vaak ondergaat in het hier en nu.
 
@@ -37,17 +49,21 @@ Het Instituut voor Publieke Economie (IPE) publiceert onderzoek en analyse over 
 
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white-bold height-custom" markdown="1">
 
-<div class="cols" style="--cols: 8fr 8fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 5 / 13" markdown="1">
 
 ## Onze activiteiten
 
 </div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 14 / 22" markdown="1">
 
 ## Onze onderwerpen
 
@@ -55,9 +71,9 @@ Het Instituut voor Publieke Economie (IPE) publiceert onderzoek en analyse over 
 
 </div>
 
-<div class="cols" style="--cols: 8fr 8fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 5 / 13" markdown="1">
 
 We schrijven rapporten, doen onderzoek en publiceren analyses en opiniestukken. Die publiceren we op deze website, in vakbladen en in onze nieuwsbrief. Om te zorgen dat onze inzichten landen, hebben hebben we veel contact met beleidsmakers in Den Haag. Ook melden we ons regelmatig in de media.
 
@@ -69,7 +85,7 @@ Meer weten over onze organisatie? Op [deze pagina](/steun-ons/) vind je informat
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 22" markdown="1">
 
 Wij werken bewust aan vooruitgang. Wij kiezen voor onderwerpen omdat ze van groot belang zijn, omdat ze te weinig aandacht krijgen en omdat er aanwijsbare stappen richting verbetering zijn. Daarnaast moeten onderwerpen passen bij onze organisatie en haar ontwikkeling.
 
@@ -79,21 +95,45 @@ Per onderwerp analyseren we waar onze toegevoegde waarde ligt. Waar dat is varie
 
 </div>
 
-{{ listing(limit=10, layout="carousel", collection="highlights", tag="Over ons") }}
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
+
+{{ listing(limit=10, layout="carousel", meta1="date", meta2="none", meta_pos="below-content", thumbs=True, excerpt=False, per_row=4, ratio=1.5, collection="highlights", tag="Over ons") }}
+
+</div>
+
+</div>
 
 </section>
 
-<section class="band band--alt" markdown="1">
+<section class="band theme-light-bold height-medium" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ## Onze stichting
+
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 De Stichting Instituut voor Publieke Economie is geregistreerd bij de Kamer van Koophandel onder nummer 85447455. De Stichting is opgericht in 2022.
 
 De Stichting is aangemerkt als Algemeen Nut Beogende Instelling (ANBI; RSIN 8636 26 257). De Stichting heeft geen winstoogmerk en wordt voornamelijk gefinancierd door filantropie. Aanvullende informatie vind je in ons Standaardformulier Publicatieplicht voor grote fondsenwervende instellingen en in ons meest recente jaarverslag.
 
-<div class="cols" style="--cols: 5fr 8fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 **Overzicht jaarverslagen**
 
@@ -107,7 +147,7 @@ De Stichting is aangemerkt als Algemeen Nut Beogende Instelling (ANBI; RSIN 8636
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 14" markdown="1">
 
 **Overzicht standaardformulieren ANBI**
 
@@ -123,9 +163,21 @@ De Stichting is aangemerkt als Algemeen Nut Beogende Instelling (ANBI; RSIN 8636
 
 </div>
 
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 16" markdown="1">
+
 ## Veelgestelde vragen
 
 Hieronder beantwoorden we enkele veelgestelde vragen.
+
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 <details class="accordion" markdown="1">
 <summary>Hoe worden jullie gefinancierd?</summary>
@@ -147,5 +199,15 @@ Hieronder beantwoorden we enkele veelgestelde vragen.
 **Onze analyses laten ruimte voor verschillende politieke voorkeuren.** Wij worden wel eens gevraagd of we een politieke kleur hebben. Ons antwoord is een stellig “nee”. Wij streven ernaar analyses te bieden die nuttig zijn voor mensen met verschillende politieke voorkeuren.
 
 </details>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="band theme-white height-medium band--image band--image-only" style="--band-image: url(/media/img/unsplash-image-l0f3jcdjlci-7197d965.jpg); --overlay: 0" markdown="1">
+
+
 
 </section>

@@ -1,9 +1,10 @@
 # ipe.nl — website (static rebuild)
 
 A static rebuild of [www.ipe.nl](https://www.ipe.nl) for the Instituut voor Publieke Economie,
-in the IPE house style. It holds the permanent pages plus the publications of the last three
-months. Nothing links back to the old Squarespace site: every page, image and PDF is in this
-repository.
+with the same look and layout as the original Squarespace site. It holds every page of the
+old site, the events, and the publications of the last three months (plus older publications
+those pages link to). Nothing links back to the old site: every page, image and PDF is in
+this repository.
 
 Live preview: **https://ipe-dza.pages.dev** (Cloudflare Pages, marked `noindex`).
 

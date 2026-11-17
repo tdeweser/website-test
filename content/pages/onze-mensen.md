@@ -7,19 +7,27 @@ source: https://www.ipe.nl/onze-mensen
 description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo maken we complexe onderwerpen toegankelijk, brengen we vernieuwende ideeën onder de aandacht, en mengen we ons in het debat. We werken daarbij samen met academische, journalistieke, ambtelijke en politieke instellingen. Het IPE is opgericht in 2022 en gevestigd te Den Haag.
 ---
 
-<section class="band" markdown="1">
+<section class="band theme-white-bold height-small" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 ## Kernteam
 
-<div class="cols" style="--cols: 5fr 6fr 5fr 6fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/vinzenz-ziesemer-5170edd8.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
 ### Vinzenz Ziesemer
 
@@ -35,13 +43,13 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 19" markdown="1">
 
 ![](/media/img/jasper-h-van-dijk-0d54d6c1.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 19 / 25" markdown="1">
 
 ### Jasper H. van Dijk
 
@@ -59,15 +67,15 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols" style="--cols: 5fr 6fr 5fr 6fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/jasper-j-van-dijk-b2a92d77.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
 ### Jasper J. van Dijk
 
@@ -81,13 +89,13 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 19" markdown="1">
 
 ![](/media/img/julia-c3685704.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 19 / 25" markdown="1">
 
 ### Julia van Rijn
 
@@ -103,15 +111,15 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols" style="--cols: 5fr 6fr 5fr 6fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/schermafbeelding-2026-09-08-om-10-21-32-am-65da6b75.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
 ### Tessa De Weser
 
@@ -125,17 +133,17 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 19" markdown="1">
 
 ![](/media/img/screenshot-2026-11-10-094704-f8e6648d.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 19 / 25" markdown="1">
 
 ### Maurijn Rezvani
 
-*Onderzoeker*
+<p class="text-black"><span><em>Onderzoeker</em></span></p>
 
 - Onderzoekt de vereenvoudiging van gemeentelijk armoedebeleid
 - Werkte eerder als strategisch adviseur bij de gemeente Amsterdam
@@ -147,42 +155,42 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols" style="--cols: 5fr 6fr 1fr 5fr 6fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/profielfoto-senna-9fdf4c41.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
 ### Cor van der Leemputten
 
-*Communicatie en organisatie*
+<p class="text-black"><span><em>Communicatie en organisatie</em></span></p>
 
 - Voltooide masters Europese Internationale Politiek en Europese Studies in Nederland, Spanje, Polen en de Verenigde Staten
 - Vijftien jaar ervaring als adviseur en woordvoerder voor NGO's, overheid en bedrijfsleven
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 12 / 13" markdown="1">
 
 <a class="social-link" href="https://www.linkedin.com/in/leemputten/" target="_blank" rel="noopener">LinkedIn</a>
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 19" markdown="1">
 
 ![](/media/img/kopie-van-profielfoto-miriam-7bb20b6a.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 19 / 25" markdown="1">
 
 ### Senna Blaas
 
-*Werkstudent*
+<p class="text-black"><span><em>Werkstudent</em></span></p>
 
 - Student Economie, beleid en management aan Universiteit Leiden
 - Ondersteunende werkzaamheden
@@ -194,19 +202,19 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols" style="--cols: 5fr 6fr 6fr 6fr 1fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/scherm-afbeelding-2026-08-04-om-2-54-19-pm-b0088757.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
 ### Rosa Smit
 
-*Stagiair*
+<p class="text-black"><span><em>Stagiair</em></span></p>
 
 - Masterstudent Crisis and Security Management aan de Universiteit Leiden
 - Doet onderzoek naar innovatiebeleid en verricht ondersteunende werkzaamheden
@@ -214,7 +222,7 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 12 / 18" markdown="1">
 
 <a class="social-link" href="https://www.linkedin.com/in/rosa-smit-0b861b34b/" target="_blank" rel="noopener">LinkedIn</a>
 
@@ -222,7 +230,7 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 18 / 24" markdown="1">
 
 ### Valerie van Maarschalkerwaart
 
@@ -233,7 +241,7 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 24 / 25" markdown="1">
 
 <a class="social-link" href="https://nl.linkedin.com/in/valerievanmaarschalkerwaart" target="_blank" rel="noopener">LinkedIn</a>
 
@@ -243,13 +251,25 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </section>
 
-<section class="band band--alt" markdown="1">
+<section class="band theme-light height-small" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
+
+<div class="text-accent" markdown="1">
 
 ## Fellows
 
-<div class="cols" style="--cols: 5fr 6fr 5fr 6fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/hummel-5a9396f2.jpg)
 
@@ -257,9 +277,9 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
-### Albert Jan Hummel
+<h3 class="text-accent"><span>Albert Jan Hummel</span></h3>
 
 *Belastingen -* [*Onderzoekspagina*](https://www.albertjanhummel.com)*‍ ‍*
 
@@ -267,7 +287,7 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 - Vakgebied: openbare financiën, macro-economie, arbeidseconomie
 - Promoveerde in de Economie aan de Erasmus Universiteit Rotterdam
 
-### Wouter Leenders
+<h3 class="text-accent"><span>Wouter Leenders</span></h3>
 
 *Belastingconcurrentie en vermogen -* [*onderzoekspagina*](https://wouterleenders.eu)
 
@@ -276,7 +296,7 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 19" markdown="1">
 
 ![](/media/img/merel-956540a8.jpg)
 
@@ -284,16 +304,16 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 19 / 25" markdown="1">
 
-### Merel van Rooy
+<h3 class="text-accent"><span>Merel van Rooy</span></h3>
 
-*Verkeersboetebeleid*
+<p class="text-black"><span><em>Verkeersboetebeleid </em></span></p>
 
 - Expert verkeersboetebeleid, auteur van ‘De Boetefabriek’
 - Behaalde haar master Internationale Politieke Economie aan de Rijksuniversiteit Groningen
 
-### David Bokhorst
+<h3 class="text-accent"><span>David Bokhorst</span></h3>
 
 *Europese Unie, sociale zekerheid, governance -*[*onderzoekspagina*](https://me.eui.eu/david-jonas-bokhorst/)
 
@@ -305,17 +325,17 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols" style="--cols: 5fr 6fr 5fr 6fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/matthijs-fe2ee944.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
-### Matthijs Korevaar
+<h3 class="text-accent"><span>Matthijs Korevaar</span></h3>
 
 *Wonen -*[*onderzoekspagina*](https://sites.google.com/view/matthijskorevaar/research)
 
@@ -324,15 +344,15 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 19" markdown="1">
 
 ![](/media/img/aart-gerritsen-a58c4820.jpg)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 19 / 25" markdown="1">
 
-### Aart Gerritsen
+<h3 class="text-accent"><span>Aart Gerritsen</span></h3>
 
 *Belastingbeleid -*[*onderzoekspagina*](https://sites.google.com/site/aartgerritsen/papers)
 
@@ -343,17 +363,17 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols" style="--cols: 5fr 6fr 5fr 6fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/yannick-felt-c5dec9dc.jpg)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
-### Yannick Feld
+<h3 class="text-accent"><span>Yannick Feld</span></h3>
 
 *Belastingbeleid en minimaregelingen*
 
@@ -362,15 +382,15 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 14 / 19" markdown="1">
 
 ![](/media/img/kimfairley-0f9fc72d.jpg)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 19 / 25" markdown="1">
 
-### Kim Fairley
+<h3 class="text-accent"><span>Kim Fairley</span></h3>
 
 *Onderwijs, persoonlijke financiering en gezondheid -* [*onderzoekspagina*](https://kimfairley.github.io/website/)
 
@@ -384,19 +404,31 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white-bold height-small" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
+
+<div class="text-accent" markdown="1">
 
 ## Raad van Advies
 
-<div class="cols" style="--cols: 5fr 6fr 5fr 6fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/barbara-baarsma-bijgesneden-4c4e1bd2.jpg)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
 ### Barbara Baarsma
 
@@ -406,13 +438,13 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 13 / 18" markdown="1">
 
 ![](/media/img/coen-teulings-bijgesneden-65e9b3d4.jpg)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 18 / 24" markdown="1">
 
 ### Coen Teulings
 
@@ -426,19 +458,31 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white-bold height-small" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
+
+<div class="text-accent" markdown="1">
 
 ## Bestuur
 
-<div class="cols" style="--cols: 5fr 6fr 5fr 6fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/lia-ao-bijgesneden-15566d1e.jpg)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
 ### Li’ao Wang
 
@@ -450,15 +494,15 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 13 / 18" markdown="1">
 
 ![](/media/img/gregor-bijgesneden-8bc9312e.jpg)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 18 / 24" markdown="1">
 
-### Gregor Rossen
+<h3 class="text-accent"><span>Gregor Rossen</span></h3>
 
 *Penningmeester*
 
@@ -470,15 +514,15 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 
 </div>
 
-<div class="cols" style="--cols: 5fr 6fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 1 / 6" markdown="1">
 
 ![](/media/img/sam-bijgesneden-licht-3f98ab14.jfif)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 6 / 12" markdown="1">
 
 ### Sam de Muijnck
 
@@ -491,5 +535,11 @@ description: Het IPE publiceert onderzoek en analyse over economisch beleid. Zo 
 </div>
 
 </div>
+
+</section>
+
+<section class="band theme-white height-custom band--image band--image-only" style="--band-image: url(/media/img/unsplash-image-l0f3jcdjlci-7197d965.jpg); --overlay: 0" markdown="1">
+
+
 
 </section>

@@ -9,7 +9,6 @@ tags:
 - IPE in de media
 - Julia van Rijn
 author: Vinzenz Ziesemer
-image: /media/files/file.png
 external_url: https://www.nporadio1.nl/uitzendingen/nos-radio-1-journaal-nos-ntr/019c338a-5979-70e4-9f32-db63a7bfda71/2026-10-20-nos-radio-1-journaal-nos-ntr
 source: https://www.ipe.nl/highlights/indemedia-nporadio1journaal-20oktober2026
 ---

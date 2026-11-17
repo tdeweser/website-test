@@ -11,7 +11,7 @@ tags:
 - Jasper H. van Dijk
 - Industriepolitiek en innovatie
 author: Vinzenz Ziesemer
-image: /media/files/file.png
+listing_image: /media/img/afbeelding1-3105060f.png
 excerpt: Het kabinet wil flink sleutelen aan het innovatiebeleid, maar alleen als het geen geld kost – een recept voor teleurstelling. Gelukkig biedt de defensiebegroting een enorme kans.
 source: https://www.ipe.nl/highlights/defensieinnovatiemiljaren-5dw78
 ---

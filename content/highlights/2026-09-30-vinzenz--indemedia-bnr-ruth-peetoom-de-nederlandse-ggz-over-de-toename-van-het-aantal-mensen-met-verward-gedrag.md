@@ -9,7 +9,6 @@ tags:
 - IPE in de media
 - Vinzenz Ziesemer
 author: Vinzenz Ziesemer
-image: /media/files/file.png
 external_url: https://www.bnr.nl/podcast/zakendoen/60125106/ruth-peetoom-de-nederlandse-ggz-over-de-toename-van-het-aantal-mensen-met-verward-gedrag
 source: https://www.ipe.nl/highlights/vinzenz/indemedia-bnr-ruth-peetoom-de-nederlandse-ggz-over-de-toename-van-het-aantal-mensen-met-verward-gedrag
 ---

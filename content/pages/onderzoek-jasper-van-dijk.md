@@ -2,24 +2,32 @@
 title: Onderzoek Jasper H. van Dijk
 url: /onderzoek-jasper-van-dijk/
 layout: page
-linked_only: true
+linked_only: false
 source: https://www.ipe.nl/onderzoek-jasper-van-dijk
 description: Jasper H. van Dijk is Onderzoeksleider bij het Instituut voor Publieke Economie. Eerder werkte Jasper als econoom en woordvoerder bij ministerie van Financiën en als consultant bij McKinsey & Company. Ook is hij mede-initiator van toerisme-initiatief ‘Amsterdam Heeft een Keuze’. Jasper studeerde economie aan de Universiteit van Amsterdam en de Erasmus Universiteit in Rotterdam.
 ---
 
-<section class="band" markdown="1">
+<section class="band theme-white height-medium" markdown="1">
 
-<div class="cols" style="--cols: 9fr 15fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 2 / 10" markdown="1">
 
 # Jasper H. van Dijk
+
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 10" markdown="1">
 
 ![](/media/img/schermafbeelding-2026-07-13-om-2-02-10-pm-633caed8.png)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 10 / 25" markdown="1">
 
 Jasper H. van Dijk is onderzoeksleider bij IPE, met als specialisatie innovatiebeleid en de woningmarkt. Naast zijn werk bij IPE rondt hij zijn promotieonderzoek af aan de Universiteit Utrecht, is hij bestuurslid van DE/MO en voorzitter van de stichting Amsterdam heeft een Keuze.
 
@@ -33,13 +41,21 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 
 </section>
 
-<section class="band band--alt" markdown="1">
+<section class="band theme-light height-medium" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ## 2026
 
-<div class="cols" style="--cols: 12fr 12fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 13" markdown="1">
 
 ### Publicaties
 
@@ -47,12 +63,12 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 - DARPA-model kopiëren is knap lastig, [ESB](https://esb.nu/darpa-model-kopieren-is-knap-lastig/)
 - De investeringsinstelling voor start- en scale-ups moet worden bevrijd van de verkeerde opdracht, [FD](https://fd.nl/opinie/1594065/de-investeringsinstelling-voor-start-en-scale-ups-moet-worden-bevrijd-van-de-verkeerde-opdracht)
 - De Wet betaalbare huur moet worden afgeschaft, [de Volkskrant](https://www.volkskrant.nl/columns-opinie/opinie-de-wet-betaalbare-huur-moet-worden-afgeschaft~b03321a3/)
-- Verkenning toegevoegde waarde nationale investeringsinstelling, IPE
-- Vijf aandachtspunten bij een Nederlandse DARPA, IPE
+- Verkenning toegevoegde waarde nationale investeringsinstelling, [IPE](/highlights/investeringsinstelling/)
+- Vijf aandachtspunten bij een Nederlandse DARPA, [IPE](/highlights/vijfaandachtspuntennederlandsedarpa/)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 13 / 25" markdown="1">
 
 ### Interviews en lezingen
 
@@ -70,13 +86,21 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white height-medium" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ## 2025
 
-<div class="cols" style="--cols: 11fr 12fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 12" markdown="1">
 
 ### Publicaties
 
@@ -86,13 +110,13 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 - Wetenschappelijke Factsheet Private Investeringen, [Parlement & Wetenschap Tweede Kamer](https://www.linkedin.com/feed/update/urn:li:activity:7331328915598184450/)
 - Zó vindt de thuiswonende jongere nooit een eigen huis, [NRC](https://www.nrc.nl/nieuws/2025/05/09/zo-vindt-de-thuiswonende-jongere-nooit-een-eigen-huis-a4892720)
 - Het WWS en de private huurmarkt, [IPE Policy Paper](/highlights/matthijs-korevaar-jasper-h-van-dijk-wws-policy-paper/)
-- Is het verstandig om de overheidsuitgaven te verhogen?, IPE nieuwsbrief
+- Is het verstandig om de overheidsuitgaven te verhogen?, [IPE nieuwsbrief](/highlights/nieuwsbrief-jh-vz-overheidsuitgaven-verhogen/)
 - Zonder Eurobonds of soepelere begrotingsregels moet Nederland zelf veel meer uitgeven, [ESB](https://esb.nu/zonder-eurobonds-of-soepelere-begrotingsregels-moet-nederland-zelf-veel-meer-uitgeven/)
-- Het nieuwe vestigingsbeleid vraagt om een focus op talent, [FD](https://fd.nl/opinie/1541857/het-nieuwe-vestigingsbeleid-vraagt-om-een-focus-op-talent)/IPE
+- Het nieuwe vestigingsbeleid vraagt om een focus op talent, [FD](https://fd.nl/opinie/1541857/het-nieuwe-vestigingsbeleid-vraagt-om-een-focus-op-talent)/[IPE](/highlights/nieuwsbrief-jh-vestigingsklimaat/)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 13 / 25" markdown="1">
 
 ### Interviews en lezingen
 
@@ -113,30 +137,38 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 
 </section>
 
-<section class="band band--alt" markdown="1">
+<section class="band theme-light height-medium" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ## 2024
 
-<div class="cols" style="--cols: 11fr 12fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 12" markdown="1">
 
 ### Publicaties
 
 - Incasso verkeersboetes komt de samenleving duur te staan, [MeJudice](https://www.mejudice.nl/artikelen/detail/incasso-verkeersboetes-komt-samenleving-duur-te-staan)
 - In een goedkoop huurhuis wil iedereen wel wonen, [FD](https://fd.nl/opinie/1519759/in-een-goedkoop-huurhuis-wil-iedereen-wel-wonen)
 - Hoofdlijnenakkoord mist structurele groeiplannen terwijl schuld oploopt, [ESB](https://esb.nu/hoofdlijnenakkoord-mist-structurele-groeiplannen-terwijl-schuld-oploopt/)
-- De Wet Betaalbare Huur raakt jongeren en lagere inkomens, IPE policy paper
-- Voorstel voor nieuw begrotingsanker, IPE policy paper
+- De Wet Betaalbare Huur raakt jongeren en lagere inkomens, [IPE policy paper](/highlights/wet-betaalbare-huur-2/)
+- Voorstel voor nieuw begrotingsanker, [IPE policy paper](/highlights/begrotingsanker/)
 - Huurprijsplan De Jonge dupeert lagere inkomens, [De Telegraaf](https://www.telegraaf.nl/nieuws/1433895042/huurprijsplan-de-jonge-dupeert-lagere-inkomens)
-- Naar een Europese Kapitaalmarktunie, IPE rapport
+- Naar een Europese Kapitaalmarktunie, [IPE rapport](/highlights/kapitaalmarktunie/)
 - Position paper Rondetafelgesprek 14 februari 2024, [Tweede Kamer](https://debatdirect.tweedekamer.nl/2024-03-26/financien/troelstrazaal/economische-vooruitzichten-en-het-begrotingsbeleid-16-30/stukken)
 - Helaas, dat goedbedoelde huurplafond vergroot juist de problemen op de woningmarkt, [de Volkskrant](https://www.volkskrant.nl/columns-opinie/opinie-helaas-dat-goedbedoelde-huurplafond-vergroot-juist-de-problemen-op-de-woningmarkt~bed96681/)
-- De Wet Betaalbare Huur helpt woningzoekenden van de regen in de drup, IPE policy paper
+- De Wet Betaalbare Huur helpt woningzoekenden van de regen in de drup, [IPE policy paper](/highlights/wet-betaalbare-huur/)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 13 / 25" markdown="1">
 
 ### Interviews en lezingen
 
@@ -155,13 +187,13 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 - Incasso verkeersboetes komt de samenleving duur te staan, [MeJudice](https://www.mejudice.nl/artikelen/detail/incasso-verkeersboetes-komt-samenleving-duur-te-staan)
 - In een goedkoop huurhuis wil iedereen wel wonen, [FD](https://fd.nl/opinie/1519759/in-een-goedkoop-huurhuis-wil-iedereen-wel-wonen)
 - Hoofdlijnenakkoord mist structurele groeiplannen terwijl schuld oploopt, [ESB](https://esb.nu/hoofdlijnenakkoord-mist-structurele-groeiplannen-terwijl-schuld-oploopt/)
-- De Wet Betaalbare Huur raakt jongeren en lagere inkomens, IPE policy paper
-- Voorstel voor nieuw begrotingsanker, IPE policy paper
+- De Wet Betaalbare Huur raakt jongeren en lagere inkomens, [IPE policy paper](/highlights/wet-betaalbare-huur-2/)
+- Voorstel voor nieuw begrotingsanker, [IPE policy paper](/highlights/begrotingsanker/)
 - Huurprijsplan De Jonge dupeert lagere inkomens, [De Telegraaf](https://www.telegraaf.nl/nieuws/1433895042/huurprijsplan-de-jonge-dupeert-lagere-inkomens)
-- Naar een Europese Kapitaalmarktunie, IPE rapport
+- Naar een Europese Kapitaalmarktunie, [IPE rapport](/highlights/kapitaalmarktunie/)
 - Position paper Rondetafelgesprek 14 februari 2024, [Tweede Kamer](https://debatdirect.tweedekamer.nl/2024-03-26/financien/troelstrazaal/economische-vooruitzichten-en-het-begrotingsbeleid-16-30/stukken)
 - Helaas, dat goedbedoelde huurplafond vergroot juist de problemen op de woningmarkt, [de Volkskrant](https://www.volkskrant.nl/columns-opinie/opinie-helaas-dat-goedbedoelde-huurplafond-vergroot-juist-de-problemen-op-de-woningmarkt~bed96681/)
-- De Wet Betaalbare Huur helpt woningzoekenden van de regen in de drup, IPE policy paper
+- De Wet Betaalbare Huur helpt woningzoekenden van de regen in de drup, [IPE policy paper](/highlights/wet-betaalbare-huur/)
 
 </div>
 
@@ -169,32 +201,40 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white height-medium" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ## 2023
 
-<div class="cols" style="--cols: 11fr 12fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 12" markdown="1">
 
 ### Publicaties
 
 - Industriepolitiek verhoogt kans op ondoelmatig beleid, [ESB](https://esb.nu/industriepolitiek-verhoogt-kans-op-ondoelmatig-beleid/)
 - Fatsoeneer de staatskas zonder een ruk aan het stuur, [NRC](https://www.nrc.nl/nieuws/2023/09/18/fatsoeneer-de-staatskas-zonder-een-ruk-aan-het-stuur-a4174645)
-- Voorstel voor een leesbare Voorjaarsnota, IPE policy paper
+- Voorstel voor een leesbare Voorjaarsnota, [IPE policy paper](/highlights/leesbare-voorjaarnota/)
 - Inkomensafhankelijke eigen bijdrage beter dan kabinetsplan kinderopvang, [ESB](https://esb.nu/inkomensafhankelijke-ouderbijdrage-beter-dan-kabinetsplan-kinderopvang/)
 - Voor lagere inkomens wordt de crèche onbetaalbaar, [NRC](https://www.nrc.nl/nieuws/2023/05/11/voor-lagere-inkomens-wordt-de-creche-onbetaalbaar-a4164443)
-- De innovatiebox faciliteert belastingconcurrentie, IPE policy paper
+- De innovatiebox faciliteert belastingconcurrentie, [IPE policy paper](/highlights/innovatiebox/)
 - De Europese markt heeft industriepolitiek op Europees niveau nodig, [NRC](https://www.nrc.nl/nieuws/2023/03/12/de-europese-markt-heeft-industriepolitiek-op-europees-niveau-nodig-a4159212)
 - De grote ommezwaai in denken over Nederlands begrotingsbeleid,
 
   IPE policy paper
-- Five proposals for enforceable EU fiscal rules, IPE policy paper
+- Five proposals for enforceable EU fiscal rules, [IPE policy paper](/highlights/five-proposals/)
 - It’s Groundhog Day for EU fiscal rule reform, [Politico](https://www.politico.eu/article/its-groundhog-day-for-eu-fiscal-rule-reform-austerity-recession-enforcement/)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 13 / 25" markdown="1">
 
 ### Interviews en lezingen
 
@@ -213,29 +253,37 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 
 </section>
 
-<section class="band band--alt" markdown="1">
+<section class="band theme-light height-medium" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 ## 2022
 
-<div class="cols" style="--cols: 11fr 8fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 12" markdown="1">
 
 ### Publicaties
 
 - En weer is de eurozone niet voorbereid op een crisis, [FD](https://fd.nl/opinie/1461609/en-weer-is-de-eurozone-niet-voorbereid-op-een-crisis)
 - Suggestions for SGP reform, [IPE policy paper](https://Suggestions for SGP Reform)
-- Hervorming Europese begrotingsregels: drie suggesties bij voorstel Commissie, IPE policy paper
-- Kritiek op Italiaans begrotingsbeleid is achterhaald en ongegrond, IPE policy paper
+- Hervorming Europese begrotingsregels: drie suggesties bij voorstel Commissie, [IPE policy paper](/highlights/reactievoorstelecsgp/)
+- Kritiek op Italiaans begrotingsbeleid is achterhaald en ongegrond,[IPE policy paper](/highlights/kritiekopitaliaansbegrotingsbeleid/)
 - Vervang Europese begrotingsregels door een simpele uitgavenregel, [ESB](https://esb.nu/vervang-europese-begrotingsregels-door-een-simpele-uitgavenregel/#:~:text=Deze%20regel%20%E2%80%93%20een%20benchmark%20bij,economische%20groei%20van%20een%20lidstaat.)
-- Marktdiscipline vervangt geen begrotingsregels, IPE
+- Marktdiscipline vervangt geen begrotingsregels, [IPE](/highlights/marktdiscipline/)
 - Hoe ons voor te bereiden op een volgende financiële crisis?, [FD](https://Hoe ons voor te bereiden op een volgende financiële crisis?)
 - Bierviltjesberekening bepaalt onze overheidsuitgaven, [NRC](https://www.nrc.nl/nieuws/2022/04/28/bierviltjesberekening-bepaalt-onze-overheidsuitgaven-a4118855)
-- Een crisisheffing op winst – een goed idee?, IPE
+- Een crisisheffing op winst – een goed idee?, [IPE](/highlights/overwinst/)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 13 / 21" markdown="1">
 
 ### Interviews en lezingen
 
@@ -248,9 +296,21 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white height-medium" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ## Overig
+
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 [Van Dijk, '*AOW omhoog? Help de generatie die het nodig heeft*’', Volkskrant 9 februari 2022](https://www.volkskrant.nl/columns-opinie/opinie-aow-omhoog-help-de-generatie-die-het-nodig-heeft~b04d4a3c/)
 
@@ -275,5 +335,9 @@ In 2023 was Jasper medeoprichter van IPE. Hij heeft veelvuldig gepubliceerd over
 [Martijn Badir en Jasper van Dijk, ‘Toerismebelasting is veel te laag’, Parool, 19 januari 2019](https://www.parool.nl/columns-opinie/toerismebelasting-is-veel-te-laag~b5bb877d/?fbclid=IwAR3JlWAUswI_erc9Gf1GUSfbEyu9RZleVGesbc9OlmpTqx4AAoKZpdoBWso)
 
 [Martijn Badir en Jasper van Dijk, ‘Met de plannen van Zef Hemel krijgt de stad juist meer Toeristen’, Parool, 20 oktober 2019](https://www.parool.nl/columns-opinie/met-de-plannen-van-zef-hemel-krijgt-de-stad-juist-meer-toeristen~befe93a0/#:~:text=',-Jasper%20van%20Dijk&text=Vorige%20week%20presenteerde%20Zef%20Hemel,op%20de%20Zuidas%20te%20lokken.)
+
+</div>
+
+</div>
 
 </section>

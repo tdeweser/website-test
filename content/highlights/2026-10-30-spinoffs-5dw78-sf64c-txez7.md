@@ -11,7 +11,7 @@ tags:
 - Julia van Rijn
 - Industriepolitiek en innovatie
 author: Vinzenz Ziesemer
-image: /media/files/file.png
+listing_image: /media/img/figuur-spinoffs-371b0de6.png
 excerpt: Hoe meer de universiteit van de opbrengst opeist, hoe minder er wordt uitgevonden.
 source: https://www.ipe.nl/highlights/spinoffs-5dw78-sf64c-txez7
 ---

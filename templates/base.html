@@ -12,11 +12,12 @@
   {% if favicon %}<link rel="icon" href="{{ favicon }}">{% endif %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
   <link rel="stylesheet" href="/assets/ds/styles.css">
+  <link rel="stylesheet" href="/assets/css/fonts-work-sans.css">
   <link rel="stylesheet" href="/assets/css/site.css">
   <script src="/assets/js/site.js" defer></script>
 </head>
 <body class="{% block body_class %}{% endblock %}">
-  <a class="skip-link" href="#inhoud">Direct naar de inhoud</a>
+  <a class="skip-link" href="#inhoud">Doorgaan naar inhoud</a>
   {% include "partials/header.html" %}
   <main id="inhoud">
     {% block main %}{% endblock %}

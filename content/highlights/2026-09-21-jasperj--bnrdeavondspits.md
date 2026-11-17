@@ -9,7 +9,6 @@ tags:
 - IPE in de media
 - Jasper J. van Dijk
 author: Vinzenz Ziesemer
-image: /media/files/file.png
 external_url: https://www.bnr.nl/nieuws/economie/10610822/ser-wil-toeslagenstelsel-op-de-schop-behoorlijk-radicale-vereenvoudiging
 source: https://www.ipe.nl/highlights/jasperj/bnrdeavondspits
 ---

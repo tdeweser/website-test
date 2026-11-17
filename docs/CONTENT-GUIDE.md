@@ -12,13 +12,13 @@ Then commit **both** your change and the regenerated `public/` folder.
 > `content/events`, `content/people/authors.yml` and `static/media`. Once you edit content by
 > hand, stop re-scraping, or re-apply your edits afterwards.
 
-## Writing rules (from the IPE design system)
+## Writing rules
 
 - Dutch, sentence case, no emoji. The institutional voice is "wij".
-- Bullets are the red square, which you get automatically with a Markdown `- ` list.
+- The site copies the look of the original ipe.nl. Don't add new colours, fonts or styles in
+  content; use the section themes and classes described below.
 - Use the official boilerplate where an "about" line is needed (see
   `design-system/README.md`).
-- Don't add colours or fonts. The styles come from the design-system tokens only.
 
 ## Add an article
 
@@ -34,7 +34,8 @@ categories: [Artikel, Sociaal beleid en belastingen]
 tags: [Vinzenz Ziesemer, Belastingen]
 author: Vinzenz Ziesemer
 featured: true             # optional: picked up by listings with featured=True
-image: /media/img/my-image.jpg
+image: /media/img/my-image.jpg          # thumbnail (blog index, listings)
+listing_image: /media/img/figure.png    # optional: listings use this when there is no image
 excerpt: One or two sentences shown on cards and in the feed.
 external_url: https://…    # optional, for media items: adds a "Bekijk bij de bron" button
 ---
@@ -56,26 +57,27 @@ Put images in `static/media/img/` and PDFs in `static/media/files/`, and link th
 Pages live in `content/pages/<name>.md`. Their structure:
 
 ```markdown
-<section class="band band--alt" markdown="1">      <!-- band, band--alt, band--dark, band--image -->
+<section class="band theme-white-bold height-medium" markdown="1">
 
-## Heading
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 13" markdown="1">
+
+## Left column (columns 1–12 of 24)
 
 Text …
 
-<div class="cols" style="--cols: 1fr 1fr" markdown="1">
-<div class="cols__cell" markdown="1">
-
-Left column
-
-</div>
-<div class="cols__cell" markdown="1">
-
-Right column
-
-</div>
 </div>
 
-{{ listing(tag="Wonen", limit=4, layout="carousel") }}
+<div class="fe-cell" style="--c: 14 / 25" markdown="1">
+
+Right column (columns 14–24)
+
+</div>
+
+</div>
+
+{{ listing(tag="Wonen", limit=4, layout="carousel", meta1="cats", meta2="date", meta_pos="above-title") }}
 
 </section>
 ```
@@ -83,7 +85,18 @@ Right column
 Keep a blank line after every opening `<section>`/`<div … markdown="1">` and before its
 closing tag. Otherwise the Markdown inside is not converted.
 
-Buttons: `<p class="button-row"><a class="button" href="/steun-ons/">Steun ons</a></p>`.
+| Class | Effect |
+|---|---|
+| `theme-white`, `theme-white-bold` | white section; `-bold` makes headings red |
+| `theme-light`, `theme-light-bold` | beige section |
+| `theme-dark` | navy section, white text |
+| `theme-bright` | red section, white text |
+| `height-small` / `-medium` / `-large` | vertical padding of the section |
+| `band--image` + `style="--band-image: url(/media/img/x.jpg); --overlay: .3"` | background photo |
+| `<div class="block-bg">` | beige box around a block |
+| `<div class="align-center">`, `text-large`, `text-small`, `text-white`, `text-accent` | text styling |
+
+Buttons: `<p class="button-row align-left"><a class="button" href="/steun-ons/">Steun ons</a></p>`.
 Collapsible Q&A: `<details class="accordion" markdown="1"><summary>Vraag</summary> … </details>`.
 
 ## Add a new page
@@ -99,4 +112,7 @@ Author cards are in `content/people/authors.yml` (`name`, `role`, `email`, `phot
 
 ## Navigation and footer
 
-Edit `content/site.yml`: `nav`, `cta`, `contact`, `newsletter`, `social`, `footer_links`.
+Edit `content/site.yml`. In `nav`, an entry with `url` is a plain link and an entry with
+`items` is a dropdown folder. `cta` is the red "Steun ons" button. The footer uses
+`newsletter`, `donate`, `social` and `anbi_note`; its layout is in
+`templates/partials/footer.html`.

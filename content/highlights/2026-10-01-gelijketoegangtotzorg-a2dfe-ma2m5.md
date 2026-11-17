@@ -11,7 +11,7 @@ tags:
 - Armoedebeleid
 - Zorg
 author: Vinzenz Ziesemer
-image: /media/files/file.png
+listing_image: /media/img/afbeelding-jj-nieuwsbrief-8cd97bd3.webp
 excerpt: Het kabinet leunt op de gemeentepolis om zorgmijding tegen te gaan. Die kent echter grote lokale verschillen en bereikt daardoor maar een deel van de doelgroep.
 source: https://www.ipe.nl/highlights/gelijketoegangtotzorg-a2dfe-ma2m5
 ---

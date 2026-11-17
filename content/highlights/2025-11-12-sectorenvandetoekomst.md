@@ -28,8 +28,8 @@ In dit rapport verkennen we de invloed van overheidsbeleid op de sectorale samen
 
 <hr>
 
-<p class="button-row"><a class="button" href="/media/files/2025-172-sectoren-van-de-toekomst.pdf">Rapport</a></p>
+<p class="button-row align-center"><a class="button" href="/media/files/2025-172-sectoren-van-de-toekomst.pdf">Rapport</a></p>
 
-<p class="button-row"><a class="button" href="/sectoren-dashboard/">Online appendix</a></p>
+<p class="button-row align-center"><a class="button" href="/sectoren-dashboard/">Online appendix</a></p>
 
 <hr>

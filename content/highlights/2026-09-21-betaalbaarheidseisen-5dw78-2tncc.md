@@ -11,7 +11,7 @@ tags:
 - Matthijs Korevaar
 - Wonen
 author: Vinzenz Ziesemer
-image: /media/files/file.png
+listing_image: /media/img/afbeelding1-png-jasper-e1a21b51.png
 excerpt: En iemand moet de rekening betalen.
 source: https://www.ipe.nl/highlights/betaalbaarheidseisen-5dw78-2tncc
 ---

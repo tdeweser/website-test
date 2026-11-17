@@ -22,4 +22,4 @@ source: https://www.ipe.nl/highlights/gemeentepolis-dashboard
  document.querySelectorAll("iframe.ipe-embed").forEach(function(f){
   try{f.contentWindow.postMessage({bron:"ipe-online-grafieken",vraag:"hoogte"},O);}catch(x){}});})();</script>
 
-<p class="button-row"><a class="button" href="/media/files/ipe-gelijke-toegang-tot-zorg-voor-minima-web.pdf">Download Rapport</a></p>
+<p class="button-row align-center"><a class="button" href="/media/files/ipe-gelijke-toegang-tot-zorg-voor-minima-web.pdf">Download Rapport</a></p>

@@ -7,7 +7,7 @@ source: https://www.ipe.nl/copyright
 description: Copyright - Het is toegestaan om door IPE uitgegeven publicaties (of delen daarvan) te gebruiken of hergebruiken. Wel vragen wij u om IPE als bron te vermelden. Zie hiervoor ook de Creative Commons licentie. Door ons gebruikte foto’s zijn daar echter van uitgezonderd, net als alle andere materialen die niet oorspronkelijk door IPE gecreëerd zijn.
 ---
 
-<section class="band" markdown="1">
+<section class="band theme-white height-small" markdown="1">
 
 # Intellectueel eigendom
 

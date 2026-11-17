@@ -26,7 +26,7 @@ In juli trad de Wet Betaalbare Huur in werking. Wij onderzochten welke huurwonin
 
 **In een nieuw onderzoek analyseren we, op basis van de gegevens van honderdduizenden woningen, in hoeverre de nieuwe gereguleerde huur afwijkt van de markthuur en van de waardering door private huurders en verhuurders.** Ook kijken we naar hoe die verschillen samenhangen met de rendementen van verhuurders en de inkomens van bewoners.
 
-<p class="button-row"><a class="button" href="/media/files/20250409-het-woningwaarderingsstelsel-en-de-private-huurmarkt-final-10h00-a6p5.pdf">Download policy paper</a></p>
+<p class="button-row align-center"><a class="button" href="/media/files/20250409-het-woningwaarderingsstelsel-en-de-private-huurmarkt-final-10h00-a6p5.pdf">Download policy paper</a></p>
 
 <hr>
 

@@ -10,7 +10,7 @@ description: 'Privacy: Deze website is een initiatief van Stichting Instituut vo
   Hier lees je wat wij doen met privacy informatie die we via de website verzamelen.'
 ---
 
-<section class="band" markdown="1">
+<section class="band theme-white height-small" markdown="1">
 
 ### Privacy
 

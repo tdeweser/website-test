@@ -1,34 +1,38 @@
+{# Footer as on the old site: red "Bevalt onze inhoud?" band, then a beige bar. #}
 <footer class="site-footer">
-  <div class="container site-footer__grid">
-    <div class="site-footer__brand">
-      <img src="/assets/ds/assets/logo/ipe-logo-vertical.png" alt="{{ site.title }}" width="120" height="94">
-      <p class="site-footer__address">
-        {{ site.contact.organisation }}<br>
-        {{ site.contact.street }}<br>
-        {{ site.contact.postcode_city }}<br>
-        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
-      </p>
+  <section class="band theme-bright footer-cta">
+    <div class="wrap">
+      <div class="footer-cta__top">
+        <h1>Bevalt onze inhoud?</h1>
+        <button class="share-button" type="button" data-share>Deel deze pagina</button>
+      </div>
+      <div class="footer-cta__grid">
+        <div class="footer-cta__col">
+          <p><strong>Schrijf je in voor onze <a href="{{ site.newsletter.url }}" target="_blank" rel="noopener">nieuwsbrief</a>.</strong></p>
+          <div class="embed embed--newsletter"><iframe src="{{ site.newsletter.embed }}?transparent=1" title="Aanmelden voor de nieuwsbrief" loading="lazy" scrolling="no"></iframe></div>
+        </div>
+        <div class="footer-cta__col">
+          <p><strong><a href="{{ site.donate.url }}">Doneer hier</a> of gebruik de QR code.</strong></p>
+          {% if qr %}<img class="footer-cta__qr" src="{{ qr }}" alt="QR-code om te doneren" width="160" height="160" loading="lazy">{% endif %}
+        </div>
+      </div>
     </div>
-    <div>
-      <h2 class="mono-label">Bevalt onze inhoud?</h2>
-      <p>Schrijf je in voor onze <a href="{{ site.newsletter.url }}" target="_blank" rel="noopener">nieuwsbrief</a>.</p>
-      <div class="embed embed--newsletter"><iframe src="{{ site.newsletter.embed }}" title="Aanmelden voor de nieuwsbrief" loading="lazy"></iframe></div>
-    </div>
-    <div>
-      <h2 class="mono-label">Steun ons</h2>
-      <p><a href="{{ site.donate.url }}">Doneer hier</a> en help ons de overheid in beweging te brengen.</p>
-      <h2 class="mono-label">Volg ons</h2>
-      <ul class="plain-list">
-        {% for s in site.social %}<li><a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.title }}</a></li>{% endfor %}
-        <li><a href="/feed.xml">RSS-feed</a></li>
+  </section>
+  <section class="band theme-light footer-bottom">
+    <div class="wrap footer-bottom__grid">
+      <ul class="social-icons">
+        {% for s in site.social %}
+        <li><a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.title }}">
+          {% if 'linkedin' in s.url %}
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94zM20.44 13.4c0-3.1-1.65-5.15-4.43-5.15-1.6 0-2.62.86-3.06 1.6V8.5H9.6V20h3.38v-6.06c0-1.6.75-2.6 2.06-2.6 1.24 0 2.02.9 2.02 2.6V20h3.38v-6.6z"/></svg>
+          {% else %}
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.9c-.74.33-1.53.55-2.36.65a4.1 4.1 0 0 0 1.8-2.27c-.8.47-1.68.82-2.6 1a4.1 4.1 0 0 0-7 3.74A11.65 11.65 0 0 1 3.4 4.73a4.1 4.1 0 0 0 1.27 5.48 4.07 4.07 0 0 1-1.86-.51v.05a4.1 4.1 0 0 0 3.29 4.02 4.1 4.1 0 0 1-1.85.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 2 18.4a11.6 11.6 0 0 0 6.29 1.84c7.55 0 11.67-6.25 11.67-11.67l-.01-.53A8.3 8.3 0 0 0 22 5.9z"/></svg>
+          {% endif %}
+        </a></li>
+        {% endfor %}
       </ul>
+      <p class="footer-bottom__text">Wij geven om jouw <a href="/privacy/">privacy</a>.<br><a href="/copyright/">Copyright</a> © IPE 2022</p>
+      <p class="footer-bottom__text">{{ site.anbi_note }}</p>
     </div>
-  </div>
-  <div class="container site-footer__bottom">
-    <p>{{ site.anbi_note }}</p>
-    <p>
-      {% for l in site.footer_links %}<a href="{{ l.url }}">{{ l.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
-      · © IPE {{ now.year }}
-    </p>
-  </div>
+  </section>
 </footer>

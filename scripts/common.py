@@ -144,7 +144,8 @@ def ms_to_date(ms: int) -> date:
 def write_markdown(path: Path, front: dict, body: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     fm = yaml.safe_dump(front, allow_unicode=True, sort_keys=False, width=1000)
-    path.write_text(f"---\n{fm}---\n\n{body.strip()}\n", encoding="utf-8")
+    body = body.replace("\r\n", "\n").replace("\r", "\n").strip()
+    path.write_text(f"---\n{fm}---\n\n{body}\n", encoding="utf-8", newline="\n")
 
 
 def read_markdown(path: Path) -> tuple[dict, str]:

@@ -87,10 +87,15 @@ class Site:
                                autoescape=select_autoescape(["html", "xml"]),
                                undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True)
         self.env.filters["nl_date"] = nl_date
-        favicon = next(iter(sorted((STATIC / "media").glob("favicon.*"))), None)
+        def media(name):  # site-wide assets the scraper stores under fixed names
+            f = next(iter(sorted((STATIC / "media").glob(f"{name}.*"))), None)
+            return f"/media/{f.name}" if f else None
+
         self.env.globals.update(site=self.cfg, nav=self.cfg["nav"], tag_url=tag_url,
                                 category_url=category_url, now=datetime.now(timezone.utc),
-                                favicon=f"/media/{favicon.name}" if favicon else None)
+                                today=date.today(), favicon=media("favicon"),
+                                logo=media("logo-header") or "/assets/ds/assets/logo/ipe-logo-inverted.png",
+                                qr=media("qr-doneren"))
         self.content_env = Environment(autoescape=False, undefined=StrictUndefined)
         self.content_env.globals.update(listing=self.sc_listing, authors=self.sc_authors,
                                         archive=self.sc_archive, map=self.sc_map,
@@ -130,23 +135,19 @@ class Site:
         return out
 
     def sc_listing(self, collection="highlights", category=None, tag=None, featured=False,
-                   limit=6, layout="list", title=None) -> Markup:
+                   limit=6, layout="list", title=None, meta1="date", meta2="none",
+                   meta_pos="below-title", thumbs=True, excerpt=False, per_row=4,
+                   ratio=1.5, thumb_side="left") -> Markup:
         items = self.select(collection, category, tag, featured)[:limit]
         if not items and featured:  # few starred items in the window: fall back to latest
             items = self.select(collection, category, tag)[:limit]
         if not items and collection != "evenementen":
             # Topic pages pair several listings per subject; an empty one just disappears.
             return Markup("")
-        more = None
-        if isinstance(category, str) and not tag:
-            more = category_url(category)
-        elif isinstance(tag, str):
-            more = tag_url(tag)
-        elif collection == "highlights":
-            more = "/highlights/"
-        empty = ("Er zijn op dit moment geen evenementen gepland." if collection == "evenementen"
-                 else "Geen publicaties in de afgelopen drie maanden.")
-        return self._partial("listing", items=items, layout=layout, title=title, more=more, empty=empty)
+        empty = "Er zijn op dit moment geen evenementen gepland."
+        return self._partial("listing", items=items, layout=layout, title=title, empty=empty,
+                             meta1=meta1, meta2=meta2, meta_pos=meta_pos, thumbs=thumbs,
+                             excerpt=excerpt, per_row=per_row, ratio=ratio, thumb_side=thumb_side)
 
     def sc_authors(self, names) -> Markup:
         people = [self.authors.get(n) or {"name": n, "url": tag_url(n)} for n in names]
@@ -176,7 +177,7 @@ class Site:
         html = self.env.get_template(template).render(**ctx)
         target = PUBLIC / out_url.strip("/") / "index.html" if out_url.endswith("/") else PUBLIC / out_url.lstrip("/")
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(html, encoding="utf-8")
+        target.write_text(html, encoding="utf-8", newline="\n")
 
     def build(self):
         if PUBLIC.exists():
@@ -191,11 +192,7 @@ class Site:
 
         for doc in self.articles + self.events:
             doc.html = self.to_html(doc)
-            cats = doc.meta.get("categories") or []
-            topic = next((c for c in cats if c not in KINDS), None)
-            related = [d for d in self.select(category=topic or None) if d is not doc][:3] if doc.meta.get("in_window") else []
-            people = [self.authors[t] for t in doc.meta.get("tags") or [] if t in self.authors]
-            self.render("article.html", doc.url, page=doc, content=Markup(doc.html), related=related, people=people)
+            self.render("article.html", doc.url, page=doc, content=Markup(doc.html))
 
         self.build_listings()
         self.build_feed()
@@ -206,22 +203,17 @@ class Site:
 
     def build_listings(self):
         """/highlights/, /highlights/categorie/<x>/ and /highlights/tag/<x>/ pages."""
-        def page(title, url, items, intro=None, person=None, filters=None):
-            doc = Doc(Path(), {"title": title, "url": url, "description": intro or ""}, "", "page")
-            self.render("listing.html", url, page=doc, items=items, intro=intro, person=person, filters=filters)
+        def page(title, url, items, heading=None):
+            doc = Doc(Path(), {"title": title, "url": url}, "", "page")
+            self.render("listing.html", url, page=doc, items=items, heading=heading, filters=None)
 
         categories = sorted({c for a in self.articles for c in a.meta.get("categories") or []})
-        filters = [(c, category_url(c)) for c in KINDS if c in categories] + \
-                  [(c, category_url(c)) for c in categories if c not in KINDS]
-        page("Alle publicaties", "/highlights/", self.listed,
-             "Publicaties en media-optredens van de afgelopen drie maanden.", filters=filters)
+        page("Alle publicaties", "/highlights/", self.listed)
         for c in categories:
-            page(c, category_url(c), self.select(category=c), filters=filters)
-
+            page(c, category_url(c), self.select(category=c), heading=c)
         tags = {t for a in self.articles for t in a.meta.get("tags") or []} | set(self.authors)
         for t in sorted(tags):
-            person = self.authors.get(t)
-            page(t, tag_url(t), self.select(tag=t), person=person)
+            page(t, tag_url(t), self.select(tag=t), heading=t)
 
     def build_feed(self):
         base = self.cfg.get("base_url", "").rstrip("/")
@@ -236,7 +228,7 @@ class Site:
                f"<title>{xml_escape(self.cfg['title'])}</title><link>{base}/</link>"
                f"<description>{xml_escape(self.cfg['description'].strip())}</description>"
                f"<language>nl</language>{''.join(items)}</channel></rss>\n")
-        (PUBLIC / "feed.xml").write_text(xml, encoding="utf-8")
+        (PUBLIC / "feed.xml").write_text(xml, encoding="utf-8", newline="\n")
 
     def copy_assets(self):
         shutil.copytree(STATIC, PUBLIC, dirs_exist_ok=True)
@@ -251,10 +243,10 @@ class Site:
 
     def write_meta_files(self):
         if self.cfg.get("noindex"):
-            (PUBLIC / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
-            (PUBLIC / "_headers").write_text("/*\n  X-Robots-Tag: noindex, nofollow\n", encoding="utf-8")
+            (PUBLIC / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8", newline="\n")
+            (PUBLIC / "_headers").write_text("/*\n  X-Robots-Tag: noindex, nofollow\n", encoding="utf-8", newline="\n")
         else:
-            (PUBLIC / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8")
+            (PUBLIC / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

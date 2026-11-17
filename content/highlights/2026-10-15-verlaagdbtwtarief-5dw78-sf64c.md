@@ -11,7 +11,7 @@ tags:
 - Julia van Rijn
 - Belastingen
 author: Vinzenz Ziesemer
-image: /media/files/file.png
+listing_image: /media/img/nieuwsbrief-julia1-e9dccd26.png
 excerpt: Nederland kampt met een krappe arbeidsmarkt en een begrotingstekort. Toch hanteert de overheid verlaagde btw-tarieven op arbeidsintensieve diensten, wat de arbeidsvraag opjaagt en jaarlijks ruim 1,3 miljard euro kost. Het afschaffen ervan speelt personeel vrij en levert budgettaire ruimte op.
 source: https://www.ipe.nl/highlights/verlaagdbtwtarief-5dw78-sf64c
 ---

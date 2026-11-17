@@ -10,7 +10,7 @@ tags:
 - Vinzenz Ziesemer
 - Industriepolitiek en innovatie
 author: Vinzenz Ziesemer
-image: /media/files/file.png
+listing_image: /media/img/dia1-60b63a61.jpg
 excerpt: Voor het Nederlandse Agentschap voor Disruptieve Innovatie (NADI) zijn in het coalitieakkoord niet de juiste middelen gereserveerd. Hoe kan de financiering alsnog geregeld worden?
 source: https://www.ipe.nl/highlights/nadi-dreigt-vast-te-lopen-door-gebrek-aan-relevant-budget
 ---
@@ -35,7 +35,7 @@ Door het succes werd het model van de DARPA gekopieerd naar andere beleidsterrei
 
 ARPA-organisaties vullen een gat in de onderzoeksketen. Voordat wetenschappelijk onderzoek invloed kan hebben op de fysieke werkelijkheid, zijn toepassing en volwassenwording van de technologie nodig. Wat begint als een *proof of concept* in een lab, moet worden opgeschaald naar iets wat operationeel kan functioneren. Pas daarna stappen private investeerders in. Daarom ligt er bij de overheid de taak om ook buiten de universiteitspoorten aan de volwassenwording van technologie bij te dragen. Precies in dit gat springt het ARPA-model.
 
-Om te zorgen dat het ARPA-model ook in Nederland werkt, moet het kabinet zich wel houden aan een aantal randvoorwaarden (daarover schreven we in een eerder IPE stuk). ARPA's geven programmamanagers bijvoorbeeld ontzettend veel autonomie. Zij zetten onderzoeksopdrachten uit bij universiteiten, instituten en bedrijven, of prikkelen onderzoekers via prijzen en *challenges*. Invloed vanuit de overheid is uit den boze, technologen en wetenschappers zijn de baas.
+Om te zorgen dat het ARPA-model ook in Nederland werkt, moet het kabinet zich wel houden aan een aantal randvoorwaarden ([daarover schreven we in een eerder IPE stuk](/highlights/vijfaandachtspuntennederlandsedarpa/)). ARPA's geven programmamanagers bijvoorbeeld ontzettend veel autonomie. Zij zetten onderzoeksopdrachten uit bij universiteiten, instituten en bedrijven, of prikkelen onderzoekers via prijzen en *challenges*. Invloed vanuit de overheid is uit den boze, technologen en wetenschappers zijn de baas.
 
 Klinkt logisch, maar dat ging mis bij eerdere pogingen van de overheid om stimuleringsfondsen te lanceren, denk aan het recente Nationale Groeifonds of het al wat oudere Fonds Economische Structuurversterking. Ook zal de organisatie wat tijd nodig hebben om te ontdekken of en hoe dit Amerikaanse model in de Nederlandse context kan werken, of dat Europese schaal nodig is. [Tijd die het Nationale Groeifonds niet werd gegund.](https://www.wrr.nl/documenten/2024/05/28/leren-investeren-lessen-uit-de-ontwikkeling-van-het-nationaal-groeifonds)
 
@@ -59,7 +59,7 @@ Hoe kan deze dekking worden gevonden? De afgelopen jaren wordt het debat over he
 
 Vanwege grotere defensie-uitgaven heeft de coalitie de pijngrens voor bezuinigingen al opgezocht. Extra geld voor innovatie ligt niet voor het oprapen, wat het des te belangrijker maakt om te prioriteren waar dat geld heen gaat. Want niet elke euro die aan innovatie wordt besteed, is even effectief.
 
-De innovatiebox krijgt al langer kritiek van economen (waaronder IPE). Onderzoek laat zien dat de regeling vooral R&D subsidieert [die anders ook was gedaan](https://www.seo.nl/wp-content/uploads/2023/12/2023-125-Evaluatie-van-de-innovatiebox-2010-2019.pdf). 90% van het voordeel gaat bovendien naar [drie gevestigde bedrijven](https://fd.nl/bedrijfsleven/1592577/ruim-90-vanalle-voordeel-uit-innovatiebox-naar-asml-msd-en-booking) (ASML, Booking en MSD; zie figuur 1). De innovatiebox wordt verdedigd als middel om grote bedrijven in Nederland te houden, maar er zijn directere en minder bureaucratische instrumenten om vestigingsbeleid te voeren. Daar komt bij dat ook het geld van NADI bij R&D-heavy bedrijven zoals ASML en MSD kan belanden, zolang ze dus innovatief zijn.
+De innovatiebox krijgt al langer kritiek van economen ([waaronder IPE](/highlights/innovatiebox/)). Onderzoek laat zien dat de regeling vooral R&D subsidieert [die anders ook was gedaan](https://www.seo.nl/wp-content/uploads/2023/12/2023-125-Evaluatie-van-de-innovatiebox-2010-2019.pdf). 90% van het voordeel gaat bovendien naar [drie gevestigde bedrijven](https://fd.nl/bedrijfsleven/1592577/ruim-90-vanalle-voordeel-uit-innovatiebox-naar-asml-msd-en-booking) (ASML, Booking en MSD; zie figuur 1). De innovatiebox wordt verdedigd als middel om grote bedrijven in Nederland te houden, maar er zijn directere en minder bureaucratische instrumenten om vestigingsbeleid te voeren. Daar komt bij dat ook het geld van NADI bij R&D-heavy bedrijven zoals ASML en MSD kan belanden, zolang ze dus innovatief zijn.
 
 ![](/media/img/dia1-60b63a61.jpg)
 

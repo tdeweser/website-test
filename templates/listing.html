@@ -1,36 +1,38 @@
 {% extends "base.html" %}
-{% block body_class %}layout-listing{% endblock %}
+{# Blog index as on the old site (/highlights, category and tag views): image left,
+   categories, red title, excerpt. Link posts (media items) open the source, with an arrow. #}
+{% block body_class %}layout-blog{% endblock %}
 {% block main %}
-<section class="band band--alt listing-header">
-  <div class="container">
-    {% if person %}
-    <div class="person">
-      {% if person.get('photo') %}<img class="person__photo" src="{{ person.photo }}" alt="">{% endif %}
-      <div>
-        <p class="mono-label mono-label--bullet">Auteur</p>
-        <h1>{{ person.name }}</h1>
-        {% if person.get('role') %}<p class="person__role">{{ person.role }}</p>{% endif %}
-        {% if person.get('email') %}<p><a href="mailto:{{ person.email }}">{{ person.email }}</a></p>{% endif %}
-      </div>
-    </div>
-    {% else %}
-    <p class="mono-label mono-label--bullet">Publicaties</p>
-    <h1>{{ page.title }}</h1>
-    {% endif %}
-    {% if intro %}<p class="lead">{{ intro }}</p>{% endif %}
+<section class="band theme-white blog-index">
+  <div class="wrap">
+    <h1 class="visually-hidden">{{ page.title }}</h1>
     {% if filters %}
-    <ul class="tag-list" aria-label="Filter op categorie">
-      <li><a class="tag {% if page.url == '/highlights/' %}tag--solid{% else %}tag--gray{% endif %}" href="/highlights/">Alles</a></li>
+    <ul class="blog-filter meta" aria-label="Filter op categorie">
+      <li><a href="/highlights/"{% if page.url == '/highlights/' %} aria-current="page"{% endif %}>Alles</a></li>
       {% for name, url in filters %}
-      <li><a class="tag {% if page.url == url %}tag--solid{% else %}tag--gray{% endif %}" href="{{ url }}">{{ name }}</a></li>
+      <li><a href="{{ url }}"{% if page.url == url %} aria-current="page"{% endif %}>{{ name }}</a></li>
       {% endfor %}
     </ul>
+    {% elif heading %}
+    <p class="blog-index__heading meta">{{ heading }}</p>
     {% endif %}
-  </div>
-</section>
-<section class="band">
-  <div class="container">
-    {% with layout="list", title=None, more=None, empty="Geen publicaties in de afgelopen drie maanden." %}{% include "partials/listing.html" %}{% endwith %}
+    {% if items %}
+    {% for d in items %}
+    {% set href = d.meta.get('external_url') or d.url %}
+    <article class="blog-entry{% if not d.meta.get('image') %} blog-entry--no-image{% endif %}">
+      {% if d.meta.get('image') %}
+      <a class="blog-entry__image" href="{{ href }}" tabindex="-1" aria-hidden="true"><img src="{{ d.meta.image }}" alt="" loading="lazy"></a>
+      {% endif %}
+      <div class="blog-entry__text">
+        {% if d.meta.get('categories') %}<p class="blog-entry__cats meta">{{ d.meta.categories | join(', ') }}</p>{% endif %}
+        <h2 class="blog-entry__title"><a href="{{ href }}"{% if d.meta.get('external_url') %} target="_blank" rel="noopener"{% endif %}>{{ d.title }}{% if d.meta.get('external_url') %} →{% endif %}</a></h2>
+        {% if d.meta.get('excerpt') and not d.meta.get('external_url') %}<p class="blog-entry__excerpt">{{ d.meta.excerpt }}</p>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+    {% else %}
+    <p class="listing__empty">Geen publicaties in de afgelopen drie maanden.</p>
+    {% endif %}
   </div>
 </section>
 {% endblock %}

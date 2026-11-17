@@ -12,7 +12,7 @@ tags:
 - Vinzenz Ziesemer
 - Industriepolitiek en innovatie
 author: Vinzenz Ziesemer
-image: /media/files/file.png
+listing_image: /media/img/figuur-1-li-f0d439e6.png
 excerpt: De argumenten van voorstanders voor overheidsdurfkapitaal houden net als 27 jaar geleden geen stand.
 source: https://www.ipe.nl/highlights/overheidsdurfkapitaalgeengoedidee
 ---
@@ -51,7 +51,7 @@ In deze tabel is voor verschillende landen de ‘scale-up ratio’ berekend. Dit
 
 ‍Een mogelijke oorzaak waarvoor weinig bewijs is, welteverstaan.
 
-‍De toegang tot financiering wordt in Nederland, op Denemarken na, het [minst genoemd](https://www.eib.org/en/publications/20240238-econ-eibis-2024-eu) als hindernis voor investeringen. Dit is niet verrassend. Nederland heeft een van de best ontwikkelde kapitaalmarkten van de Europese Unie. Kapitaal vindt steeds meer zijn weg in Nederland en is op zoek naar investeringsmogelijkheden (zie figuur 2). Er zijn zelfs anekdotische aanwijzingen dat er *te veel* durfkapitaal is. Durfkapitaalinvesteerder Prime Venture is [gestopt](https://fd.nl/tech-en-innovatie/1542548/techinvesteerder-vindt-bedrijven-te-duur-en-geeft-inleg-terug-aan-geldschieters) met een fonds, omdat het geen geschikte investeringen kon vinden.
+‍De toegang tot financiering wordt in Nederland, op Denemarken na, het [minst genoemd](https://www.eib.org/en/publications/20240238-econ-eibis-2024-eu) als hindernis voor investeringen. Dit is niet verrassend. Nederland heeft een van de best ontwikkelde kapitaalmarkten van de [Europese Unie](/highlights/kapitaalmarktunie/). Kapitaal vindt steeds meer zijn weg in Nederland en is op zoek naar investeringsmogelijkheden (zie figuur 2). Er zijn zelfs anekdotische aanwijzingen dat er *te veel* durfkapitaal is. Durfkapitaalinvesteerder Prime Venture is [gestopt](https://fd.nl/tech-en-innovatie/1542548/techinvesteerder-vindt-bedrijven-te-duur-en-geeft-inleg-terug-aan-geldschieters) met een fonds, omdat het geen geschikte investeringen kon vinden.
 
 ![](/media/img/figuur-2-li-46cac52d.png)
 
@@ -101,7 +101,7 @@ Deze vraag ligt bij het oprichten van de investeringsinstelling weer voor: Gaan 
 
 Nog geen twee jaar na oprichting wordt geconcludeerd dat Twinning weinig toegevoegde waarde heeft ten opzichte van de markt, waarna werd besloten het vehikel [af te stoten](https://zoek.officielebekendmakingen.nl/kst-26143-3.html). Maar na het barsten van de internetzeepbel in 2000 waren er maar [weinig geïnteresseerde marktpartijen](https://zoek.officielebekendmakingen.nl/kst-26143-5.html). In 2003 trok Den Haag daarom de [stekker uit](https://www.emerce.nl/nieuws/twinning-op-korte-termijn-afgestoten) het Twinning-project.
 
-Toch had minister Jorritsma gelijk, Nederland heeft inderdaad ‘snelheid en lef’ nodig om tot de koplopers te behoren. Maar dat betekent niet dat de overheid zich als durfinvesteerder moet gaan gedragen. Kapitaal zoekt veelbelovende kansen. Wie innovatie wil versnellen, moet daarom beginnen bij de bron: goede ideeën en de mensen die ze ontwikkelen. Investeren dus - in onderwijs, universiteiten en valorisatie - niet een handjevol bestaande bedrijven spekken met [belastingkortingen](https://fd.nl/bedrijfsleven/1592577/ruim-90-vanalle-voordeel-uit-innovatiebox-naar-asml-msd-en-booking). Ook een Nationaal Agentschap Disruptieve Innovatie (NADI), kan effectief zijn om de ideeënontwikkeling aan te jagen en veelbelovende startups te laten ontstaan.
+Toch had minister Jorritsma gelijk, Nederland heeft inderdaad ‘snelheid en lef’ nodig om tot de koplopers te behoren. Maar dat betekent niet dat de overheid zich als durfinvesteerder moet gaan gedragen. Kapitaal zoekt veelbelovende kansen. Wie innovatie wil versnellen, moet daarom beginnen bij de bron: goede ideeën en de mensen die ze ontwikkelen. Investeren dus - in onderwijs, universiteiten en valorisatie - niet een handjevol bestaande bedrijven spekken met [belastingkortingen](https://fd.nl/bedrijfsleven/1592577/ruim-90-vanalle-voordeel-uit-innovatiebox-naar-asml-msd-en-booking). Ook een Nationaal Agentschap Disruptieve Innovatie (NADI), [kan effectief zijn](/highlights/vijfaandachtspuntennederlandsedarpa/) om de ideeënontwikkeling aan te jagen en veelbelovende startups te laten ontstaan.
 
 Succes trekt financiering aan, niet andersom.
 

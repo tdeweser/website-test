@@ -20,7 +20,7 @@ Dit rapport brengt de gevolgen van betaalbaarheidseisen op nieuwbouw in kaart. M
 
 {{ authors(["Jasper H. van Dijk", "Matthijs Korevaar"]) }}
 
-<p class="button-row"><a class="button" href="/media/files/betaalbaar-bouwen.pdf">Download Rapport</a></p>
+<p class="button-row align-center"><a class="button" href="/media/files/betaalbaar-bouwen.pdf">Download Rapport</a></p>
 
 ### In de media
 

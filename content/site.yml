@@ -48,10 +48,16 @@ scrape:
     /events: Evenementen
     /armoede-dashboard: Armoededashboard
     /sectoren-dashboard: Sectoren van de toekomst
+  # Also take every other plain page listed in the old sitemap.xml (not in the menu,
+  # e.g. /pensioenreglement, /think-cell). Articles stay limited to the window.
+  include_sitemap_pages: true
   # Blog-style collections on the old site.
   collections:
     - /highlights
     - /evenementen
+  # Collections that are not articles: all their items are listed, whatever the date.
+  always_listed:
+    - evenementen
   # Collection holding author cards (name - role, photo, e-mail). Scraped into
   # content/people/authors.yml; author links go to the generated tag page.
   authors: /auteurs
@@ -67,7 +73,10 @@ scrape:
     - /55c1c005-0af9-4b76-9ec7-faee39d63d9e
 
 # --- Navigation ------------------------------------------------------------------
+# Same structure as the header on the old site: plain links, and folders (with
+# `items`) that open a dropdown.
 nav:
+  - { title: Home, url: / }
   - title: Onderwerpen
     items:
       - { title: Macro-economie, url: /macro-economie/ }
@@ -79,11 +88,10 @@ nav:
     items:
       - { title: Over IPE, url: /over-ons/over-ipe/ }
       - { title: Onze mensen, url: /onze-mensen/ }
-      - { title: Evenementen, url: /events/ }
-      - { title: Vacatures, url: /vacatures/ }
-      - { title: Contact, url: /contact/ }
-      - { title: English, url: /english/ }
-      - { title: Steun ons, url: /steun-ons/ }
+  - { title: Evenementen, url: /events/ }
+  - { title: Vacatures, url: /vacatures/ }
+  - { title: Contact, url: /contact/ }
+  - { title: English, url: /english/ }
 
 cta: { title: Steun ons, url: /steun-ons/ }
 
@@ -102,8 +110,8 @@ donate:
   url: /steun-ons/
 
 social:
-  - { title: LinkedIn, url: "https://www.linkedin.com/company/instituut-voor-publieke-economie" }
   - { title: X (Twitter), url: "https://twitter.com/InstituutPE" }
+  - { title: LinkedIn, url: "https://www.linkedin.com/company/instituut-voor-publieke-economie" }
 
 footer_links:
   - { title: Privacy, url: /privacy/ }

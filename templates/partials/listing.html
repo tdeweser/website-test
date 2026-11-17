@@ -1,22 +1,37 @@
-{# Shared by the listing() shortcode, listing pages and "Lees ook".
-   Expects: items, layout (carousel | list | grid | autogrid | autocolumns), title, more, empty #}
-{% set kind = 'cards' if layout in ('carousel', 'grid', 'autogrid', 'autocolumns') else 'rows' %}
-<div class="listing listing--{{ 'carousel' if layout == 'carousel' else kind }}">
-  {% if title %}<h3 class="listing__title">{{ title }}</h3>{% endif %}
+{# The listing() shortcode: a Squarespace summary block.
+   layout: carousel | list | grid | autogrid | autocolumns
+   meta1/meta2: date | categories | tags | author | none; meta_pos: above-title | below-title | below-content #}
+{% macro meta_value(d, kind) -%}
+  {%- if kind == 'date' and d.date -%}{{ d.date | nl_date }}
+  {%- elif kind in ('categories', 'cats') -%}{{ (d.meta.get('categories') or []) | join(', ') }}
+  {%- elif kind == 'tags' -%}{{ (d.meta.get('tags') or []) | join(', ') }}
+  {%- elif kind == 'author' -%}{{ d.meta.get('author') or '' }}
+  {%- endif -%}
+{%- endmacro %}
+{% macro meta_line(d) -%}
+  {%- set parts = [meta_value(d, meta1), meta_value(d, meta2)] | select | list -%}
+  {%- if parts %}<p class="summary__meta">{{ parts | join(' · ') }}</p>{% endif -%}
+{%- endmacro %}
+<div class="summary summary--{{ layout }}" style="--per-row: {{ per_row }}; --thumb-ratio: {{ ratio }}">
+  {% if title %}<h3 class="summary__heading">{{ title }}</h3>{% endif %}
+  {% if layout == 'carousel' %}
+  <div class="summary__controls"><button type="button" class="summary__prev" aria-label="Vorige">‹</button><button type="button" class="summary__next" aria-label="Volgende">›</button></div>
+  {% endif %}
   {% if items %}
-  <ul class="listing__items">
+  <ul class="summary__items">
     {% for d in items %}
-    <li class="card{% if not d.meta.get('image') %} card--no-image{% endif %}">
-      {% if d.meta.get('image') %}
-      <a class="card__image" href="{{ d.url }}" tabindex="-1" aria-hidden="true"><img src="{{ d.meta.image }}" alt="" loading="lazy"></a>
+    {% set href = d.meta.get('external_url') or d.url %}
+    {% set img = d.meta.get('image') or d.meta.get('listing_image') %}
+    <li class="summary__item{% if thumbs and img %} has-thumb{% endif %}">
+      {% if thumbs and img %}
+      <a class="summary__thumb" href="{{ href }}" tabindex="-1" aria-hidden="true"><img src="{{ img }}" alt="" loading="lazy"></a>
       {% endif %}
-      <div class="card__body">
-        <p class="card__meta">
-          {% if d.label %}<span class="mono-label">{{ d.label }}</span>{% endif %}
-          {% if d.date %}<time class="mono-label mono-label--muted" datetime="{{ d.date.isoformat() }}">{{ d.date | nl_date(true) }}</time>{% endif %}
-        </p>
-        <h4 class="card__title"><a href="{{ d.url }}">{{ d.title }}</a></h4>
-        {% if kind == 'rows' and d.meta.get('excerpt') %}<p class="card__excerpt">{{ d.meta.excerpt | truncate(180) }}</p>{% endif %}
+      <div class="summary__body">
+        {% if meta_pos == 'above-title' %}{{ meta_line(d) }}{% endif %}
+        <h4 class="summary__title"><a href="{{ href }}"{% if d.meta.get('external_url') %} target="_blank" rel="noopener"{% endif %}>{{ d.title }}</a></h4>
+        {% if meta_pos == 'below-title' %}{{ meta_line(d) }}{% endif %}
+        {% if excerpt and d.meta.get('excerpt') %}<p class="summary__excerpt">{{ d.meta.excerpt }}</p>{% endif %}
+        {% if meta_pos == 'below-content' %}{{ meta_line(d) }}{% endif %}
       </div>
     </li>
     {% endfor %}
@@ -24,5 +39,4 @@
   {% else %}
   <p class="listing__empty">{{ empty }}</p>
   {% endif %}
-  {% if more and items %}<p class="listing__more"><a href="{{ more }}">Alle publicaties →</a></p>{% endif %}
 </div>

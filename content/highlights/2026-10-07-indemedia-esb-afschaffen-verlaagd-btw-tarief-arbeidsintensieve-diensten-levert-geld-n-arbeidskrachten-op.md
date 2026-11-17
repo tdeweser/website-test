@@ -10,7 +10,6 @@ tags:
 - Vinzenz Ziesemer
 - Julia van Rijn
 author: Vinzenz Ziesemer
-image: /media/files/file.png
 external_url: https://esb.nu/afschaffen-verlaagd-btw-tarief-arbeidsintensieve-dienstenlevert-geld-en-arbeidskrachten-op/
 source: https://www.ipe.nl/highlights/indemedia-esb-afschaffen-verlaagd-btw-tarief-arbeidsintensieve-diensten-levert-geld-n-arbeidskrachten-op
 ---

@@ -12,23 +12,51 @@
     });
   }
 
-  // Desktop dropdowns: click/keyboard toggle (hover + focus-within work via CSS).
-  document.querySelectorAll(".site-nav__trigger").forEach(function (btn) {
+  // Dropdown folders: click/keyboard toggle (hover and focus-within work via CSS).
+  var triggers = document.querySelectorAll(".site-nav__trigger");
+  function closeAll(except) {
+    triggers.forEach(function (b) { if (b !== except) b.setAttribute("aria-expanded", "false"); });
+  }
+  triggers.forEach(function (btn) {
     btn.addEventListener("click", function () {
       var expanded = btn.getAttribute("aria-expanded") === "true";
-      document.querySelectorAll(".site-nav__trigger").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+      closeAll(btn);
       btn.setAttribute("aria-expanded", String(!expanded));
     });
   });
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest(".site-nav__group")) {
-      document.querySelectorAll(".site-nav__trigger").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+  document.addEventListener("click", function (e) { if (!e.target.closest(".site-nav__folder")) closeAll(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeAll(); });
+
+  // Carousel arrows (summary blocks).
+  document.querySelectorAll(".summary--carousel").forEach(function (box) {
+    var list = box.querySelector(".summary__items");
+    var prev = box.querySelector(".summary__prev");
+    var next = box.querySelector(".summary__next");
+    if (!list || !prev || !next) return;
+    function update() {
+      prev.disabled = list.scrollLeft <= 2;
+      next.disabled = list.scrollLeft + list.clientWidth >= list.scrollWidth - 2;
     }
+    prev.addEventListener("click", function () { list.scrollBy({ left: -list.clientWidth, behavior: "smooth" }); });
+    next.addEventListener("click", function () { list.scrollBy({ left: list.clientWidth, behavior: "smooth" }); });
+    list.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
   });
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      document.querySelectorAll(".site-nav__trigger").forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
-    }
+
+  // "Deel deze pagina": native share sheet, or copy the link.
+  document.querySelectorAll("[data-share]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var data = { title: document.title, url: location.href };
+      if (navigator.share) { navigator.share(data).catch(function () {}); return; }
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(location.href).then(function () {
+          var label = btn.textContent;
+          btn.textContent = "Link gekopieerd";
+          setTimeout(function () { btn.textContent = label; }, 2000);
+        });
+      }
+    });
   });
 
   // Archive: filter items by title.

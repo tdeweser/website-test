@@ -7,7 +7,7 @@ source: https://www.ipe.nl/vacatures
 description: Wij bouwen aan een Fellow netwerk. Vind je het leuk om met ons mee te denken, heb je expertise in een relevant beleidsterrein (vanuit een academische of praktische invalshoek), en vind je het leuk om daar voor ons over te schrijven? Neem dan contact met ons op. Stagiaires doen zelfstandig onderzoek, analyseren data voor onze publicaties (bijvoorbeeld met gebruik van R), en helpen ons met onze dagelijkse gang van zaken.
 ---
 
-<section class="band" markdown="1">
+<section class="band theme-white height-medium" markdown="1">
 
 # Vacatures en fellowships
 
@@ -54,5 +54,11 @@ Wij gaan graag het gesprek aan met geïnteresseerden. Zie je mogelijkheden om sa
 </details>
 
 IPE is een inclusieve organisatie. We willen iedereen uitnodigen om te solliciteren, ongeacht leeftijd, handicap, etniciteit, geslacht, genderidentiteit, religieuze overtuiging, seksuele geaardheid of andere kenmerken. Ook als je niet expliciet aan alle eisen voldoet.
+
+</section>
+
+<section class="band theme-black height-large band--image band--image-only" style="--band-image: url(/media/img/unsplash-image-or4vc8kswo-1630b29e.jpg); --overlay: 0" markdown="1">
+
+
 
 </section>

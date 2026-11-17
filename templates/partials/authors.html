@@ -1,14 +1,12 @@
-<div class="authors">
-  <p class="mono-label mono-label--bullet">Auteurs</p>
-  <ul class="authors__list">
-    {% for p in people %}
-    <li class="author">
-      {% if p.get('photo') %}<img class="author__photo" src="{{ p.photo }}" alt="" loading="lazy">{% endif %}
-      <div>
-        <a class="author__name" href="{{ p.url }}">{{ p.name }}</a>
-        {% if p.get('role') %}<span class="author__role">{{ p.role }}</span>{% endif %}
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+{# Author cards inside articles, as on the old site: round photo, "Name - Role", e-mail. #}
+<ul class="author-cards">
+  {% for p in people %}
+  <li class="author-card">
+    <a class="author-card__photo" href="{{ p.url }}" tabindex="-1" aria-hidden="true">{% if p.get('photo') %}<img src="{{ p.photo }}" alt="" loading="lazy">{% endif %}</a>
+    <div>
+      <p class="author-card__name"><a href="{{ p.url }}">{{ p.get('title') or p.name }}</a></p>
+      {% if p.get('email') %}<p class="author-card__email">E: <a href="mailto:{{ p.email }}">{{ p.email }}</a></p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>

@@ -2,24 +2,26 @@
 title: Publicaties Jasper J. van Dijk
 url: /onderzoek-jasper-j-van-dijk/
 layout: page
-linked_only: true
+linked_only: false
 source: https://www.ipe.nl/onderzoek-jasper-j-van-dijk
 description: Jasper J. van Dijk is econoom met als missie het aanpakken van maatschappelijke en sociale uitdagingen met beter onderbouwd beleid. Dit doet hij vanuit het platform De Onderbouwing en in samenwerking met het Instituut voor Publieke Economie. Jasper is gepromoveerd in de Economie aan de Universiteit van Oxford en heeft gewerkt bij de OESO, de Boston Consulting Group en het ministerie van Financiën. Als wetenschapper, consultant en ambtenaar heeft hij tien jaar ervaring met het onderzoeken van en adviseren over maatschappelijke vraagstukken.
 ---
 
-<section class="band" markdown="1">
+<section class="band theme-white height-medium" markdown="1">
 
-<div class="cols" style="--cols: 9fr 14fr" markdown="1">
+<div class="fe-row" markdown="1">
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 2 / 10" markdown="1">
 
 # Jasper J. van Dijk
 
-![](/media/img/schermafbeelding-2026-07-13-om-2-38-49-pm-ef567dec.png)
+</div>
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 10 / 24" markdown="1">
 
 Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaal beleid. Hij is gepromoveerd in de economie aan de Universiteit van Oxford. Voordat hij bij IPE in dienst trad, werkte Jasper als econoom bij het Nederlandse ministerie van Financiën en als consultant bij de Boston Consulting Group.
 
@@ -27,19 +29,53 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 
 </div>
 
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
+
+![](/media/img/schermafbeelding-2026-07-13-om-2-38-49-pm-ef567dec.png)
+
+</div>
+
+</div>
+
 </section>
 
-<section class="band band--alt" markdown="1">
+<section class="band theme-light height-small" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 3" markdown="1">
 
 ## 2026
 
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 13" markdown="1">
+
 #
+
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ### Publicaties
 
 - Zorgverzekering via gemeenten werkt niet, [AD](https://www.ad.nl/praat-mee/opinie-zorgverzekering-via-gemeenten-werkt-niet~a8da9380/)
 - Gelijke toegang tot zorg voor minima, [IPE](/highlights/gemeentepolis/)
 - Grote verschillen individuele inkomenstoeslag, [IPE](https://iit.eerlijkereneenvoudiger.nl/)
+
+</div>
+
+<div class="fe-cell" style="--c: 9 / 17" markdown="1">
 
 ### Interviews
 
@@ -62,29 +98,41 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 - Kabinet laat allerzwaksten stikken, [NOS](https://nos.nl/artikel/2609970-ombudsman-over-bijstandsbesparingen-kabinet-laat-allerzwaksten-stikken)
 - We moeten af van het toeslagensysteem, maar hoe dat kan is nog de vraag, [NOS](https://nos.nl/artikel/2596737-we-moeten-af-van-het-toeslagensysteem-maar-hoe-dat-kan-is-nog-de-vraag)
 
+</div>
+
+</div>
+
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white height-small" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 3" markdown="1">
 
 ## 2025
 
-<div class="cols" style="--cols: 8fr 8fr 8fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ### Publicaties
 
 - Dit is hét moment voor de hervorming van het toeslagenstelsel, [ESB](https://esb.nu/dit-is-het-moment-voor-de-hervorming-van-het-toeslagenstelsel/)
 - Eerlijker en eenvoudiger armoedebeleid, [Idee](https://d66.nl/vanmierlostichting/nieuws/eerlijker-en-eenvoudiger-armoedebeleid/)
 - Eerlijker en eenvoudiger armoedebeleid, [Groen](https://wi.christenunie.nl/uitgaven-details/10227347/groen/10352206/groen-december-2025-creatief-met-armoede-volgt-het-zoet-na-het-zuur)
-- Update gemeentelijk armoedebeleid 2025, IPE
-- Bevrijd het minimumloon van de ketens van de AOW (en andersom), IPE
+- Update gemeentelijk armoedebeleid 2025, [IPE](/highlights/updatearmoedebeleid/)
+- Bevrijd het minimumloon van de ketens van de AOW (en andersom), [IPE](/highlights/bevrijdhetminimumloon/)
 - Waarom hervorming toeslagen steeds mislukt, [AD](https://www.ad.nl/praat-mee/opinie-waarom-hervorming-toeslagen-steeds-mislukt~a0c74dda/)
 - Waarom kiezen voor eenvoud ook een doorrekening verdient, [FD](https://fd.nl/opinie/1574921/waarom-kiezen-voor-eenvoud-ook-een-doorrekening-verdient)
 - Eerlijker en eenvoudiger armoedebeleid: Rijk en gemeenten aan zet, [Het Liberaal Kompas](https://www.teldersstichting.nl/2752353_het-liberaal-kompas-is-uit)
-- Strategisch vermogen van het Rijk, IPE
+- Strategisch vermogen van het Rijk, [IPE](/highlights/strategisch-vermogen-rijk/)
 - Wie - burgers, uitvoerders, Kamerleden - heeft nog overzicht over de impact van beleid?, [FD](https://fd.nl/opinie/1566439/wie-heeft-nog-overzicht-over-de-impact-van-beleid)
-- Landelijke basis, lokaal maatwerk, Tijdschrift voor Schuldsanering
+- Landelijke basis, lokaal maatwerk, [Tijdschrift voor Schuldsanering](/highlights/landelijke-basis-lokaal-maatwerk/)
 - Nationaal armoedeplan blijft hangen in woorden, [Telegraaf](https://www.telegraaf.nl/wat-u-zegt/de-kwestie/onderzoeker-jasper-j.-van-dijk-nationaal-armoedeplan-blijft-hangen-in-woorden/70739685.html)
 - Waarom een eenvoudiger belastingstelsel niet zonder heldere definitie van complexiteit kan, [MeJudice](https://www.mejudice.nl/artikelen/detail/een-eenvoudiger-belastingstelsel-begint-bij-een-definitie-van-het-begrip-complexiteit)
 - Laat gemeenten hun arme inwoners gewoon helpen, [NRC](https://www.nrc.nl/nieuws/2025/05/21/laat-gemeenten-hun-arme-inwoners-gewoon-helpen-a4894132)
@@ -92,11 +140,11 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 - Onze aanpak van armoede is een bureaucratische uitputtingsslag, voor gemeente én inwoner, [Volkskrant](https://www.volkskrant.nl/columns-opinie/opinie-onze-aanpak-van-armoede-is-een-bureaucratische-uitputtingsslag-voor-gemeente-en-inwoner~b9a936a4/)
 
 - Maak gemeentelijk armoedebeleid eerlijker en eenvoudiger, [ESB](https://esb.nu/maak-gemeentelijk-armoedebeleid-eerlijker-en-eenvoudiger/)
-- Eerlijker en eenvoudiger armoedebeleid: Landelijke basis, lokaal maatwerk, IPE
+- Eerlijker en eenvoudiger armoedebeleid: Landelijke basis, lokaal maatwerk, [IPE](/highlights/gemeentelijke-regelingen/)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 9 / 17" markdown="1">
 
 ### Interviews
 
@@ -122,7 +170,7 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 17 / 25" markdown="1">
 
 ### Lezingen
 
@@ -146,29 +194,37 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 
 </section>
 
-<section class="band band--alt" markdown="1">
+<section class="band theme-light height-small" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 ## 2024
 
-<div class="cols" style="--cols: 8fr 8fr 8fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ### Publicaties
 
 - Alle fossiele subsidies weg? Zo simpel (en effectief) is dat niet, [NRC](https://www.nrc.nl/nieuws/2024/12/02/alle-fossiele-subsidies-weg-zo-simpel-en-effectief-is-dat-niet-a4875141)
-- De Nederlandse overheid dreigt zich te laten gijzelen door haar industrie, Telegraaf
+- De Nederlandse overheid dreigt zich te laten gijzelen door haar industrie, [Telegraaf](/highlights/opinie-telegraaf-industrie/)
 - Het is ‘moeilijk uit te leggen’ dat zelfstandig pensioensparen leidt tot hogere belastingen, [MeJudice](https://www.mejudice.nl/artikelen/detail/het-is-moeilijk-uit-te-leggen-dat-pensioensparen-in-de-tweede-pijler-vaak-gunstiger-is-dan-in-de-derde-pijler)
 - Stuur bij fossiele subsidies en koolstofbeprijzing op gewenste situatie in 2050, [ESB](https://esb.nu/stuur-bij-fossiele-subsidies-en-koolstofbeprijzing-op-gewenste-situatie-in-2050/)
-- Weglekeffecten, IPE
+- Weglekeffecten, [IPE](/highlights/weglek/)
 - Arbeidseis legt nieuwe tijdbom onder kinderopvangtoeslag, [Telegraaf](https://www.telegraaf.nl/watuzegt/1634951363/arbeidseis-legt-nieuwe-tijdbom-onder-kinderopvangtoeslag)
-- Herzie arbeidseis kinderopvangtoeslag, IPE
+- Herzie arbeidseis kinderopvangtoeslag, [IPE](/highlights/arbeidseis/)
 - Hervorming toeslagen: “Alle alternatieven zijn inmiddels bedacht en uitgewerkt. Er is een politieke keuze nodig.” [MeJudice](https://www.mejudice.nl/artikelen/detail/hervorming-toeslagen-alle-alternatieven-zijn-inmiddels-bedacht-en-uitgewerkt-er-is-een-politieke-keuze-nodig)
 - Politici moeten de knoop doorhakken om het toeslagenstelsel te versimpelen of af te schaffen, [FD](https://fd.nl/opinie/1507840/politici-moeten-de-knoop-doorhakken-om-het-toeslagenstelsel-te-versimpelen-of-af-te-schaffen)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 9 / 17" markdown="1">
 
 ### Interviews
 
@@ -187,14 +243,14 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 17 / 25" markdown="1">
 
 ### Lezingen
 
 - Presentatie over het versimpelen van het toeslagenstelsel bij bijeenkomst van GroenLinks, PvdA, D66, VOLT en VVD
 - Panellid “how to get the best out of cities?”, [reinventing the city](https://reinventingthecity24.dryfta.com/program-schedule/calendar/profile-overview/104-city-panel)
 - Lezing over de kinderopvangtoeslag bij de directie kinderopvang, [Ministerie van Sociale Zaken en Werkgelegenheid](https://www.rijksoverheid.nl/ministeries/ministerie-van-sociale-zaken-en-werkgelegenheid)
-- Voorzitter panel bij boekpresentatie “De Boetefabriek”, Van Gennep
+- Voorzitter panel bij boekpresentatie “De Boetefabriek”, [Van Gennep](/highlights/merel-publiceert-deboetefabriek/)
 
 </div>
 
@@ -202,13 +258,21 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white height-small" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 ## 2023
 
-<div class="cols" style="--cols: 8fr 8fr 8fr" markdown="1">
+</div>
 
-<div class="cols__cell" markdown="1">
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 9" markdown="1">
 
 ### Publicaties
 
@@ -218,14 +282,14 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 - Externe inhuur? De overheid heeft dringend een eigen strategieclub nodig, [Volkskrant](https://www.volkskrant.nl/columns-opinie/opinie-externe-inhuur-de-overheid-heeft-dringend-een-eigen-strategieclub-nodig~b0798a4a/)
 - Voor lagere inkomens wordt de crèche onbetaalbaar, [NRC](https://www.nrc.nl/nieuws/2023/05/11/voor-lagere-inkomens-wordt-de-creche-onbetaalbaar-a4164443)
 - Inkomensafhankelijke ouderbijdrage beter dan kabinetsplan kinderopvang, [ESB](https://esb.nu/inkomensafhankelijke-ouderbijdrage-beter-dan-kabinetsplan-kinderopvang/)
-- Het einde van de toeslagen, IPE
+- Het einde van de toeslagen, [IPE](/highlights/nutoeslaan/)
 - Zo komen we van de toeslagen en heffingskortingen af, [ESB](https://esb.nu/zo-komen-we-van-de-toeslagen-en-heffingskortingen-af/)
 - De belastingen op arbeid zijn complex, onrechtvaardig en belemmeren méér werken, [ESB](https://esb.nu/de-belastingen-op-arbeid-zijn-complex-onrechtvaardig-en-belemmeren-meer-werken/)
 - Noodzakelijke versimpeling van de toeslagen komt in gevaar, [MeJudice](https://www.mejudice.nl/artikelen/detail/noodzakelijke-versimpeling-van-de-toeslagen-komt-in-gevaar)
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 9 / 17" markdown="1">
 
 ### Interviews
 
@@ -240,7 +304,7 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 
 </div>
 
-<div class="cols__cell" markdown="1">
+<div class="fe-cell" style="--c: 17 / 25" markdown="1">
 
 ### Lezingen
 
@@ -256,9 +320,21 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 
 </section>
 
-<section class="band band--alt" markdown="1">
+<section class="band theme-light height-custom" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 ## 2022
+
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 - Bouw van peperdure kerncentrales is onzinnig zolang ze elders in Europa worden gesloopt, [de Volkskrant](https://www.volkskrant.nl/columns-opinie/bouw-van-peperdure-nieuwe-kerncentrales-is-onzinnig-zolang-ze-elders-in-europa-worden-gesloopt~b8aebfb8/)
 - Weeg maatschappelijke kosten en baten kernenergie integraal af, [ESB](https://esb.nu/esb/20072097/weeg-maatschappelijke-kosten-en-baten-kernenergie-integraal-af)
@@ -268,16 +344,36 @@ Jasper J. van Dijk is onderzoeksleider bij IPE. Hij is gespecialiseerd in sociaa
 - Technologie en vergrijzing bepalend voor stijging uitgaven zorg, [ESB](https://esb.nu/kort/20070397/technologie-en-vergrijzing-bepalend-voor-stijging-uitgaven-zorg)
 - Panellid bij ‘een nieuwe kijk op de zorg’ met Lynn Berger, [de Balie](https://debalie.nl/debalie-tv/een-nieuwe-kijk-op-de-zorg-met-lynn-berger/)
 
+</div>
+
+</div>
+
 </section>
 
-<section class="band" markdown="1">
+<section class="band theme-white height-custom" markdown="1">
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 ## 2021 en eerder
+
+</div>
+
+</div>
+
+<div class="fe-row" markdown="1">
+
+<div class="fe-cell" style="--c: 1 / 25" markdown="1">
 
 - Veerkracht en verder bouwen, [Nota over de toestand van 's rijks financiën](https://www.rijksoverheid.nl/documenten/begrotingen/2021/09/21/miljoenennota-2022)
 - Nieuw afwegingskader laat zien wanneer zelfvoorziening nodig is, [ESB](https://esb.nu/esb/20062440/nieuw-afwegingskader-laat-zien-wanneer-zelfvoorziening-nodig-is)
 - Analyse van beleidsopties van politieke partijen voor de zorg, [Zorgkeuzes in Kaart](https://www.rijksoverheid.nl/documenten/rapporten/2020/07/01/zorgkeuzes-in-kaart)
 - Robustness of econometrically estimated local multipliers across different methods and data, [Journal of Regional Science](https://onlinelibrary.wiley.com/doi/10.1111/jors.12378)
 - Local employment multipliers in U.S. cities, [Journal of Economic Geography](https://academic.oup.com/joeg/article-abstract/17/2/465/2930552?login=false&redirectedFrom=fulltext)
+
+</div>
+
+</div>
 
 </section>

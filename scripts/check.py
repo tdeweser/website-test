@@ -25,7 +25,7 @@ from common import CONTENT, PUBLIC, load_config, read_markdown  # noqa: E402
 OLD_SITE = re.compile(
     r"(?<![@\w.-])(?:https?:)?(?://)?(?:www\.)?(?:ipe|instituut-pe)\.nl\b"   # URLs / bare hosts
     r"|@(?:www\.)?instituut-pe\.nl\b"                                       # old e-mail domain
-    r"|squarespace",                                                        # any Squarespace host/asset
+    r"|(?:[\w-]+\.)*squarespace(?:-cdn)?\.com|sqspcdn\.com",               # any Squarespace host/asset
     re.I,
 )
 TEXT_TYPES = {".html", ".css", ".js", ".xml", ".txt", ".json", ""}
@@ -90,6 +90,8 @@ def main() -> int:
                     continue
                 link_count += 1
                 parts = urllib.parse.urlsplit(url)
+                if parts.fragment.startswith(":~:"):  # text fragment, not an element id
+                    parts = parts._replace(fragment="")
                 if not parts.path:  # same-page anchor
                     if parts.fragment and parts.fragment not in ids(f):
                         err(f"{rel}: anchor #{parts.fragment} not found on page")
@@ -119,8 +121,8 @@ def main() -> int:
             if resolve(meta["url"]) is None:
                 err(f"{md.relative_to(CONTENT)}: page {meta['url']} was not built")
     cfg = load_config()
-    for group in cfg["nav"]:
-        for item in group["items"]:
+    for entry in cfg["nav"] + [cfg["cta"]]:
+        for item in entry.get("items") or [entry]:
             if resolve(item["url"]) is None:
                 err(f"nav: {item['title']} -> {item['url']} was not built")
 

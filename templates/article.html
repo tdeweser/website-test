@@ -1,51 +1,24 @@
 {% extends "base.html" %}
-{% block body_class %}layout-article{% endblock %}
+{# Blog/event item as on the old site: date, title, narrow body, tag line. No hero image:
+   the original shows the thumbnail only in listings. #}
+{% block body_class %}layout-item{% if page.kind == 'event' %} layout-event{% endif %}{% endblock %}
 {% block main %}
-<article class="article">
-  <header class="article__header band band--alt">
-    <div class="container container--text">
-      <p class="article__meta">
-        {% if page.label %}<a class="mono-label mono-label--bullet" href="{{ category_url(page.label) }}">{{ page.label }}</a>{% endif %}
-        {% if page.date %}<time class="mono-label mono-label--muted" datetime="{{ page.date.isoformat() }}">{{ page.date | nl_date }}</time>{% endif %}
-      </p>
-      <h1 class="article__title">{{ page.title }}</h1>
-      {% if page.meta.get('author') %}
-      <p class="article__byline">Geschreven door <a href="{{ tag_url(page.meta.author) }}">{{ page.meta.author }}</a></p>
-      {% endif %}
-    </div>
+<article class="item">
+  <header class="item__top">
+    {% if page.date %}<time class="item__date meta" datetime="{{ page.date.isoformat() }}">{{ page.date | nl_date }}</time>{% endif %}
+    <h1 class="item__title">{{ page.title }}</h1>
+    {% if page.kind == 'event' and page.date and page.date < today %}
+    <p class="item__past"><em>Dit evenement heeft plaatsgevonden.</em></p>
+    {% endif %}
   </header>
-
-  {% if page.meta.get('image') and page.label != 'In de media' %}
-  <figure class="article__image container container--text">
-    <img src="{{ page.meta.image }}" alt="">
-  </figure>
-  {% endif %}
-
-  <div class="article__body container container--text prose">
+  <div class="item__content">
     {{ content }}
-    {% if page.meta.get('external_url') %}
-    <p class="button-row"><a class="button" href="{{ page.meta.external_url }}" target="_blank" rel="noopener">Bekijk bij de bron</a></p>
+    {% set tags = page.meta.get('tags') or [] %}
+    {% if tags %}
+    <p class="item__tags meta">
+      {% for t in tags %}<a href="{{ tag_url(t) }}">{{ t }}</a>{% if not loop.last %}<span aria-hidden="true"> • </span>{% endif %}{% endfor %}
+    </p>
     {% endif %}
   </div>
-
-  <footer class="article__footer container container--text">
-    {% set topics = (page.meta.get('categories') or []) %}
-    {% set tags = (page.meta.get('tags') or []) %}
-    {% if topics or tags %}
-    <ul class="tag-list" aria-label="Onderwerpen">
-      {% for c in topics %}<li><a class="tag tag--red" href="{{ category_url(c) }}">{{ c }}</a></li>{% endfor %}
-      {% for t in tags %}<li><a class="tag tag--gray" href="{{ tag_url(t) }}">{{ t }}</a></li>{% endfor %}
-    </ul>
-    {% endif %}
-  </footer>
 </article>
-
-{% if related %}
-<section class="band band--alt">
-  <div class="container">
-    <h2>Lees ook</h2>
-    {% with items=related, layout="grid", title=None, more="/highlights/", empty="" %}{% include "partials/listing.html" %}{% endwith %}
-  </div>
-</section>
-{% endif %}
 {% endblock %}

@@ -24,11 +24,11 @@ Enkele jaren geleden maakte het ministerie van Financiën een begin met het eval
 
 Ondanks beloftes van het kabinet leiden deze negatieve evaluaties lang niet altijd tot hervormingen. Het is hoog tijd dat het kabinet de daad bij het woord voegt en ondoelmatige regelingen afschaft of vervangt. Te beginnen met de recent negatief geëvalueerde bedrijfsopvolgingsregeling (BOR).
 
-<p class="button-row"><a class="button" href="/media/files/20221205-pdf-fiscale-regelingen-hoog-tijd-om-fisale-regelingen-ana-te-pakken-5kc.pdf">Download PDF</a></p>
+<p class="button-row align-center"><a class="button" href="/media/files/20221205-pdf-fiscale-regelingen-hoog-tijd-om-fisale-regelingen-ana-te-pakken-5kc.pdf">Download PDF</a></p>
 
 <hr>
 
-### 1. Fiscale regelingen: de verborgen kostenpost van Den Haag
+<h3 class="text-accent"><span>1. Fiscale regelingen: de verborgen kostenpost van Den Haag</span></h3>
 
 In Nederland geven wij jaarlijks meer dan 120 miljard euro uit aan [fiscale regelingen](https://www.rijksfinancien.nl/fiscale-regelingen#:~:text=Het%20belastingstelsel%20kent%20verschillende%20fiscale,vrijstellingen%2C%20heffingskortingen%20en%20verlaagde%20tarieven.). Dit is het totaal aan alle aftrekposten, vrijstellingen, heffingskortingen en verlaagde tarieven die de belastinginkomsten verlagen. Een aanzienlijk bedrag, wat [vergelijkbaar](https://www.rijksoverheid.nl/onderwerpen/prinsjesdag/lesmateriaal/miljoenennotaposter) is met *alle directe belastingen*, ofwel zo’n tienmaal wat we jaarlijks uitgeven aan defensie of justitie en veiligheid.
 
@@ -40,7 +40,7 @@ In een poging de transparantie te vergroten, is het ministerie van Financiën ja
 
 Het kabinet [schrijft](https://www.rijksfinancien.nl/sites/default/files/bestanden/formatie2021/Startnota.pdf) in haar Startnota, waarin de begrotingsregels voor de kabinetsperiode worden vastgelegd, dat het uitgangspunt bij negatieve evaluatie van een fiscale regelingen is dat deze wordt afgeschaft of aangepast. Maar gebeurt dit ook?
 
-### 2. Nog niet veel fiscale regelingen zijn geëvalueerd, maar waar dat wel zo is komen ze er slecht uit
+<h3 class="text-accent"><span>2. Nog niet veel fiscale regelingen zijn geëvalueerd, maar waar dat wel zo is komen ze er slecht uit</span></h3>
 
 Wij hebben de fiscale regelingen, zoals genoemd in de Miljoenennota 2022, verder in kaart gebracht. We nemen niet alle fiscale regelingen mee. Een aantal regelingen is namelijk niet zozeer een fiscale subsidie, als wel onderdeel van de heffingsstructuur van het belastingstelsel. Dat betreft de heffingskortingen, het heffingsvrije vermogen in box 3 en de vrijstellingen van energiebelasting. In zulke regelingen zijn we niet geïnteresseerd (het gaat ons immers om fiscale subsidies) en ze lenen zich ook minder voor evaluatie.
 
@@ -88,7 +88,7 @@ De grootste regelingen in termen van kosten zijn subsidies op de eigen woning: d
 
 Verder zijn de giftenaftrek inkomstenbelasting, de aftrek specifieke zorgkosten, de schenk- en erfbelasting faciliteiten ANBI’s, eenmalige vrijstelling eigen woning in de schenk- en erfbelasting, de aftrek voor scholingsuitgaven (studiekosten) en de giftenaftrek vennootschapsbelasting als niet doelmatig aangemerkt. Van deze is alleen de aftrek voor scholingsuitgaven afgeschaft. Het kabinet is inmiddels voornemens de eenmalige vrijstelling eigen woning (ook wel ‘Jubelton’) af te schaffen. Van de overige regelingen zijn geen voornemens tot afschaffing of wijziging bekend.
 
-### 3. Een blik naar voren
+<h3 class="text-accent"><span>3. Een blik naar voren</span></h3>
 
 Het kabinet heeft veel te doen. Zo zijn veel fiscale regelingen nog niet geëvalueerd. Prioriteit kan het kabinet geven aan de grote regelingen. De enorme kostenpost aan pensioenregelingen is nog nooit onderzocht. Ook moet het kabinet stappen nemen met regelingen die zijn aangemerkt als niet doelmatig, maar die nog niet zijn afgeschaft of significant zijn aangepast.
 
