@@ -89,8 +89,17 @@ class Site:
         self.env.filters["nl_date"] = nl_date
         self.env.filters["inline_md"] = lambda s: Markup(
             markdown.markdown(s or "").removeprefix("<p>").removesuffix("</p>"))
-        team_file = CONTENT / "people" / "team.yml"
-        self.team = yaml.safe_load(team_file.read_text(encoding="utf-8")) if team_file.exists() else []
+        self.env.filters["slug"] = slugify
+        # People (team page + homepage): content/people/people.yml, groups in display order.
+        people_file = CONTENT / "people" / "people.yml"
+        self.people_groups = yaml.safe_load(people_file.read_text(encoding="utf-8")) if people_file.exists() else []
+        self.team = []
+        for group in self.people_groups:
+            for p in group["people"]:
+                if p.get("home"):
+                    own = next((l["url"] for l in p.get("links", []) if l["url"].startswith("/")), None)
+                    self.team.append({**p, "url": own or f"/onze-mensen/#{slugify(p['name'])}"})
+        self.env.globals["people_groups"] = self.people_groups
         def media(name):  # site-wide assets the scraper stores under fixed names
             f = next(iter(sorted((STATIC / "media").glob(f"{name}.*"))), None)
             return f"/media/{f.name}" if f else None

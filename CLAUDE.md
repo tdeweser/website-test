@@ -22,8 +22,11 @@ Read [README.md](README.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) fir
   - *Still the original ipe.nl look:* all other page bodies (`site.css`, measured from the old
     Squarespace site). Keep those faithful to the original until the user asks to redesign them.
   - The design system below applies to new designs and mock-ups.
-- The homepage is hand-maintained: `content/pages/home.md` (front matter = all texts and
-  settings) and `content/people/team.yml`. The scraper never overwrites them (`keep_local`).
+- Hand-maintained (the scraper never overwrites them, `keep_local` in site.yml):
+  the homepage `content/pages/home.md` (front matter = all texts and settings), the team page
+  `content/pages/onze-mensen.md` and `content/people/people.yml` (everyone on the team page,
+  grouped; `home: true` = also on the homepage). Portraits are round with a CSS-drawn red ring
+  (`ui.portrait`); `ringed: true` marks photo files that already contain a ring.
 - Listings show only `in_window: true` items (the 3-month window, `content/site.yml`).
   Non-article content (pages, events) is taken regardless of date.
 - Shortcodes available in content: `listing()`, `authors()`, `archive()`, `map()`,

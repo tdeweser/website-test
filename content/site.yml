@@ -53,6 +53,7 @@ scrape:
   # overwrites the local file. The homepage is the redesigned one, not a copy.
   keep_local:
     - /
+    - /onze-mensen
   # Always take the newest N posts in these categories, whatever their date
   # (the homepage shows the 4 newest reports and policy papers).
   newest_of:

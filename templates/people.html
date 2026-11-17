@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% import "partials/ui.html" as ui %}
+{# "Onze mensen" (redesign): every group from content/people/people.yml as cards with a
+   round portrait. Each person has an anchor (#name-slug) the homepage links to. #}
+{% block body_class %}layout-people is-redesign{% endblock %}
+{% block main %}
+<section class="block block--cream page-intro">
+  <div class="shell page-intro__grid">
+    {{ ui.heading(page.title, "h1") }}
+    {% if page.meta.get('intro') %}<p class="block__intro">{{ page.meta.intro }}</p>{% endif %}
+  </div>
+</section>
+
+{% for group in people_groups %}
+<section class="block {{ 'block--white' if loop.index is odd else 'block--cream' }}" id="{{ group.title | slug }}">
+  <div class="shell">
+    <div class="block__head">{{ ui.heading(group.title) }}</div>
+    <ul class="people-list">
+      {% for p in group.people %}
+      <li class="person" id="{{ p.name | slug }}" data-reveal style="--i: {{ loop.index0 % 3 }}">
+        {{ ui.portrait(p, "person__photo") }}
+        <h3 class="person__name">{{ p.name }}</h3>
+        {% if p.get('role') %}<p class="person__role mono">{{ p.role }}</p>{% endif %}
+        {% if p.get('bullets') %}
+        <ul class="person__facts">
+          {% for b in p.bullets %}<li>{{ b }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if p.get('links') %}
+        <ul class="person__links">
+          {% for l in p.links %}
+          <li><a href="{{ l.url }}"{% if l.url.startswith('http') %} target="_blank" rel="noopener"{% endif %}>{{ l.title }} {{ ui.icon("arrow") }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

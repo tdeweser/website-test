@@ -66,7 +66,7 @@ this file.
 | `media` | heading, intro (Markdown links allowed) and the `tag` whose items fill the photo slider |
 | `wordmark` | the two lines of the large photo-filled "Publieke Economie" and the photo |
 | `values` | "Wij staan voor" heading, intro and rows |
-| `people` | heading, text and link; the people themselves are in `content/people/team.yml` |
+| `people` | heading, text and link; the people are those with `home: true` in `content/people/people.yml` |
 | `support` | "Bevalt onze inhoud?" photo, newsletter and donate texts and buttons (the QR code comes from the old site) |
 
 ## Edit a permanent page
@@ -123,9 +123,27 @@ Collapsible Q&A: `<details class="accordion" markdown="1"><summary>Vraag</summar
 
 ## People
 
-Author cards are in `content/people/authors.yml` (`name`, `role`, `email`, `photo`,
-`url`). The name must exactly match the tag used on articles. The team page itself is
+**Team page and homepage.** `content/people/people.yml` lists everyone on "Onze mensen",
+grouped in display order (Kernteam, Fellows, Raad van Advies, Bestuur). Per person:
+
+```yaml
+- name: Julia van Rijn
+  role: Onderzoeker
+  bullets: [Onderzoekt diverse onderwerpen …, …]
+  links:
+  - { title: LinkedIn, url: "https://www.linkedin.com/in/…" }
+  photo: /media/img/julia-c3685704.png
+  ringed: true   # the photo file already has a red ring baked in
+  home: true     # also show under "De mensen achter IPE" on the homepage
+```
+
+Every photo is shown as a circle with a red ring, whatever its original shape. To add
+someone, put a square-ish photo in `static/media/img/` and add an entry. Each person gets
+an anchor on the team page (`/onze-mensen/#julia-van-rijn`). The page intro is in
 `content/pages/onze-mensen.md`.
+
+**Author cards** in articles come from `content/people/authors.yml` (`name`, `role`,
+`email`, `photo`, `url`). The name must exactly match the tag used on articles.
 
 ## Navigation and footer
 

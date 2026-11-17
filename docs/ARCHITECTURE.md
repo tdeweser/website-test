@@ -105,7 +105,7 @@ Old paths are kept, with a trailing slash, served from `<path>/index.html`. For 
 
 The site is being upgraded section by section.
 
-**Redesigned: header, footer and homepage.** These are modelled on the reference design at
+**Redesigned: header, footer, homepage and "Onze mensen".** These are modelled on the reference design at
 https://ipe-eta.vercel.app/ and written from scratch:
 
 - `/assets/css/chrome.css`: tokens (`--red`, `--cream`, `--ink`, `--navy`, `--shell`,

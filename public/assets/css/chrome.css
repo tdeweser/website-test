@@ -154,6 +154,59 @@
 }
 @media (max-width: 520px) { .footer__cols { grid-template-columns: 1fr; } }
 
+/* ---------- Content blocks (sections of redesigned pages) ---------- */
+/* Redesigned pages (body.is-redesign): reset the original-look defaults from site.css. */
+.is-redesign main { font-family: var(--f-sans); color: var(--ink); }
+.is-redesign main :is(h1, h2, h3, p, ul, li) { margin: 0; }
+.is-redesign main :is(ul) { list-style: none; padding: 0; }
+.is-redesign main a { color: inherit; }
+.is-redesign main p a { color: inherit; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 4px; font-weight: 600; }
+
+.block { padding-block: clamp(72px, 9vw, 136px); }
+.block--white { background: #fff; }
+.block--cream { background: var(--cream); }
+.block--ink { background: var(--ink); color: #fff; }
+.block--navy { background: var(--navy); color: #fff; }
+.block__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px 48px; flex-wrap: wrap; margin-bottom: clamp(36px, 4.5vw, 56px); }
+.block__head--split { display: grid; grid-template-columns: 1fr 1fr; align-items: end; }
+.block__intro { font: 400 1.0625rem/1.65 var(--f-sans); max-width: 34rem; }
+.block--ink .block__intro, .block--navy .block__intro { color: rgba(255, 255, 255, .86); }
+@media (max-width: 800px) { .block__head--split { grid-template-columns: 1fr; } }
+
+/* ---------- Portraits: one uniform round photo with a red ring ---------- */
+.portrait {
+  position: relative; display: block; width: 100%; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+  background: var(--cream); box-shadow: inset 0 0 0 4px var(--red);
+}
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; display: block; }
+/* Photos with a ring baked in (and white corners): zoom so that ring falls outside the circle. */
+.portrait--ringed img { transform: scale(1.14); object-position: 50% 50%; }
+/* the CSS ring sits on top of the photo */
+.portrait::after { content: ""; position: absolute; inset: 0; border-radius: 50%; box-shadow: inset 0 0 0 4px var(--red); pointer-events: none; }
+
+/* ---------- "Onze mensen" ---------- */
+.page-intro { padding-block: clamp(56px, 7vw, 104px) clamp(48px, 6vw, 88px); }
+.page-intro__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 64px; align-items: end; }
+.page-intro .title-line { font-size: clamp(2.6rem, 1.6rem + 3.4vw, 4.5rem); line-height: 1.1; }
+@media (max-width: 800px) { .page-intro__grid { grid-template-columns: 1fr; } }
+
+.people-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(48px, 5vw, 72px) clamp(24px, 3vw, 48px); }
+.person { scroll-margin-top: 110px; }
+.person__photo { width: min(184px, 70%); margin-bottom: 22px; }
+.person__name { font: 600 1.375rem/1.2 var(--f-sans); letter-spacing: -.02em; }
+.person__role { margin-top: 6px !important; color: var(--ink-soft); }
+.person__facts { margin-top: 16px !important; }
+.is-redesign main .person__facts li { position: relative; padding-left: 18px; margin: 0 0 8px; font: 400 .9375rem/1.55 var(--f-sans); color: var(--ink-soft); }
+.person__facts li::before { content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px; background: var(--red); }
+.person__links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 16px !important; }
+.person__links a { display: inline-flex; align-items: center; gap: 6px; font: 500 .8125rem/1.4 var(--f-mono); text-transform: uppercase; letter-spacing: .06em; text-decoration: none; color: var(--ink); }
+.person__links a .icon { width: 14px; height: 14px; color: var(--red); transition: transform .3s var(--ease-soft); }
+.person__links a:hover { color: var(--red); }
+.person__links a:hover .icon { transform: translateX(3px); }
+.person:target .person__name { color: var(--red); }
+@media (max-width: 1000px) { .people-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .people-list { grid-template-columns: 1fr; } .person__photo { width: 160px; } }
+
 /* ---------- Reveal on scroll (only when JS runs; site.js adds .is-visible) ---------- */
 .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease-soft) calc(var(--i, 0) * 90ms), transform .8s var(--ease-soft) calc(var(--i, 0) * 90ms); }
 .js [data-reveal].is-visible { opacity: 1; transform: none; }

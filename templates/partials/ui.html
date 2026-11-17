@@ -33,6 +33,12 @@
 <{{ tag }} class="title-line {{ cls }}" data-reveal><span>{{ text }}</span></{{ tag }}>
 {%- endmacro %}
 
+{# Round portrait with the red ring drawn by CSS. Photos that already contain a ring
+   (ringed: true in people.yml) are zoomed so their own ring falls outside the circle. #}
+{% macro portrait(p, cls="") -%}
+<span class="portrait{% if p.get('ringed') %} portrait--ringed{% endif %} {{ cls }}">{% if p.get('photo') %}<img src="{{ p.photo }}" alt="" loading="lazy">{% endif %}</span>
+{%- endmacro %}
+
 {% macro textlink(title, url) -%}
 <a class="textlink" href="{{ url }}"{% if url.startswith("http") %} target="_blank" rel="noopener"{% endif %}>{{ title }} {{ icon("arrow") }}</a>
 {%- endmacro %}

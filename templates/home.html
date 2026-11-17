@@ -2,7 +2,7 @@
 {% import "partials/ui.html" as ui %}
 {# Homepage (redesign). Data: content/pages/home.md front matter (page.meta) and
    collections prepared in build.py: home.publications, home.articles, home.media, team. #}
-{% block body_class %}layout-home{% endblock %}
+{% block body_class %}layout-home is-redesign{% endblock %}
 {% block main %}
 {% set m = page.meta %}
 
@@ -142,7 +142,7 @@
       {% for p in team %}
       <li class="person-card" data-reveal style="--i: {{ loop.index0 }}">
         <a href="{{ p.url }}">
-          <img class="person-card__photo" src="{{ p.photo }}" alt="" loading="lazy">
+          {{ ui.portrait(p, "person-card__photo") }}
           <span class="person-card__name">{{ p.name }}</span>
           <span class="person-card__role mono">{{ p.role }}</span>
         </a>

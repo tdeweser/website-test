@@ -1,0 +1,238 @@
+# People on the 'Onze mensen' page, grouped. Edited by hand (no longer scraped).
+# home: true  -> also shown in 'De mensen achter IPE' on the homepage.
+# ringed: true -> the photo file already has a red ring baked in (it is zoomed so
+#                 the site draws one uniform ring).
+- title: Kernteam
+  people:
+  - name: Vinzenz Ziesemer
+    role: Directeur
+    bullets:
+    - Beheert de onderzoeksagenda van IPE, gespecialiseerd in overheidsfinanciën
+    - Promoveerde in de Economie aan het European University Institute
+    - Werkte eerder als econoom en teamleider bij het ministerie van Financiën en als analist in de financiële sector
+    links:
+    - title: Onderzoekspagina
+      url: /onderzoek-vinzenz-ziesemer/
+    - title: X
+      url: https://twitter.com/VJZiesemer
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/vinzenz-ziesemer-019b0a64/
+    photo: /media/img/vinzenz-ziesemer-5170edd8.png
+    ringed: true
+    home: true
+  - name: Jasper H. van Dijk
+    role: Onderzoeksleider Macroeconomie & EU (plv. dir.)
+    bullets:
+    - Gespecialiseerd in innovatiebeleid en wonen
+    - Buitenpromovendus bij de Universiteit Utrecht, faculteit economie
+    - Werkte eerder als econoom en woordvoerder bij het ministerie van Financiën en als consultant bij McKinsey & Company
+    links:
+    - title: Cv en publicaties
+      url: /onderzoek-jasper-van-dijk/
+    - title: X
+      url: https://twitter.com/jasperhvandijk
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/jasper-h-van-dijk-178b2186/
+    photo: /media/img/jasper-h-van-dijk-0d54d6c1.png
+    ringed: true
+    home: true
+  - name: Jasper J. van Dijk
+    role: Onderzoeksleider Sociaal beleid en Functioneren overheid
+    bullets:
+    - Gespecialiseerd in toeslagen, armoedebeleid, sociale zekerheid en functioneren van de overheid
+    - Promoveerde in de Economie aan Oxford University
+    - Werkte eerder bij het ministerie van Financiën en de Boston Consulting Group
+    links:
+    - title: Publicaties
+      url: /onderzoek-jasper-j-van-dijk/
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/jaspervandijk/
+    photo: /media/img/jasper-j-van-dijk-b2a92d77.png
+    ringed: true
+    home: true
+  - name: Julia van Rijn
+    role: Onderzoeker
+    bullets:
+    - Onderzoekt diverse onderwerpen binnen de thema’s Macro-economie en Sociaal beleid
+    - Schreef eerder mee aan stukken over armoedebeleid, de kapitaalmarktunie en belastingen
+    - Voltooide de master beleidseconomie aan de Erasmus Universiteit Rotterdam
+    links:
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/julia-van-rijn-39454120a/
+    photo: /media/img/julia-c3685704.png
+    ringed: true
+    home: true
+  - name: Tessa De Weser
+    role: Onderzoeker
+    bullets:
+    - Onderzoekt diverse onderwerpen binnen de thema's sociaal beleid en functioneren overheid
+    - Schreef haar scriptie over sociale mediaverslaving bij TNO en werkte eerder als assistent aan de universiteit
+    - Voltooide de bachelor Econometrie en de master Duurzaamheidseconomie
+    links:
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/tessa-de-weser-44aa57206
+    photo: /media/img/schermafbeelding-2026-09-08-om-10-21-32-am-65da6b75.png
+    ringed: true
+    home: true
+  - name: Maurijn Rezvani
+    role: Onderzoeker
+    bullets:
+    - Onderzoekt de vereenvoudiging van gemeentelijk armoedebeleid
+    - Werkte eerder als strategisch adviseur bij de gemeente Amsterdam
+    - Voltooide de master Economic Policy aan de Universiteit Utrecht, na bachelors in antropologie en politicologie
+    links:
+    - title: LinkedIn
+      url: https://nl.linkedin.com/in/maurijnr
+    photo: /media/img/screenshot-2026-11-10-094704-f8e6648d.png
+    ringed: true
+  - name: Cor van der Leemputten
+    role: Communicatie en organisatie
+    bullets:
+    - Voltooide masters Europese Internationale Politiek en Europese Studies in Nederland, Spanje, Polen en de Verenigde Staten
+    - Vijftien jaar ervaring als adviseur en woordvoerder voor NGO's, overheid en bedrijfsleven
+    links:
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/leemputten/
+    photo: /media/img/profielfoto-senna-9fdf4c41.png
+    ringed: true
+    home: true
+  - name: Senna Blaas
+    role: Werkstudent
+    bullets:
+    - Student Economie, beleid en management aan Universiteit Leiden
+    - Ondersteunende werkzaamheden
+    - Heeft stage gelopen bij het ministerie van Economische Zaken en Klimaat
+    links:
+    - title: LinkedIn
+      url: https://nl.linkedin.com/in/senna-blaas
+    photo: /media/img/kopie-van-profielfoto-miriam-7bb20b6a.png
+    ringed: true
+  - name: Rosa Smit
+    role: Stagiair
+    bullets:
+    - Masterstudent Crisis and Security Management aan de Universiteit Leiden
+    - Doet onderzoek naar innovatiebeleid en verricht ondersteunende werkzaamheden
+    - Voltooide master Economic Policy aan de Universiteit Utrecht
+    links:
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/rosa-smit-0b861b34b/
+    photo: /media/img/scherm-afbeelding-2026-08-04-om-2-54-19-pm-b0088757.png
+    ringed: true
+  - name: Valerie van Maarschalkerwaart
+    role: Organisatie
+    bullets:
+    - Voltooide Master Spatial, Transport and Environmental Economics aan de VU Amsterdam
+    - Werkte eerder als taxateur/vastgoedadviseur en had een kunstgalerie in Amsterdam
+    links:
+    - title: LinkedIn
+      url: https://nl.linkedin.com/in/valerievanmaarschalkerwaart
+    photo: /media/img/kopie-van-profielfoto-socials-1-804be8fb.png
+    ringed: true
+- title: Fellows
+  people:
+  - name: Albert Jan Hummel
+    role: Belastingen
+    bullets:
+    - Universitair docent aan de Universiteit van Amsterdam
+    - 'Vakgebied: openbare financiën, macro-economie, arbeidseconomie'
+    - Promoveerde in de Economie aan de Erasmus Universiteit Rotterdam
+    links:
+    - title: Onderzoekspagina
+      url: https://www.albertjanhummel.com
+    photo: /media/img/hummel-5a9396f2.jpg
+  - name: Wouter Leenders
+    role: Belastingconcurrentie en vermogen
+    bullets:
+    - PhD-student aan de University of California, Berkeley
+    - Behaalde zijn BA Economics aan de University of Cambridge en MSc aan London School of Economics and Political Science
+    links:
+    - title: Onderzoekspagina
+      url: https://wouterleenders.eu
+    photo: /media/img/picture-7814f110.jpeg
+  - name: Merel van Rooy
+    role: Verkeersboetebeleid
+    bullets:
+    - Expert verkeersboetebeleid, auteur van ‘De Boetefabriek’
+    - Behaalde haar master Internationale Politieke Economie aan de Rijksuniversiteit Groningen
+    photo: /media/img/merel-956540a8.jpg
+  - name: David Bokhorst
+    role: Europese Unie, sociale zekerheid, governance
+    bullets:
+    - Research Fellow bij het European University Institute
+    - Promoveerde aan de Universiteit van Amsterdam; won met zijn proefschrift de Els Witte prijs
+    - Werkte als adviseur financiële zaken EU bij de Tweede Kamer
+    links:
+    - title: Onderzoekspagina
+      url: https://me.eui.eu/david-jonas-bokhorst/
+    photo: /media/img/bokhorst-david-jonas-bijgesneden-b6e321da.jpg
+  - name: Matthijs Korevaar
+    role: Wonen
+    bullets:
+    - Universitair hoofddocent aan de Erasmus School of Economics
+    - Promoveerde in Finance aan de Maastricht University, werkte daarna als visiting assistant professor aan de Columbia Business School
+    links:
+    - title: Onderzoekspagina
+      url: https://sites.google.com/view/matthijskorevaar/research
+    photo: /media/img/matthijs-fe2ee944.png
+  - name: Aart Gerritsen
+    role: Belastingbeleid
+    bullets:
+    - Universitair hoofddocent aan de Erasmus School of Economics
+    - Promoveerde in de Economie aan de Erasmus Universiteit Rotterdam, werkte daarna als Senior Research Fellow bij het Max Planck Institute for Tax Law and Public Finance
+    links:
+    - title: Onderzoekspagina
+      url: https://sites.google.com/site/aartgerritsen/papers
+    photo: /media/img/aart-gerritsen-a58c4820.jpg
+  - name: Yannick Feld
+    role: Belastingbeleid en minimaregelingen
+    bullets:
+    - Docent Fiscaal Recht aan de Universiteit Leiden en extern docent Amsterdam School of Economics (UvA)
+    - Behaalde zijn master Fiscale Economie aan de Universiteit van Amsterdam en zijn master Public Governance aan Tilburg University
+    photo: /media/img/yannick-felt-c5dec9dc.jpg
+  - name: Kim Fairley
+    role: Onderwijs, persoonlijke financiering en gezondheid
+    bullets:
+    - Universitair docent Economie Radboud Universiteit
+    - 'Past experimenten toe in sociaal beleid: lab, veld en microdata'
+    - Promoveerde aan de Radboud Universiteit, deed een postdoc aan de University of Colorado Boulder, en kreeg tenure aan de Universiteit Leiden
+    links:
+    - title: Onderzoekspagina
+      url: https://kimfairley.github.io/website/
+    photo: /media/img/kimfairley-0f9fc72d.jpg
+- title: Raad van Advies
+  people:
+  - name: Barbara Baarsma
+    bullets:
+    - Hoogleraar Toegepaste Economie aan de Universiteit van Amsterdam
+    - Voorzitter van de Bankraad van De Nederlandsche Bank
+    - Was kroonlid van de Sociaal Economische Raad en directeur van SEO Economisch Onderzoek
+    photo: /media/img/barbara-baarsma-bijgesneden-4c4e1bd2.jpg
+  - name: Coen Teulings
+    bullets:
+    - Universiteitshoogleraar aan de Universiteit van Utrecht
+    - Was Professor arbeidseconomie aan de Universiteit van Cambridge
+    - Was directeur van het Centraal Planbureau, directeur van SEO Economisch Onderzoek en directeur van het Tinbergen Instituut
+    photo: /media/img/coen-teulings-bijgesneden-65e9b3d4.jpg
+- title: Bestuur
+  people:
+  - name: Li’ao Wang
+    role: Voorzitter
+    bullets:
+    - CTO & CPO bij VMN media
+    - Toezichthouder bij Stichting Gezondheidscentra Eindhoven
+    - Werkte als consultant bij Bain & Company
+    photo: /media/img/lia-ao-bijgesneden-15566d1e.jpg
+  - name: Gregor Rossen
+    role: Penningmeester
+    bullets:
+    - Senior portfolio manager alternatives bij Aegon AM
+    - Werkte bij het Nederlandse pensioenfonds PGGM en een Nederlands private equity fonds
+    - Voorzitter van Amsterdam Capitals en co-voorzitter van het CDA Amsterdam
+    photo: /media/img/gregor-bijgesneden-8bc9312e.jpg
+  - name: Sam de Muijnck
+    role: Secretaris
+    bullets:
+    - Directeur van de denktank Our New Economy (ONE)
+    - 'Schreef met Joris Tieleman het boek ‘Economy Studies: A Guide to Rethinking Economics Education’'
+    - Was voorzitter van Nederlandse tak van internationale studentenbeweging Rethinking Economics en de Jonge Economen Denktank
+    photo: /media/img/sam-bijgesneden-licht-3f98ab14.jfif
