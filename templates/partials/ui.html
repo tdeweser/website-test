@@ -1,0 +1,38 @@
+{# Small UI building blocks shared by the header, footer and homepage.
+   Import with: {% import "partials/ui.html" as ui %} #}
+
+{% macro icon(name, cls="icon") -%}
+{%- if name == "arrow" -%}
+<svg class="{{ cls }}" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+{%- elif name == "arrow-left" -%}
+<svg class="{{ cls }}" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.5 10h-12M9 5l-4.5 5L9 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg>
+{%- elif name == "chevron" -%}
+<svg class="{{ cls }}" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 8l4.5 4.5L14.5 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+{%- elif name == "globe" -%}
+<svg class="{{ cls }}" viewBox="0 0 20 20" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5s-1 5.2-3.2 7.5c-2.2-2.3-3.2-4.8-3.2-7.5s1-5.2 3.2-7.5z"/></g></svg>
+{%- elif name == "linkedin" -%}
+<svg class="{{ cls }}" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94zM20.44 13.4c0-3.1-1.65-5.15-4.43-5.15-1.6 0-2.62.86-3.06 1.6V8.5H9.6V20h3.38v-6.06c0-1.6.75-2.6 2.06-2.6 1.24 0 2.02.9 2.02 2.6V20h3.38v-6.6z"/></svg>
+{%- elif name == "x" -%}
+<svg class="{{ cls }}" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78L17.75 3zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43z"/></svg>
+{%- endif -%}
+{%- endmacro %}
+
+{# Button with an arrow block; on hover the block colour sweeps over the label.
+   style: "" (red, black block) | "line" (outline, red block) | "dark" (black, red block) #}
+{% macro button(title, url, style="", small=false) -%}
+{%- set external = url.startswith("http") -%}
+<a class="btn{% if style %} btn--{{ style }}{% endif %}{% if small %} btn--small{% endif %}" href="{{ url }}"{% if external %} target="_blank" rel="noopener"{% endif %}>
+  <span class="btn__label">{{ title }}</span>
+  <span class="btn__arrow">{{ icon("arrow") }}</span>
+  <span class="btn__fill" aria-hidden="true"><span class="btn__label">{{ title }}</span><span class="btn__arrow">{{ icon("arrow") }}</span></span>
+</a>
+{%- endmacro %}
+
+{# Section heading with the red underline that draws in when it scrolls into view. #}
+{% macro heading(text, tag="h2", cls="") -%}
+<{{ tag }} class="title-line {{ cls }}" data-reveal><span>{{ text }}</span></{{ tag }}>
+{%- endmacro %}
+
+{% macro textlink(title, url) -%}
+<a class="textlink" href="{{ url }}"{% if url.startswith("http") %} target="_blank" rel="noopener"{% endif %}>{{ title }} {{ icon("arrow") }}</a>
+{%- endmacro %}

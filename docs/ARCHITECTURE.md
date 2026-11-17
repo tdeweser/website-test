@@ -103,8 +103,25 @@ Old paths are kept, with a trailing slash, served from `<path>/index.html`. For 
 
 ## Styling
 
-The site recreates the look of the original Squarespace site. The values were measured
-from the live site's computed styles in Chrome:
+The site is being upgraded section by section.
+
+**Redesigned: header, footer and homepage.** These are modelled on the reference design at
+https://ipe-eta.vercel.app/ and written from scratch:
+
+- `/assets/css/chrome.css`: tokens (`--red`, `--cream`, `--ink`, `--navy`, `--shell`,
+  `--edge`), the sticky header (white once scrolled; dropdown folders; NL/EN picker; mobile
+  drawer), the dark footer, the arrow buttons (`.btn`, `.btn--line`, `.btn--small`; on
+  hover the arrow block's colour sweeps over the label), headings with a red underline
+  that draws in (`.title-line`), and reveal-on-scroll (`[data-reveal]` → `.is-visible`).
+- `/assets/css/home.css`: the homepage sections. The hero photo is revealed by a "curtain".
+  Topic photos get a red duotone (grayscale + `mix-blend-mode: color`). The media slider has
+  arrow buttons. The "Publieke Economie" wordmark is DM Mono with the photo clipped to the
+  text, and slides in on scroll (CSS scroll timelines; static in browsers without them).
+- Fonts: DM Sans VF (variable, weights 300–800, `fonts-dm-sans.css`) and DM Mono (design system).
+- All motion is disabled with `prefers-reduced-motion`, and nothing is hidden without JavaScript.
+
+**Still the original look: every other page body.** The values below were measured from the
+live Squarespace site's computed styles in Chrome (`/assets/css/site.css`):
 
 | Element | Value |
 |---|---|

@@ -1,2 +1,177 @@
-{% extends "page.html" %}
-{% block body_class %}layout-page layout-home{% endblock %}
+{% extends "base.html" %}
+{% import "partials/ui.html" as ui %}
+{# Homepage (redesign). Data: content/pages/home.md front matter (page.meta) and
+   collections prepared in build.py: home.publications, home.articles, home.media, team. #}
+{% block body_class %}layout-home{% endblock %}
+{% block main %}
+{% set m = page.meta %}
+
+{# ---------- Hero ---------- #}
+<section class="hero">
+  <div class="hero__grid shell">
+    <div class="hero__text">
+      {% set t = m.hero.title %}{% set u = m.hero.underline %}
+      <h1 class="hero__title">{% if u and u in t %}{{ t.replace(u, '') }}<span class="underlined">{{ u }}</span>{% else %}{{ t }}{% endif %}</h1>
+      <p class="hero__lead">{{ m.hero.lead }}</p>
+      <div class="btns">
+        {% for b in m.hero.buttons %}{{ ui.button(b.title, b.url, b.get('style', '')) }}{% endfor %}
+      </div>
+      <p class="hero__note">{{ m.hero.note }}</p>
+    </div>
+    <figure class="hero__photo"><img src="{{ m.hero.image }}" alt="" fetchpriority="high"></figure>
+  </div>
+</section>
+
+{# ---------- Recente publicaties ---------- #}
+<section class="block block--white">
+  <div class="shell">
+    <div class="block__head">
+      {{ ui.heading(m.publications.title) }}
+      {{ ui.textlink(m.publications.more.title, m.publications.more.url) }}
+    </div>
+    <ul class="pubs">
+      {% for d in home.publications %}
+      <li class="pub" data-reveal style="--i: {{ loop.index0 }}">
+        <a class="pub__img" href="{{ d.url }}" tabindex="-1" aria-hidden="true">{% if d.meta.get('image') or d.meta.get('listing_image') %}<img src="{{ d.meta.get('image') or d.meta.get('listing_image') }}" alt="" loading="lazy">{% endif %}</a>
+        <p class="mono">{{ d.label }} · {{ d.date | nl_date }}</p>
+        <h3 class="pub__title"><a href="{{ d.url }}">{{ d.title }}</a></h3>
+        {% set topics = (d.meta.get('categories') or []) | reject('in', kinds) | list %}{% set topic = topics[0] if topics else '' %}
+        {% if topic %}<a class="pub__topic" href="{{ category_url(topic) }}">{{ topic }}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if home.articles %}
+    <div class="articles">
+      <p class="articles__label mono">{{ m.publications.articles.label }}</p>
+      <ul class="articles__list">
+        {% for d in home.articles %}
+        {% set topics = (d.meta.get('categories') or []) | reject('in', kinds) | list %}{% set topic = topics[0] if topics else '' %}
+        <li class="article-row" data-reveal style="--i: {{ loop.index0 }}">
+          <a href="{{ d.url }}">
+            <p class="mono">{{ d.date | nl_date }}{% if topic %} · {{ topic }}{% endif %} <span class="article-row__arrow">{{ ui.icon("arrow") }}</span></p>
+            <h3 class="article-row__title">{{ d.title }}</h3>
+            {% if d.meta.get('excerpt') %}<p class="article-row__excerpt">{{ d.meta.excerpt | truncate(150) }}</p>{% endif %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{# ---------- Onze onderwerpen ---------- #}
+<section class="block block--ink">
+  <div class="shell">
+    <div class="block__head block__head--split">
+      {{ ui.heading(m.topics.title) }}
+      <p class="block__intro">{{ m.topics.intro }}</p>
+    </div>
+    <ul class="topics">
+      {% for t in m.topics['items'] %}
+      <li class="topic" data-reveal style="--i: {{ loop.index0 }}">
+        <a class="topic__img" href="{{ t.url }}" tabindex="-1" aria-hidden="true"><img src="{{ t.image }}" alt="" loading="lazy"></a>
+        <h3 class="topic__title"><a href="{{ t.url }}">{{ t.title }}</a></h3>
+        <p class="topic__text">{{ t.text }}</p>
+        {{ ui.textlink("Lees verder", t.url) }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ---------- In de media ---------- #}
+{% if home.media %}
+<section class="block block--white">
+  <div class="shell">
+    <div class="block__head block__head--split">
+      {{ ui.heading(m.media.title) }}
+      <div class="block__intro">{{ m.media.intro | inline_md }}</div>
+    </div>
+  </div>
+  <div class="slider" data-slider>
+    <ul class="slider__track" data-slider-track>
+      {% for d in home.media %}
+      {% set href = d.meta.get('external_url') or d.url %}
+      {% set img = d.meta.get('image') or d.meta.get('listing_image') %}
+      <li class="media-card">
+        <a href="{{ href }}"{% if d.meta.get('external_url') %} target="_blank" rel="noopener"{% endif %}>
+          <span class="media-card__img">{% if img %}<img src="{{ img }}" alt="" loading="lazy">{% endif %}</span>
+          <span class="mono">{{ d.date | nl_date }}</span>
+          <span class="media-card__title">{{ d.title }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="shell slider__nav">
+      <button class="slider__btn" type="button" data-slider-prev aria-label="Vorige">{{ ui.icon("arrow-left") }}</button>
+      <button class="slider__btn" type="button" data-slider-next aria-label="Volgende">{{ ui.icon("arrow") }}</button>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{# ---------- Woordbeeld + Wij staan voor ---------- #}
+<section class="block block--cream values">
+  <div class="wordmark" aria-hidden="true" style="--wordmark-image: url({{ m.wordmark.image }})">
+    {% for line in m.wordmark.lines %}<span class="wordmark__line wordmark__line--{{ loop.index }}">{{ line }}</span>{% endfor %}
+  </div>
+  <div class="shell values__grid">
+    <div>
+      {{ ui.heading(m['values'].title) }}
+      <p class="block__intro">{{ m['values'].intro }}</p>
+    </div>
+    <ul class="values__list">
+      {% for v in m['values']['items'] %}
+      <li class="value" data-reveal style="--i: {{ loop.index0 }}"><h3 class="value__title">{{ v.title }}</h3><p>{{ v.text }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ---------- De mensen achter IPE ---------- #}
+<section class="block block--navy">
+  <div class="shell people">
+    <div class="people__intro">
+      {{ ui.heading(m.people.title) }}
+      <p class="block__intro">{{ m.people.text }}</p>
+      {{ ui.textlink(m.people.link.title, m.people.link.url) }}
+    </div>
+    <ul class="people__grid">
+      {% for p in team %}
+      <li class="person-card" data-reveal style="--i: {{ loop.index0 }}">
+        <a href="{{ p.url }}">
+          <img class="person-card__photo" src="{{ p.photo }}" alt="" loading="lazy">
+          <span class="person-card__name">{{ p.name }}</span>
+          <span class="person-card__role mono">{{ p.role }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{# ---------- Bevalt onze inhoud? ---------- #}
+<section class="block block--cream support">
+  <div class="shell support__grid">
+    <figure class="support__photo" data-reveal><img src="{{ m.support.image }}" alt="" loading="lazy"></figure>
+    <div>
+      {{ ui.heading(m.support.title) }}
+      <div class="support__cols">
+        <div class="support__col">
+          <p>{{ m.support.newsletter.text }}</p>
+          {{ ui.button(m.support.newsletter.button, m.support.newsletter.url, "line") }}
+        </div>
+        <div class="support__col">
+          <p>{{ m.support.donate.text }}</p>
+          <div class="support__donate">
+            {{ ui.button(m.support.donate.button, m.support.donate.url) }}
+            {% if qr %}<img class="support__qr" src="{{ qr }}" alt="QR-code om te doneren" width="96" height="96" loading="lazy">{% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

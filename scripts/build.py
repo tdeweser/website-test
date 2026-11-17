@@ -87,6 +87,10 @@ class Site:
                                autoescape=select_autoescape(["html", "xml"]),
                                undefined=StrictUndefined, trim_blocks=True, lstrip_blocks=True)
         self.env.filters["nl_date"] = nl_date
+        self.env.filters["inline_md"] = lambda s: Markup(
+            markdown.markdown(s or "").removeprefix("<p>").removesuffix("</p>"))
+        team_file = CONTENT / "people" / "team.yml"
+        self.team = yaml.safe_load(team_file.read_text(encoding="utf-8")) if team_file.exists() else []
         def media(name):  # site-wide assets the scraper stores under fixed names
             f = next(iter(sorted((STATIC / "media").glob(f"{name}.*"))), None)
             return f"/media/{f.name}" if f else None
@@ -188,7 +192,8 @@ class Site:
         for doc in self.pages:
             doc.html = self.to_html(doc)
             layout = doc.meta.get("layout", "page")
-            self.render(f"{layout}.html", doc.url, page=doc, content=Markup(doc.html))
+            extra = self.home_data(doc) if layout == "home" else {}
+            self.render(f"{layout}.html", doc.url, page=doc, content=Markup(doc.html), **extra)
 
         for doc in self.articles + self.events:
             doc.html = self.to_html(doc)
@@ -200,6 +205,25 @@ class Site:
         self.write_meta_files()
         print(f"Built {len(self.pages)} pages, {len(self.articles)} articles "
               f"({len(self.listed)} listed), {len(self.events)} events -> {PUBLIC.relative_to(PUBLIC.parent)}/")
+
+    def home_data(self, doc: Doc) -> dict:
+        """Lists the homepage fills automatically (settings in content/pages/home.md)."""
+        m = doc.meta
+        pub = m.get("publications", {})
+        cats = set(pub.get("categories", []))
+        everything = sorted(self.articles, key=lambda a: (a.date, a.title), reverse=True)
+        publications = [a for a in everything if cats & set(a.meta.get("categories") or [])][: pub.get("count", 4)]
+        art = pub.get("articles") or {}
+        articles = [a for a in self.select(category=art.get("category")) if a not in publications][: art.get("count", 3)] if art else []
+        med = m.get("media", {})
+        media = []
+        if med:
+            pool = self.select(tag=med.get("tag"))
+            with_img = [d for d in pool if d.meta.get("image") or d.meta.get("listing_image")]
+            # A photo slider: prefer items with a picture, top up with the rest if needed.
+            media = (with_img if len(with_img) >= 4 else pool)[: med.get("count", 10)]
+        return {"home": {"publications": publications, "articles": articles, "media": media},
+                "team": self.team, "kinds": KINDS}
 
     def build_listings(self):
         """/highlights/, /highlights/categorie/<x>/ and /highlights/tag/<x>/ pages."""

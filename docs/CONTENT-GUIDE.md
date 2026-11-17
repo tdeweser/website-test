@@ -52,6 +52,23 @@ Body in Markdown. Shortcodes such as {{ authors(["Vinzenz Ziesemer"]) }} work he
 Put images in `static/media/img/` and PDFs in `static/media/files/`, and link them as
 `/media/img/…` and `/media/files/…`.
 
+## Homepage
+
+The homepage is `content/pages/home.md`. All its texts and settings are in the front matter
+(there is no body), and `templates/home.html` renders them. The scraper never overwrites
+this file.
+
+| Key | What it controls |
+|---|---|
+| `hero` | `title`, the part of the title to underline in red (`underline`), `lead`, `image`, `buttons` (`style: line` = outline button), `note` |
+| `publications` | heading, "Naar het archief" link, which `categories` count as publications (newest `count` shown, whatever their age) and the `articles` row (newest listed items in that category) |
+| `topics` | heading, intro, and the four topic cards (`title`, `text`, `image`, `url`) |
+| `media` | heading, intro (Markdown links allowed) and the `tag` whose items fill the photo slider |
+| `wordmark` | the two lines of the large photo-filled "Publieke Economie" and the photo |
+| `values` | "Wij staan voor" heading, intro and rows |
+| `people` | heading, text and link; the people themselves are in `content/people/team.yml` |
+| `support` | "Bevalt onze inhoud?" photo, newsletter and donate texts and buttons (the QR code comes from the old site) |
+
 ## Edit a permanent page
 
 Pages live in `content/pages/<name>.md`. Their structure:
@@ -113,6 +130,7 @@ Author cards are in `content/people/authors.yml` (`name`, `role`, `email`, `phot
 ## Navigation and footer
 
 Edit `content/site.yml`. In `nav`, an entry with `url` is a plain link and an entry with
-`items` is a dropdown folder. `cta` is the red "Steun ons" button. The footer uses
-`newsletter`, `donate`, `social` and `anbi_note`; its layout is in
-`templates/partials/footer.html`.
+`items` is a dropdown folder; Home and English are left out of the header (the logo is
+Home, English sits under the NL/EN picker, `languages`). `cta` is the red "Steun ons"
+button. The footer uses `footer` (tagline, link columns, KvK/RSIN), `anbi_note`, `contact`
+and `social`; its layout is in `templates/partials/footer.html`.

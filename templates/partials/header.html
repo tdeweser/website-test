@@ -1,34 +1,49 @@
-{# Header as on the old site: beige bar, logo hanging below it, links + folders, red button. #}
-<header class="site-header">
-  <div class="site-header__inner">
-    <a class="site-header__logo" href="/" aria-label="{{ site.title }} — home">
-      <img src="{{ logo }}" alt="{{ site.title }}" width="178" height="140">
+{% import "partials/ui.html" as ui %}
+{# Site header: small logo, menu with dropdown folders, language picker, "Steun ons".
+   Sticky; gets a white background once the page scrolls (site.js adds .is-scrolled). #}
+<header class="topbar" data-topbar>
+  <div class="topbar__inner">
+    <a class="topbar__logo" href="/" aria-label="{{ site.title }} — home">
+      <img src="{{ logo }}" alt="{{ site.title }}" width="124" height="97">
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span class="nav-toggle__bars" aria-hidden="true"></span>
-      <span class="visually-hidden">Menu openen</span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Hoofdmenu">
-      <ul class="site-nav__list">
-        {% for item in nav %}
+
+    <nav class="menu" id="menu" aria-label="Hoofdmenu">
+      <ul class="menu__list">
+        {# Home is the logo; English lives in the language picker. #}
+        {% set lang_urls = site.languages | map(attribute='url') | list %}
+        {% for item in nav if item.get('url') not in lang_urls %}
         {% if item.get('items') %}
         {% set active = page.url in item['items'] | map(attribute='url') | list %}
-        <li class="site-nav__item site-nav__folder{% if active %} is-active{% endif %}">
-          <button class="site-nav__trigger" type="button" aria-expanded="false">{{ item.title }}</button>
-          <ul class="site-nav__menu">
+        <li class="menu__group" data-menu-group>
+          <button class="menu__link{% if active %} is-current{% endif %}" type="button" aria-expanded="false">
+            {{ item.title }} {{ ui.icon("chevron") }}
+          </button>
+          <ul class="menu__sub">
             {% for sub in item['items'] %}
-            <li><a href="{{ sub.url }}"{% if page.url == sub.url %} aria-current="page"{% endif %}>{{ sub.title }}</a></li>
+            <li><a href="{{ sub.url }}"{% if page.url == sub.url %} aria-current="page"{% endif %}>{{ sub.title }} {{ ui.icon("arrow") }}</a></li>
             {% endfor %}
           </ul>
         </li>
         {% else %}
-        <li class="site-nav__item{% if page.url == item.url %} is-active{% endif %}">
-          <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
-        </li>
+        <li><a class="menu__link" href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
         {% endif %}
         {% endfor %}
+        <li class="menu__group" data-menu-group>
+          <button class="menu__link" type="button" aria-expanded="false" aria-label="Taal kiezen">
+            {{ ui.icon("globe", "icon icon--globe") }} {{ site.languages[1].code if page.url == '/english/' else site.languages[0].code }} {{ ui.icon("chevron") }}
+          </button>
+          <ul class="menu__sub menu__sub--right">
+            {% for lang in site.languages %}
+            <li><a href="{{ lang.url }}" lang="{{ lang.code | lower }}"{% if (lang.code == 'EN') == (page.url == '/english/') %} aria-current="true"{% endif %}>{{ lang.title }} {{ ui.icon("arrow") }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
       </ul>
-      <a class="header-button" href="{{ site.cta.url }}">{{ site.cta.title }}</a>
+      <div class="menu__cta">{{ ui.button(site.cta.title, site.cta.url, small=true) }}</div>
     </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span> Menu
+    </button>
   </div>
 </header>

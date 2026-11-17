@@ -48,6 +48,16 @@ scrape:
     /events: Evenementen
     /armoede-dashboard: Armoededashboard
     /sectoren-dashboard: Sectoren van de toekomst
+  # Pages maintained by hand in content/pages/ (no `source:` in their front matter).
+  # The scraper still reads them on the old site (for links and site assets) but never
+  # overwrites the local file. The homepage is the redesigned one, not a copy.
+  keep_local:
+    - /
+  # Always take the newest N posts in these categories, whatever their date
+  # (the homepage shows the 4 newest reports and policy papers).
+  newest_of:
+    categories: [Rapport, Policy paper]
+    count: 4
   # Also take every other plain page listed in the old sitemap.xml (not in the menu,
   # e.g. /pensioenreglement, /think-cell). Articles stay limited to the window.
   include_sitemap_pages: true
@@ -94,6 +104,34 @@ nav:
   - { title: English, url: /english/ }
 
 cta: { title: Steun ons, url: /steun-ons/ }
+
+# Language picker in the header (NL is the site itself, EN the English page).
+languages:
+  - { code: NL, title: Nederlands, url: / }
+  - { code: EN, title: English, url: /english/ }
+
+# --- Footer (dark) ------------------------------------------------------------------
+footer:
+  tagline: IPE is een onafhankelijke denktank, gericht op vooruitgang.
+  columns:
+    - title: Onderwerpen
+      items:
+        - { title: Macro-economie, url: /macro-economie/ }
+        - { title: Sociaal beleid, url: /sociaalbeleid-belastingen/ }
+        - { title: Europese Unie, url: /europese-unie/ }
+        - { title: Functioneren overheid, url: /functioneren-overheid/ }
+        - { title: Archief, url: /archief/ }
+    - title: Over ons
+      items:
+        - { title: Over IPE, url: /over-ons/over-ipe/ }
+        - { title: Onze mensen, url: /onze-mensen/ }
+    - title: IPE
+      items:
+        - { title: Evenementen, url: /events/ }
+        - { title: Vacatures, url: /vacatures/ }
+        - { title: Contact, url: /contact/ }
+        - { title: Steun ons, url: /steun-ons/ }
+  registration: { kvk: "85447455", rsin: "8636 26 257", city: Den Haag }
 
 # --- Footer ----------------------------------------------------------------------
 contact:

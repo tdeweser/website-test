@@ -81,7 +81,7 @@ def main() -> int:
         soup = BeautifulSoup(f.read_text(encoding="utf-8"), "html.parser")
         if not soup.title or not soup.title.get_text(strip=True):
             err(f"{rel}: missing <title>")
-        if not soup.select_one("header.site-header") or not soup.select_one("footer.site-footer"):
+        if not soup.select_one("header.topbar") or not soup.select_one("footer.footer"):
             err(f"{rel}: missing site header or footer")
         for tag, attr in (("a", "href"), ("img", "src"), ("link", "href"), ("script", "src"), ("iframe", "src"), ("source", "src")):
             for el in soup.find_all(tag):

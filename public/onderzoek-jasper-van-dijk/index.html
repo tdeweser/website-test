@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,59 +8,69 @@
 <meta name="robots" content="noindex, nofollow">  <meta property="og:site_name" content="Instituut voor Publieke Economie">
   <meta property="og:title" content="Onderzoek Jasper H. van Dijk">
 <link rel="icon" href="/media/favicon.ico">  <link rel="alternate" type="application/rss+xml" title="Instituut voor Publieke Economie" href="/feed.xml">
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
   <link rel="stylesheet" href="/assets/ds/styles.css">
   <link rel="stylesheet" href="/assets/css/fonts-work-sans.css">
+  <link rel="stylesheet" href="/assets/css/fonts-dm-sans.css">
+  <link rel="preload" href="/assets/fonts/DMSans-VF-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/chrome.css">
   <script src="/assets/js/site.js" defer></script>
 </head>
 <body class="layout-page">
   <a class="skip-link" href="#inhoud">Doorgaan naar inhoud</a>
-<header class="site-header">
-  <div class="site-header__inner">
-    <a class="site-header__logo" href="/" aria-label="Instituut voor Publieke Economie — home">
-      <img src="/media/logo-header.png" alt="Instituut voor Publieke Economie" width="178" height="140">
+<header class="topbar" data-topbar>
+  <div class="topbar__inner">
+    <a class="topbar__logo" href="/" aria-label="Instituut voor Publieke Economie — home">
+      <img src="/media/logo-header.png" alt="Instituut voor Publieke Economie" width="124" height="97">
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span class="nav-toggle__bars" aria-hidden="true"></span>
-      <span class="visually-hidden">Menu openen</span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Hoofdmenu">
-      <ul class="site-nav__list">
-        <li class="site-nav__item">
-          <a href="/">Home</a>
-        </li>
-        <li class="site-nav__item site-nav__folder">
-          <button class="site-nav__trigger" type="button" aria-expanded="false">Onderwerpen</button>
-          <ul class="site-nav__menu">
-            <li><a href="/macro-economie/">Macro-economie</a></li>
-            <li><a href="/sociaalbeleid-belastingen/">Sociaal beleid</a></li>
-            <li><a href="/europese-unie/">Europese Unie</a></li>
-            <li><a href="/functioneren-overheid/">Functioneren overheid</a></li>
-            <li><a href="/archief/">Archief</a></li>
+
+    <nav class="menu" id="menu" aria-label="Hoofdmenu">
+      <ul class="menu__list">
+        <li class="menu__group" data-menu-group>
+          <button class="menu__link" type="button" aria-expanded="false">
+            Onderwerpen <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 8l4.5 4.5L14.5 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <ul class="menu__sub">
+            <li><a href="/macro-economie/">Macro-economie <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/sociaalbeleid-belastingen/">Sociaal beleid <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/europese-unie/">Europese Unie <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/functioneren-overheid/">Functioneren overheid <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/archief/">Archief <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
           </ul>
         </li>
-        <li class="site-nav__item site-nav__folder">
-          <button class="site-nav__trigger" type="button" aria-expanded="false">Over ons</button>
-          <ul class="site-nav__menu">
-            <li><a href="/over-ons/over-ipe/">Over IPE</a></li>
-            <li><a href="/onze-mensen/">Onze mensen</a></li>
+        <li class="menu__group" data-menu-group>
+          <button class="menu__link" type="button" aria-expanded="false">
+            Over ons <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 8l4.5 4.5L14.5 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <ul class="menu__sub">
+            <li><a href="/over-ons/over-ipe/">Over IPE <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/onze-mensen/">Onze mensen <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
           </ul>
         </li>
-        <li class="site-nav__item">
-          <a href="/events/">Evenementen</a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/vacatures/">Vacatures</a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/contact/">Contact</a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/english/">English</a>
+        <li><a class="menu__link" href="/events/">Evenementen</a></li>
+        <li><a class="menu__link" href="/vacatures/">Vacatures</a></li>
+        <li><a class="menu__link" href="/contact/">Contact</a></li>
+        <li class="menu__group" data-menu-group>
+          <button class="menu__link" type="button" aria-expanded="false" aria-label="Taal kiezen">
+            <svg class="icon icon--globe" viewBox="0 0 20 20" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5s-1 5.2-3.2 7.5c-2.2-2.3-3.2-4.8-3.2-7.5s1-5.2 3.2-7.5z"/></g></svg> NL <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 8l4.5 4.5L14.5 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <ul class="menu__sub menu__sub--right">
+            <li><a href="/" lang="nl" aria-current="true">Nederlands <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/english/" lang="en">English <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+          </ul>
         </li>
       </ul>
-      <a class="header-button" href="/steun-ons/">Steun ons</a>
+      <div class="menu__cta"><a class="btn btn--small" href="/steun-ons/">
+  <span class="btn__label">Steun ons</span>
+  <span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+  <span class="btn__fill" aria-hidden="true"><span class="btn__label">Steun ons</span><span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></span>
+</a></div>
     </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span> Menu
+    </button>
   </div>
 </header>  <main id="inhoud">
 <div class="page-content">
@@ -298,37 +308,44 @@
 </section>
 </div>
   </main>
-<footer class="site-footer">
-  <section class="band theme-bright footer-cta">
-    <div class="wrap">
-      <div class="footer-cta__top">
-        <h1>Bevalt onze inhoud?</h1>
-        <button class="share-button" type="button" data-share>Deel deze pagina</button>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <a class="footer__logo" href="/"><img src="/media/logo-header.png" alt="Instituut voor Publieke Economie" width="136" height="107" loading="lazy"></a>
+      <p class="footer__tagline">IPE is een onafhankelijke denktank, gericht op vooruitgang.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h2 class="footer__label">Onderwerpen</h2>
+        <ul class="footer__links">
+<li><a href="/macro-economie/">Macro-economie</a></li><li><a href="/sociaalbeleid-belastingen/">Sociaal beleid</a></li><li><a href="/europese-unie/">Europese Unie</a></li><li><a href="/functioneren-overheid/">Functioneren overheid</a></li><li><a href="/archief/">Archief</a></li>        </ul>
       </div>
-      <div class="footer-cta__grid">
-        <div class="footer-cta__col">
-          <p><strong>Schrijf je in voor onze <a href="https://instituutpe.substack.com/" target="_blank" rel="noopener">nieuwsbrief</a>.</strong></p>
-          <div class="embed embed--newsletter"><iframe src="https://instituutpe.substack.com/embed?transparent=1" title="Aanmelden voor de nieuwsbrief" loading="lazy" scrolling="no"></iframe></div>
-        </div>
-        <div class="footer-cta__col">
-          <p><strong><a href="/steun-ons/">Doneer hier</a> of gebruik de QR code.</strong></p>
-<img class="footer-cta__qr" src="/media/qr-doneren.png" alt="QR-code om te doneren" width="160" height="160" loading="lazy">        </div>
+      <div>
+        <h2 class="footer__label">Over ons</h2>
+        <ul class="footer__links">
+<li><a href="/over-ons/over-ipe/">Over IPE</a></li><li><a href="/onze-mensen/">Onze mensen</a></li>        </ul>
+      </div>
+      <div>
+        <h2 class="footer__label">IPE</h2>
+        <ul class="footer__links">
+<li><a href="/events/">Evenementen</a></li><li><a href="/vacatures/">Vacatures</a></li><li><a href="/contact/">Contact</a></li><li><a href="/steun-ons/">Steun ons</a></li>        </ul>
+      </div>
+      <div>
+        <h2 class="footer__label">Stichting</h2>
+        <p class="footer__text">Stichting Instituut voor Publieke Economie is aangemerkt als Algemeen Nut Beogende Instelling (ANBI).</p>
+        <p class="footer__mono">KvK 85447455<br>RSIN 8636 26 257<br>Den Haag</p>
+        <p><a class="footer__mail" href="mailto:info@ipe.nl">info@ipe.nl</a></p>
+        <ul class="footer__social">
+          <li><a href="https://twitter.com/InstituutPE" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78L17.75 3zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/instituut-voor-publieke-economie" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94zM20.44 13.4c0-3.1-1.65-5.15-4.43-5.15-1.6 0-2.62.86-3.06 1.6V8.5H9.6V20h3.38v-6.06c0-1.6.75-2.6 2.06-2.6 1.24 0 2.02.9 2.02 2.6V20h3.38v-6.6z"/></svg></a></li>
+        </ul>
       </div>
     </div>
-  </section>
-  <section class="band theme-light footer-bottom">
-    <div class="wrap footer-bottom__grid">
-      <ul class="social-icons">
-        <li><a href="https://twitter.com/InstituutPE" target="_blank" rel="noopener" aria-label="X (Twitter)">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.9c-.74.33-1.53.55-2.36.65a4.1 4.1 0 0 0 1.8-2.27c-.8.47-1.68.82-2.6 1a4.1 4.1 0 0 0-7 3.74A11.65 11.65 0 0 1 3.4 4.73a4.1 4.1 0 0 0 1.27 5.48 4.07 4.07 0 0 1-1.86-.51v.05a4.1 4.1 0 0 0 3.29 4.02 4.1 4.1 0 0 1-1.85.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 2 18.4a11.6 11.6 0 0 0 6.29 1.84c7.55 0 11.67-6.25 11.67-11.67l-.01-.53A8.3 8.3 0 0 0 22 5.9z"/></svg>
-        </a></li>
-        <li><a href="https://www.linkedin.com/company/instituut-voor-publieke-economie" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94zM20.44 13.4c0-3.1-1.65-5.15-4.43-5.15-1.6 0-2.62.86-3.06 1.6V8.5H9.6V20h3.38v-6.06c0-1.6.75-2.6 2.06-2.6 1.24 0 2.02.9 2.02 2.6V20h3.38v-6.6z"/></svg>
-        </a></li>
-      </ul>
-      <p class="footer-bottom__text">Wij geven om jouw <a href="/privacy/">privacy</a>.<br><a href="/copyright/">Copyright</a> © IPE 2022</p>
-      <p class="footer-bottom__text">Stichting Instituut voor Publieke Economie is aangemerkt als Algemeen Nut Beogende Instelling (ANBI).</p>
+    <div class="footer__bottom">
+      <a href="/privacy/">Privacyverklaring</a>
+      <span>© 2026 Instituut voor Publieke Economie</span>
+      <a href="/copyright/">Copyright</a>
     </div>
-  </section>
+  </div>
 </footer></body>
 </html>

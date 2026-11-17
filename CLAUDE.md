@@ -14,11 +14,16 @@ Read [README.md](README.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) fir
 - **No links to the old site.** Nothing in `public/` may point at ipe.nl, instituut-pe.nl or
   Squarespace (mailto `@ipe.nl` excepted). Download new images/PDFs into `static/media/` and
   link them as `/media/...`. `check.py` enforces this.
-- **The website copies the look of the original ipe.nl** (user decision, 2026-11-17): beige
-  header with hanging logo, Work Sans + DM Sans, red titles, red footer band. Stay as close to
-  the original as possible; measured values are in `static/assets/css/site.css` and
-  docs/ARCHITECTURE.md → Styling. The design system below applies to *new* designs and
-  mock-ups, not to restyling this site.
+- **Look of the site (2026-11-17):** the site is being upgraded section by section.
+  - *Redesigned* (modelled on the reference design at ipe-eta.vercel.app): the header, the
+    footer (every page) and the homepage. Styles: `static/assets/css/chrome.css` (header,
+    footer, buttons, tokens) and `home.css` (homepage only). DM Sans VF + DM Mono, colours
+    red `#d63f44`, cream `#f4ede3`, ink `#141312`, navy `#1d3354`.
+  - *Still the original ipe.nl look:* all other page bodies (`site.css`, measured from the old
+    Squarespace site). Keep those faithful to the original until the user asks to redesign them.
+  - The design system below applies to new designs and mock-ups.
+- The homepage is hand-maintained: `content/pages/home.md` (front matter = all texts and
+  settings) and `content/people/team.yml`. The scraper never overwrites them (`keep_local`).
 - Listings show only `in_window: true` items (the 3-month window, `content/site.yml`).
   Non-article content (pages, events) is taken regardless of date.
 - Shortcodes available in content: `listing()`, `authors()`, `archive()`, `map()`,

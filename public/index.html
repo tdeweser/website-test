@@ -1,264 +1,386 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Instituut voor Publieke Economie</title>
-  <meta name="description" content="Het Instituut voor Publieke Economie (IPE) is een Nederlandse denktank, gespecialiseerd in economie. Het IPE publiceert onderzoek en analyse over economisch beleid. Zo maken we complexe onderwerpen toegankelijk, brengen we vernieuwende ideeën onder de aandacht, en mengen we ons in het debat.">
+  <meta name="description" content="Het Instituut voor Publieke Economie (IPE) is een onafhankelijke denktank. Wij publiceren onderzoek en analyses over economisch beleid.">
 <meta name="robots" content="noindex, nofollow">  <meta property="og:site_name" content="Instituut voor Publieke Economie">
   <meta property="og:title" content="Instituut voor Publieke Economie">
 <link rel="icon" href="/media/favicon.ico">  <link rel="alternate" type="application/rss+xml" title="Instituut voor Publieke Economie" href="/feed.xml">
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
   <link rel="stylesheet" href="/assets/ds/styles.css">
   <link rel="stylesheet" href="/assets/css/fonts-work-sans.css">
+  <link rel="stylesheet" href="/assets/css/fonts-dm-sans.css">
+  <link rel="preload" href="/assets/fonts/DMSans-VF-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
-  <script src="/assets/js/site.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/chrome.css">
+<link rel="stylesheet" href="/assets/css/home.css">  <script src="/assets/js/site.js" defer></script>
 </head>
-<body class="layout-page layout-home">
+<body class="layout-home">
   <a class="skip-link" href="#inhoud">Doorgaan naar inhoud</a>
-<header class="site-header">
-  <div class="site-header__inner">
-    <a class="site-header__logo" href="/" aria-label="Instituut voor Publieke Economie — home">
-      <img src="/media/logo-header.png" alt="Instituut voor Publieke Economie" width="178" height="140">
+<header class="topbar" data-topbar>
+  <div class="topbar__inner">
+    <a class="topbar__logo" href="/" aria-label="Instituut voor Publieke Economie — home">
+      <img src="/media/logo-header.png" alt="Instituut voor Publieke Economie" width="124" height="97">
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span class="nav-toggle__bars" aria-hidden="true"></span>
-      <span class="visually-hidden">Menu openen</span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Hoofdmenu">
-      <ul class="site-nav__list">
-        <li class="site-nav__item is-active">
-          <a href="/" aria-current="page">Home</a>
-        </li>
-        <li class="site-nav__item site-nav__folder">
-          <button class="site-nav__trigger" type="button" aria-expanded="false">Onderwerpen</button>
-          <ul class="site-nav__menu">
-            <li><a href="/macro-economie/">Macro-economie</a></li>
-            <li><a href="/sociaalbeleid-belastingen/">Sociaal beleid</a></li>
-            <li><a href="/europese-unie/">Europese Unie</a></li>
-            <li><a href="/functioneren-overheid/">Functioneren overheid</a></li>
-            <li><a href="/archief/">Archief</a></li>
+
+    <nav class="menu" id="menu" aria-label="Hoofdmenu">
+      <ul class="menu__list">
+        <li class="menu__group" data-menu-group>
+          <button class="menu__link" type="button" aria-expanded="false">
+            Onderwerpen <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 8l4.5 4.5L14.5 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <ul class="menu__sub">
+            <li><a href="/macro-economie/">Macro-economie <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/sociaalbeleid-belastingen/">Sociaal beleid <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/europese-unie/">Europese Unie <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/functioneren-overheid/">Functioneren overheid <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/archief/">Archief <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
           </ul>
         </li>
-        <li class="site-nav__item site-nav__folder">
-          <button class="site-nav__trigger" type="button" aria-expanded="false">Over ons</button>
-          <ul class="site-nav__menu">
-            <li><a href="/over-ons/over-ipe/">Over IPE</a></li>
-            <li><a href="/onze-mensen/">Onze mensen</a></li>
+        <li class="menu__group" data-menu-group>
+          <button class="menu__link" type="button" aria-expanded="false">
+            Over ons <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 8l4.5 4.5L14.5 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <ul class="menu__sub">
+            <li><a href="/over-ons/over-ipe/">Over IPE <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/onze-mensen/">Onze mensen <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
           </ul>
         </li>
-        <li class="site-nav__item">
-          <a href="/events/">Evenementen</a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/vacatures/">Vacatures</a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/contact/">Contact</a>
-        </li>
-        <li class="site-nav__item">
-          <a href="/english/">English</a>
+        <li><a class="menu__link" href="/events/">Evenementen</a></li>
+        <li><a class="menu__link" href="/vacatures/">Vacatures</a></li>
+        <li><a class="menu__link" href="/contact/">Contact</a></li>
+        <li class="menu__group" data-menu-group>
+          <button class="menu__link" type="button" aria-expanded="false" aria-label="Taal kiezen">
+            <svg class="icon icon--globe" viewBox="0 0 20 20" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5s-1 5.2-3.2 7.5c-2.2-2.3-3.2-4.8-3.2-7.5s1-5.2 3.2-7.5z"/></g></svg> NL <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 8l4.5 4.5L14.5 8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <ul class="menu__sub menu__sub--right">
+            <li><a href="/" lang="nl" aria-current="true">Nederlands <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+            <li><a href="/english/" lang="en">English <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a></li>
+          </ul>
         </li>
       </ul>
-      <a class="header-button" href="/steun-ons/">Steun ons</a>
+      <div class="menu__cta"><a class="btn btn--small" href="/steun-ons/">
+  <span class="btn__label">Steun ons</span>
+  <span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+  <span class="btn__fill" aria-hidden="true"><span class="btn__label">Steun ons</span><span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></span>
+</a></div>
     </nav>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span> Menu
+    </button>
   </div>
 </header>  <main id="inhoud">
-<div class="page-content">
-<section class="band theme-white height-small band--image" style="--band-image: url(/media/img/hero-8299c34e.png); --overlay: 0.15">
-<div class="fe-row">
-<div class="fe-cell" style="--c: 3 / 23">
-<div class="align-center text-white">
-<h2>Impact met inhoud</h2>
-<h3>Beter beleid is de snelste weg naar een betere wereld. Daarom brengen wij de overheid in beweging — met onderzoek, scherpe voorstellen en een onafhankelijke stem in het publieke debat.</h3>
-<h3>IPE is een Algemeen Nut Beogende Instelling (ANBI).</h3>
-</div>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 9 / 17">
-<div class="align-center text-white">
-<p><strong>Schrijf je in voor onze</strong> <a href="https://instituutpe.substack.com/"><strong>nieuwsbrief</strong></a></p>
-</div>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 9 / 17">
-<div class="embed embed--instituutpe-substack-com" style="--embed-ratio: 480 / 180">
-<iframe allowfullscreen loading="lazy" src="https://instituutpe.substack.com/embed?transparent=1" title="Ingesloten inhoud"></iframe>
-</div>
-</div>
-</div>
-</section>
-<section class="band theme-light height-custom">
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 9">
-<h2>Recente publicaties</h2>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 19">
-<div class="summary summary--carousel" style="--per-row: 4; --thumb-ratio: 0.6667"> <div class="summary__controls"><button type="button" class="summary__prev" aria-label="Vorige">‹</button><button type="button" class="summary__next" aria-label="Volgende">›</button></div>
-<p><ul class="summary__items"> <li class="summary__item has-thumb"> <a class="summary__thumb" href="/highlights/gemeentepolis/" tabindex="-1" aria-hidden="true"><img src="/media/img/mockup-format-2-c14ea62d.png" alt="" loading="lazy"></a> <div class="summary__body"> <h4 class="summary__title"><a href="/highlights/gemeentepolis/">Gelijke toegang tot zorg voor minima</a></h4> <p class="summary__meta">21 september 2026 · Sociaal beleid en belastingen, Rapport</p>      </p>
-</div>
-<p></li> <li class="summary__item has-thumb"> <a class="summary__thumb" href="/highlights/betaalbaarbouwen/" tabindex="-1" aria-hidden="true"><img src="/media/img/mockup-format-66a3fe29.png" alt="" loading="lazy"></a> <div class="summary__body"> <h4 class="summary__title"><a href="/highlights/betaalbaarbouwen/">Betaalbaar Bouwen</a></h4> <p class="summary__meta">18 september 2026 · Macro-economie, Rapport</p>      </p>
-</div>
-<p></li> </ul> </div></p>
-</div>
-<div class="fe-cell" style="--c: 20 / 25">
-<div class="block-bg">
-<div class="summary summary--list" style="--per-row: 3; --thumb-ratio: 1.5"> <ul class="summary__items"> <li class="summary__item"> <div class="summary__body"> <h4 class="summary__title"><a href="/highlights/spinoffs-5dw78-sf64c-txez7/">Meer spin-offs? Gun onderzoekers hun succes</a></h4> <p class="summary__meta">30 oktober 2026 · Artikel, Macro-economie</p>      </div>
-<p></li> <li class="summary__item"> <div class="summary__body"> <h4 class="summary__title"><a href="/highlights/vermogenswinstbelasting-5dw78-cr89z/">Een betere vermogenswinstbelasting</a></h4> <p class="summary__meta">22 oktober 2026 · Sociaal beleid en belastingen, Artikel</p>      </p>
-</div>
-<p></li> <li class="summary__item"> <div class="summary__body"> <h4 class="summary__title"><a href="/highlights/verlaagdbtwtarief-5dw78-sf64c/">Afschaffen verlaagd btw-tarief arbeidsintensieve diensten levert geld én arbeidskrachten op</a></h4> <p class="summary__meta">15 oktober 2026 · Sociaal beleid en belastingen, Artikel</p>      </p>
-</div>
-<p></li> </ul> </div></p>
-</div>
-</div>
-</div>
-</section>
-<section class="band theme-light height-custom">
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 9">
-<h2>In de media</h2>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 19">
-<div class="summary summary--carousel" style="--per-row: 2; --thumb-ratio: 1.5"> <div class="summary__controls"><button type="button" class="summary__prev" aria-label="Vorige">‹</button><button type="button" class="summary__next" aria-label="Volgende">›</button></div>
-<p><ul class="summary__items"> <li class="summary__item has-thumb"> <a class="summary__thumb" href="https://www.rtl.nl/tv/fragmenten/video/ec45c3d1-eb24-4845-ba08-59d81d36af5e/verkeersboetes-blijven-stijgen-ze-zijn" tabindex="-1" aria-hidden="true"><img src="/media/img/image-18746705.png" alt="" loading="lazy"></a> <div class="summary__body"> <h4 class="summary__title"><a href="https://www.rtl.nl/tv/fragmenten/video/ec45c3d1-eb24-4845-ba08-59d81d36af5e/verkeersboetes-blijven-stijgen-ze-zijn" target="_blank" rel="noopener">Rtl Renze: Merel van Rooy over boetebeleid</a></h4> <p class="summary__meta">29 oktober 2026</p>      </p>
-</div>
-<p></li> <li class="summary__item has-thumb"> <a class="summary__thumb" href="https://www.youtube.com/watch?v=5KCye9-NZIU" tabindex="-1" aria-hidden="true"><img src="/media/img/schermafbeelding-2026-10-28-om-7-21-38-pm-55b28183.png" alt="" loading="lazy"></a> <div class="summary__body"> <h4 class="summary__title"><a href="https://www.youtube.com/watch?v=5KCye9-NZIU" target="_blank" rel="noopener">NPO Radio 1: Vinzenz over investeringsbeleid</a></h4> <p class="summary__meta">25 oktober 2026</p>      </p>
-</div>
-<p></li> <li class="summary__item has-thumb"> <a class="summary__thumb" href="https://npo.nl/start/afspelen/pointer_119" tabindex="-1" aria-hidden="true"><img src="/media/img/schermafbeelding-2026-10-27-om-1-16-42-pm-54051c2a.png" alt="" loading="lazy"></a> <div class="summary__body"> <h4 class="summary__title"><a href="https://npo.nl/start/afspelen/pointer_119" target="_blank" rel="noopener">Pointer: Jasper J. van Dijk over gemeentepolis</a></h4> <p class="summary__meta">15 oktober 2026</p>      </div> </li> <li class="summary__item has-thumb"> <a class="summary__thumb" href="https://www.nporadio1.nl/podcasts/dit-is-de-dag/145600/hier-gaat-het-te-weinig-over-in-de-miljoenennota" tabindex="-1" aria-hidden="true"><img src="/media/img/schermafbeelding-2026-09-21-om-9-53-34-am-5e93c51b.png" alt="" loading="lazy"></a> <div class="summary__body"> <h4 class="summary__title"><a href="https://www.nporadio1.nl/podcasts/dit-is-de-dag/145600/hier-gaat-het-te-weinig-over-in-de-miljoenennota" target="_blank" rel="noopener">NPO Radio 1: Vinzenz Ziesemer over de miljoenennota</a></h4> <p class="summary__meta">21 september 2026</p>      </div> </li> </ul> </div></p>
-</div>
-<div class="fe-cell" style="--c: 20 / 25">
-<div class="block-bg">
-<div class="summary summary--list" style="--per-row: 3; --thumb-ratio: 1.5"> <ul class="summary__items"> <li class="summary__item"> <div class="summary__body"> <h4 class="summary__title"><a href="https://www.rtl.nl/tv/fragmenten/video/ec45c3d1-eb24-4845-ba08-59d81d36af5e/verkeersboetes-blijven-stijgen-ze-zijn" target="_blank" rel="noopener">Rtl Renze: Merel van Rooy over boetebeleid</a></h4> <p class="summary__meta">29 oktober 2026</p>      </div>
-<p></li> <li class="summary__item"> <div class="summary__body"> <h4 class="summary__title"><a href="https://www.nporadio1.nl/fragmenten/dit-is-de-dag/01a17e3f-7fa6-71b9-91f3-06f4623f1b6c/2026-10-27-cda-en-pro-willen-ander-boetestelsel-is-dat-eerlijker" target="_blank" rel="noopener">NPO Radio 1: Merel van Rooy over het boetestelsel</a></h4> <p class="summary__meta">27 oktober 2026</p>      </p>
-</div>
-<p></li> <li class="summary__item"> <div class="summary__body"> <h4 class="summary__title"><a href="https://www.youtube.com/watch?v=5KCye9-NZIU" target="_blank" rel="noopener">NPO Radio 1: Vinzenz over investeringsbeleid</a></h4> <p class="summary__meta">25 oktober 2026</p>      </p>
-</div>
-<p></li> </ul> </div></p>
-</div>
-</div>
-</div>
-</section>
-<section class="band theme-white height-small">
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 9">
-<h2>Wij staan voor</h2>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 6">
-<p><img alt="" src="/media/img/unsplash-image-xdpfwfel2jw-363c198c.jpg"></p>
-</div>
-<div class="fe-cell" style="--c: 6 / 24">
-<div class="text-large">
-<h3>Kwaliteit</h3>
-<p>Wij zetten onze kennis in voor beter beleid, samen met toponderzoekers in binnen- en buitenland.</p>
-</div>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 6">
-<p><img alt="" src="/media/img/afbeelding-onafhankelijkheid-50b40163.png"></p>
-</div>
-<div class="fe-cell" style="--c: 6 / 23">
-<div class="text-large">
-<h3>Onafhankelijkheid</h3>
-<p>Wij komen op voor het algemeen belang en geven minder vertegenwoordigde geluiden een stem.</p>
-</div>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 6">
-<p><img alt="" src="/media/img/unsplash-image-rubwhgu1u2q-3d23bd15.jpg"></p>
-</div>
-<div class="fe-cell" style="--c: 6 / 22">
-<div class="text-large">
-<h3>Impact</h3>
-<p>Wij doen concrete beleidsvoorstellen en gaan daarover in gesprek met beleidsmakers.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="band theme-dark height-small">
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 9">
-<h2>Onze onderwerpen</h2>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 10">
-<p><img alt="" src="/media/img/unsplash-image-q1p7bh3shj8-be023b00.jpg"></p>
-</div>
-<div class="fe-cell" style="--c: 11 / 20">
-<p><img alt="" src="/media/img/unsplash-image-zyx1bk9mqma-1628bf23.jpg"></p>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 10">
-<h3>Macro-economie</h3>
-<p>Economische keuzes hebben grote gevolgen voor menselijk welzijn. Wij dragen bij met onderzoek en analyse. <a href="/macro-economie/">Lees verder</a></p>
-</div>
-<div class="fe-cell" style="--c: 11 / 20">
-<h3>Sociaal beleid en belastingen</h3>
-<p>Als sociaal beleid niet functioneert, raakt dat kwetsbare groepen hard. Wij analyseren problemen in het sociale domein, van toeslagen tot boetes, en bieden oplossingen in complexe stelsels. <a href="/sociaalbeleid-belastingen/">Lees verder</a></p>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 10">
-<p><img alt="" src="/media/img/eu-e877b1ed.png"></p>
-</div>
-<div class="fe-cell" style="--c: 11 / 20">
-<p><img alt="" src="/media/img/unsplash-image-mgsgfkcgzgm-0c12239d.jpg"></p>
-</div>
-</div>
-<div class="fe-row">
-<div class="fe-cell" style="--c: 1 / 10">
-<h3>Europese Unie</h3>
-<p>Europese instituties ontwikkelen zich snel. Fundamentele keuzes over de institutionele en economische inrichting van Europa die nu worden gemaakt zullen lang doorwerken. <a href="/europese-unie/">Lees verder</a></p>
-</div>
-<div class="fe-cell" style="--c: 11 / 20">
-<h3>Functioneren van de overheid</h3>
-<p>Goed beleid valt of staat bij het functioneren van de overheid. Effectief beleid vergt namelijk een overheid die goed besluiten kan nemen én uitvoeren. <a href="/functioneren-overheid/">Lees verder</a></p>
-</div>
-</div>
-</section>
-</div>
-  </main>
-<footer class="site-footer">
-  <section class="band theme-bright footer-cta">
-    <div class="wrap">
-      <div class="footer-cta__top">
-        <h1>Bevalt onze inhoud?</h1>
-        <button class="share-button" type="button" data-share>Deel deze pagina</button>
-      </div>
-      <div class="footer-cta__grid">
-        <div class="footer-cta__col">
-          <p><strong>Schrijf je in voor onze <a href="https://instituutpe.substack.com/" target="_blank" rel="noopener">nieuwsbrief</a>.</strong></p>
-          <div class="embed embed--newsletter"><iframe src="https://instituutpe.substack.com/embed?transparent=1" title="Aanmelden voor de nieuwsbrief" loading="lazy" scrolling="no"></iframe></div>
-        </div>
-        <div class="footer-cta__col">
-          <p><strong><a href="/steun-ons/">Doneer hier</a> of gebruik de QR code.</strong></p>
-<img class="footer-cta__qr" src="/media/qr-doneren.png" alt="QR-code om te doneren" width="160" height="160" loading="lazy">        </div>
-      </div>
+
+<section class="hero">
+  <div class="hero__grid shell">
+    <div class="hero__text">
+      <h1 class="hero__title">Beter beleid is de snelste weg naar een <span class="underlined">betere wereld.</span></h1>
+      <p class="hero__lead">Daarom brengen wij de overheid in beweging: met onderzoek, scherpe voorstellen en een onafhankelijke stem in het publieke debat.</p>
+      <div class="btns">
+<a class="btn" href="/highlights/">
+  <span class="btn__label">Bekijk onze publicaties</span>
+  <span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+  <span class="btn__fill" aria-hidden="true"><span class="btn__label">Bekijk onze publicaties</span><span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></span>
+</a><a class="btn btn--line" href="https://instituutpe.substack.com/" target="_blank" rel="noopener">
+  <span class="btn__label">Schrijf je in voor onze nieuwsbrief</span>
+  <span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+  <span class="btn__fill" aria-hidden="true"><span class="btn__label">Schrijf je in voor onze nieuwsbrief</span><span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></span>
+</a>      </div>
+      <p class="hero__note">IPE is een Algemeen Nut Beogende Instelling (ANBI).</p>
     </div>
-  </section>
-  <section class="band theme-light footer-bottom">
-    <div class="wrap footer-bottom__grid">
-      <ul class="social-icons">
-        <li><a href="https://twitter.com/InstituutPE" target="_blank" rel="noopener" aria-label="X (Twitter)">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.9c-.74.33-1.53.55-2.36.65a4.1 4.1 0 0 0 1.8-2.27c-.8.47-1.68.82-2.6 1a4.1 4.1 0 0 0-7 3.74A11.65 11.65 0 0 1 3.4 4.73a4.1 4.1 0 0 0 1.27 5.48 4.07 4.07 0 0 1-1.86-.51v.05a4.1 4.1 0 0 0 3.29 4.02 4.1 4.1 0 0 1-1.85.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 2 18.4a11.6 11.6 0 0 0 6.29 1.84c7.55 0 11.67-6.25 11.67-11.67l-.01-.53A8.3 8.3 0 0 0 22 5.9z"/></svg>
-        </a></li>
-        <li><a href="https://www.linkedin.com/company/instituut-voor-publieke-economie" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94zM20.44 13.4c0-3.1-1.65-5.15-4.43-5.15-1.6 0-2.62.86-3.06 1.6V8.5H9.6V20h3.38v-6.06c0-1.6.75-2.6 2.06-2.6 1.24 0 2.02.9 2.02 2.6V20h3.38v-6.6z"/></svg>
-        </a></li>
+    <figure class="hero__photo"><img src="/media/img/hero-8299c34e.png" alt="" fetchpriority="high"></figure>
+  </div>
+</section>
+
+<section class="block block--white">
+  <div class="shell">
+    <div class="block__head">
+      <h2 class="title-line " data-reveal><span>Recente publicaties</span></h2>
+      <a class="textlink" href="/archief/">Naar het archief <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </div>
+    <ul class="pubs">
+      <li class="pub" data-reveal style="--i: 0">
+        <a class="pub__img" href="/highlights/gemeentepolis/" tabindex="-1" aria-hidden="true"><img src="/media/img/mockup-format-2-c14ea62d.png" alt="" loading="lazy"></a>
+        <p class="mono">Rapport · 21 september 2026</p>
+        <h3 class="pub__title"><a href="/highlights/gemeentepolis/">Gelijke toegang tot zorg voor minima</a></h3>
+<a class="pub__topic" href="/highlights/categorie/sociaal-beleid-en-belastingen/">Sociaal beleid en belastingen</a>      </li>
+      <li class="pub" data-reveal style="--i: 1">
+        <a class="pub__img" href="/highlights/betaalbaarbouwen/" tabindex="-1" aria-hidden="true"><img src="/media/img/mockup-format-66a3fe29.png" alt="" loading="lazy"></a>
+        <p class="mono">Rapport · 18 september 2026</p>
+        <h3 class="pub__title"><a href="/highlights/betaalbaarbouwen/">Betaalbaar Bouwen</a></h3>
+<a class="pub__topic" href="/highlights/categorie/macro-economie/">Macro-economie</a>      </li>
+      <li class="pub" data-reveal style="--i: 2">
+        <a class="pub__img" href="/highlights/barneveld/" tabindex="-1" aria-hidden="true"><img src="/media/img/kopie-van-mockup-format-1c76bb97.png" alt="" loading="lazy"></a>
+        <p class="mono">Rapport · 9 juli 2026</p>
+        <h3 class="pub__title"><a href="/highlights/barneveld/">Armoedebeleid in de gemeente Barneveld</a></h3>
+      </li>
+      <li class="pub" data-reveal style="--i: 3">
+        <a class="pub__img" href="/highlights/illiquide-vermogen/" tabindex="-1" aria-hidden="true"><img src="/media/img/kopie-van-mockup-format-d926c094.png" alt="" loading="lazy"></a>
+        <p class="mono">Policy paper · 24 juni 2026</p>
+        <h3 class="pub__title"><a href="/highlights/illiquide-vermogen/">Belasten van vermogenswinst kan beter retrospectief</a></h3>
+<a class="pub__topic" href="/highlights/categorie/sociaal-beleid-en-belastingen/">Sociaal beleid en belastingen</a>      </li>
+    </ul>
+
+    <div class="articles">
+      <p class="articles__label mono">Artikelen</p>
+      <ul class="articles__list">
+        <li class="article-row" data-reveal style="--i: 0">
+          <a href="/highlights/spinoffs-5dw78-sf64c-txez7/">
+            <p class="mono">30 oktober 2026 · Macro-economie <span class="article-row__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></p>
+            <h3 class="article-row__title">Meer spin-offs? Gun onderzoekers hun succes</h3>
+<p class="article-row__excerpt">Hoe meer de universiteit van de opbrengst opeist, hoe minder er wordt uitgevonden.</p>          </a>
+        </li>
+        <li class="article-row" data-reveal style="--i: 1">
+          <a href="/highlights/vermogenswinstbelasting-5dw78-cr89z/">
+            <p class="mono">22 oktober 2026 · Sociaal beleid en belastingen <span class="article-row__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></p>
+            <h3 class="article-row__title">Een betere vermogenswinstbelasting</h3>
+<p class="article-row__excerpt">Het retrospectief belasten van rendementen in plaats van euro’s vermindert uitstelgedrag en vermeerdert belastinginkomsten..</p>          </a>
+        </li>
+        <li class="article-row" data-reveal style="--i: 2">
+          <a href="/highlights/verlaagdbtwtarief-5dw78-sf64c/">
+            <p class="mono">15 oktober 2026 · Sociaal beleid en belastingen <span class="article-row__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></p>
+            <h3 class="article-row__title">Afschaffen verlaagd btw-tarief arbeidsintensieve diensten levert geld én arbeidskrachten op</h3>
+<p class="article-row__excerpt">Nederland kampt met een krappe arbeidsmarkt en een begrotingstekort. Toch hanteert de overheid verlaagde btw-tarieven op arbeidsintensieve...</p>          </a>
+        </li>
       </ul>
-      <p class="footer-bottom__text">Wij geven om jouw <a href="/privacy/">privacy</a>.<br><a href="/copyright/">Copyright</a> © IPE 2022</p>
-      <p class="footer-bottom__text">Stichting Instituut voor Publieke Economie is aangemerkt als Algemeen Nut Beogende Instelling (ANBI).</p>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="block block--ink">
+  <div class="shell">
+    <div class="block__head block__head--split">
+      <h2 class="title-line " data-reveal><span>Onze onderwerpen</span></h2>
+      <p class="block__intro">Wij werken bewust aan vooruitgang. Wij kiezen voor onderwerpen omdat ze van groot belang zijn, omdat ze te weinig aandacht krijgen en omdat er aanwijsbare stappen richting verbetering zijn.</p>
+    </div>
+    <ul class="topics">
+      <li class="topic" data-reveal style="--i: 0">
+        <a class="topic__img" href="/macro-economie/" tabindex="-1" aria-hidden="true"><img src="/media/img/unsplash-image-q1p7bh3shj8-be023b00.jpg" alt="" loading="lazy"></a>
+        <h3 class="topic__title"><a href="/macro-economie/">Macro-economie</a></h3>
+        <p class="topic__text">Economische keuzes hebben grote gevolgen voor menselijk welzijn. Wij dragen bij met onderzoek en analyse.</p>
+        <a class="textlink" href="/macro-economie/">Lees verder <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      </li>
+      <li class="topic" data-reveal style="--i: 1">
+        <a class="topic__img" href="/sociaalbeleid-belastingen/" tabindex="-1" aria-hidden="true"><img src="/media/img/unsplash-image-zyx1bk9mqma-1628bf23.jpg" alt="" loading="lazy"></a>
+        <h3 class="topic__title"><a href="/sociaalbeleid-belastingen/">Sociaal beleid en belastingen</a></h3>
+        <p class="topic__text">Als sociaal beleid niet functioneert, raakt dat kwetsbare groepen hard. Wij analyseren problemen in het sociale domein, van toeslagen tot boetes, en bieden oplossingen in complexe stelsels.</p>
+        <a class="textlink" href="/sociaalbeleid-belastingen/">Lees verder <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      </li>
+      <li class="topic" data-reveal style="--i: 2">
+        <a class="topic__img" href="/europese-unie/" tabindex="-1" aria-hidden="true"><img src="/media/img/eu-e877b1ed.png" alt="" loading="lazy"></a>
+        <h3 class="topic__title"><a href="/europese-unie/">Europese Unie</a></h3>
+        <p class="topic__text">Europese instituties ontwikkelen zich snel. Fundamentele keuzes over de institutionele en economische inrichting van Europa die nu worden gemaakt zullen lang doorwerken.</p>
+        <a class="textlink" href="/europese-unie/">Lees verder <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      </li>
+      <li class="topic" data-reveal style="--i: 3">
+        <a class="topic__img" href="/functioneren-overheid/" tabindex="-1" aria-hidden="true"><img src="/media/img/unsplash-image-mgsgfkcgzgm-0c12239d.jpg" alt="" loading="lazy"></a>
+        <h3 class="topic__title"><a href="/functioneren-overheid/">Functioneren van de overheid</a></h3>
+        <p class="topic__text">Goed beleid valt of staat bij het functioneren van de overheid. Effectief beleid vergt namelijk een overheid die goed besluiten kan nemen én uitvoeren.</p>
+        <a class="textlink" href="/functioneren-overheid/">Lees verder <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block block--white">
+  <div class="shell">
+    <div class="block__head block__head--split">
+      <h2 class="title-line " data-reveal><span>In de media</span></h2>
+      <div class="block__intro">Bent u journalist en wilt u achtergrondinformatie over een van onze onderwerpen? <a href="/contact/">Neem contact met ons op.</a></div>
+    </div>
+  </div>
+  <div class="slider" data-slider>
+    <ul class="slider__track" data-slider-track>
+      <li class="media-card">
+        <a href="https://www.rtl.nl/tv/fragmenten/video/ec45c3d1-eb24-4845-ba08-59d81d36af5e/verkeersboetes-blijven-stijgen-ze-zijn" target="_blank" rel="noopener">
+          <span class="media-card__img"><img src="/media/img/image-18746705.png" alt="" loading="lazy"></span>
+          <span class="mono">29 oktober 2026</span>
+          <span class="media-card__title">Rtl Renze: Merel van Rooy over boetebeleid</span>
+        </a>
+      </li>
+      <li class="media-card">
+        <a href="https://www.youtube.com/watch?v=5KCye9-NZIU" target="_blank" rel="noopener">
+          <span class="media-card__img"><img src="/media/img/schermafbeelding-2026-10-28-om-7-21-38-pm-55b28183.png" alt="" loading="lazy"></span>
+          <span class="mono">25 oktober 2026</span>
+          <span class="media-card__title">NPO Radio 1: Vinzenz over investeringsbeleid</span>
+        </a>
+      </li>
+      <li class="media-card">
+        <a href="https://npo.nl/start/afspelen/pointer_119" target="_blank" rel="noopener">
+          <span class="media-card__img"><img src="/media/img/schermafbeelding-2026-10-27-om-1-16-42-pm-54051c2a.png" alt="" loading="lazy"></span>
+          <span class="mono">15 oktober 2026</span>
+          <span class="media-card__title">Pointer: Jasper J. van Dijk over gemeentepolis</span>
+        </a>
+      </li>
+      <li class="media-card">
+        <a href="https://www.telegraaf.nl/opinie/onderzoekers-pleiten-voor-hoger-btw-tarief-van-21-voor-kapper-fietsenmaker-en-stukadoor-kost-overheid-veel-geld/162710306.html" target="_blank" rel="noopener">
+          <span class="media-card__img"><img src="/media/img/schermafbeelding-2026-10-27-om-11-59-04-am-545edeac.png" alt="" loading="lazy"></span>
+          <span class="mono">10 oktober 2026</span>
+          <span class="media-card__title">De Telegraaf: Vinzenz Ziesemer en Julia van Rijn over het verlaagde BTW-tarief op arbeidsintensieve diensten</span>
+        </a>
+      </li>
+      <li class="media-card">
+        <a href="https://www.trouw.nl/duurzaamheid-economie/huurmarkt-stort-niet-in-maar-verandert-wel~b7733e86/" target="_blank" rel="noopener">
+          <span class="media-card__img"><img src="/media/img/schermafbeelding-2026-10-27-om-11-55-16-am-9c71d2e1.png" alt="" loading="lazy"></span>
+          <span class="mono">7 oktober 2026</span>
+          <span class="media-card__title">Trouw: Matthijs Korevaar over de veranderende huurmarkt</span>
+        </a>
+      </li>
+      <li class="media-card">
+        <a href="https://www.nporadio1.nl/podcasts/dit-is-de-dag/145600/hier-gaat-het-te-weinig-over-in-de-miljoenennota" target="_blank" rel="noopener">
+          <span class="media-card__img"><img src="/media/img/schermafbeelding-2026-09-21-om-9-53-34-am-5e93c51b.png" alt="" loading="lazy"></span>
+          <span class="mono">21 september 2026</span>
+          <span class="media-card__title">NPO Radio 1: Vinzenz Ziesemer over de miljoenennota</span>
+        </a>
+      </li>
+    </ul>
+    <div class="shell slider__nav">
+      <button class="slider__btn" type="button" data-slider-prev aria-label="Vorige"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16.5 10h-12M9 5l-4.5 5L9 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button>
+      <button class="slider__btn" type="button" data-slider-next aria-label="Volgende"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section class="block block--cream values">
+  <div class="wordmark" aria-hidden="true" style="--wordmark-image: url(/media/img/unsplash-image-mgsgfkcgzgm-0c12239d.jpg)">
+<span class="wordmark__line wordmark__line--1">Publieke</span><span class="wordmark__line wordmark__line--2">Economie</span>  </div>
+  <div class="shell values__grid">
+    <div>
+      <h2 class="title-line " data-reveal><span>Wij staan voor</span></h2>
+      <p class="block__intro">Kwaliteit leveren, onafhankelijk werken, impact maken. Dat is onze werkwijze.</p>
+    </div>
+    <ul class="values__list">
+      <li class="value" data-reveal style="--i: 0"><h3 class="value__title">Kwaliteit</h3><p>Wij zetten onze kennis in voor beter beleid, samen met toponderzoekers in binnen- en buitenland.</p></li>
+      <li class="value" data-reveal style="--i: 1"><h3 class="value__title">Onafhankelijkheid</h3><p>Wij komen op voor het algemeen belang en geven minder vertegenwoordigde geluiden een stem.</p></li>
+      <li class="value" data-reveal style="--i: 2"><h3 class="value__title">Impact</h3><p>Wij doen concrete beleidsvoorstellen en gaan daarover in gesprek met beleidsmakers.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="block block--navy">
+  <div class="shell people">
+    <div class="people__intro">
+      <h2 class="title-line " data-reveal><span>De mensen achter IPE</span></h2>
+      <p class="block__intro">IPE is een kennisorganisatie. Ons team heeft uitgebreide ervaring met het onderzoeken van en adviseren over maatschappelijke vraagstukken. Samen met experts uit binnen- en buitenland vergroten we onze slagkracht.</p>
+      <a class="textlink" href="/onze-mensen/">Onze mensen <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></a>
+    </div>
+    <ul class="people__grid">
+      <li class="person-card" data-reveal style="--i: 0">
+        <a href="/onderzoek-vinzenz-ziesemer/">
+          <img class="person-card__photo" src="/media/img/vinzenz-ziesemer-5170edd8.png" alt="" loading="lazy">
+          <span class="person-card__name">Vinzenz Ziesemer</span>
+          <span class="person-card__role mono">Directeur</span>
+        </a>
+      </li>
+      <li class="person-card" data-reveal style="--i: 1">
+        <a href="/onderzoek-jasper-van-dijk/">
+          <img class="person-card__photo" src="/media/img/jasper-h-van-dijk-0d54d6c1.png" alt="" loading="lazy">
+          <span class="person-card__name">Jasper H. van Dijk</span>
+          <span class="person-card__role mono">Onderzoeksleider Macroeconomie &amp; EU (plv. dir.)</span>
+        </a>
+      </li>
+      <li class="person-card" data-reveal style="--i: 2">
+        <a href="/onderzoek-jasper-j-van-dijk/">
+          <img class="person-card__photo" src="/media/img/jasper-j-van-dijk-b2a92d77.png" alt="" loading="lazy">
+          <span class="person-card__name">Jasper J. van Dijk</span>
+          <span class="person-card__role mono">Onderzoeksleider Sociaal beleid en Functioneren overheid</span>
+        </a>
+      </li>
+      <li class="person-card" data-reveal style="--i: 3">
+        <a href="/highlights/tag/julia-van-rijn/">
+          <img class="person-card__photo" src="/media/img/julia-c3685704.png" alt="" loading="lazy">
+          <span class="person-card__name">Julia van Rijn</span>
+          <span class="person-card__role mono">Onderzoeker</span>
+        </a>
+      </li>
+      <li class="person-card" data-reveal style="--i: 4">
+        <a href="/onze-mensen/">
+          <img class="person-card__photo" src="/media/img/schermafbeelding-2026-09-08-om-10-21-32-am-65da6b75.png" alt="" loading="lazy">
+          <span class="person-card__name">Tessa De Weser</span>
+          <span class="person-card__role mono">Onderzoeker</span>
+        </a>
+      </li>
+      <li class="person-card" data-reveal style="--i: 5">
+        <a href="/onze-mensen/">
+          <img class="person-card__photo" src="/media/img/profielfoto-senna-9fdf4c41.png" alt="" loading="lazy">
+          <span class="person-card__name">Cor van der Leemputten</span>
+          <span class="person-card__role mono">Communicatie en organisatie</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block block--cream support">
+  <div class="shell support__grid">
+    <figure class="support__photo" data-reveal><img src="/media/img/svd-20241011-0060-ed3e9761.jpg" alt="" loading="lazy"></figure>
+    <div>
+      <h2 class="title-line " data-reveal><span>Bevalt onze inhoud?</span></h2>
+      <div class="support__cols">
+        <div class="support__col">
+          <p>Schrijf je in voor onze nieuwsbrief.</p>
+          <a class="btn btn--line" href="https://instituutpe.substack.com/" target="_blank" rel="noopener">
+  <span class="btn__label">Schrijf je in</span>
+  <span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+  <span class="btn__fill" aria-hidden="true"><span class="btn__label">Schrijf je in</span><span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></span>
+</a>
+        </div>
+        <div class="support__col">
+          <p>Doneer hier of gebruik de QR code.</p>
+          <div class="support__donate">
+            <a class="btn" href="/steun-ons/">
+  <span class="btn__label">Doneer</span>
+  <span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span>
+  <span class="btn__fill" aria-hidden="true"><span class="btn__label">Doneer</span><span class="btn__arrow"><svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12M11 5l4.5 5-4.5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/></svg></span></span>
+</a>
+<img class="support__qr" src="/media/qr-doneren.png" alt="QR-code om te doneren" width="96" height="96" loading="lazy">          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <a class="footer__logo" href="/"><img src="/media/logo-header.png" alt="Instituut voor Publieke Economie" width="136" height="107" loading="lazy"></a>
+      <p class="footer__tagline">IPE is een onafhankelijke denktank, gericht op vooruitgang.</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h2 class="footer__label">Onderwerpen</h2>
+        <ul class="footer__links">
+<li><a href="/macro-economie/">Macro-economie</a></li><li><a href="/sociaalbeleid-belastingen/">Sociaal beleid</a></li><li><a href="/europese-unie/">Europese Unie</a></li><li><a href="/functioneren-overheid/">Functioneren overheid</a></li><li><a href="/archief/">Archief</a></li>        </ul>
+      </div>
+      <div>
+        <h2 class="footer__label">Over ons</h2>
+        <ul class="footer__links">
+<li><a href="/over-ons/over-ipe/">Over IPE</a></li><li><a href="/onze-mensen/">Onze mensen</a></li>        </ul>
+      </div>
+      <div>
+        <h2 class="footer__label">IPE</h2>
+        <ul class="footer__links">
+<li><a href="/events/">Evenementen</a></li><li><a href="/vacatures/">Vacatures</a></li><li><a href="/contact/">Contact</a></li><li><a href="/steun-ons/">Steun ons</a></li>        </ul>
+      </div>
+      <div>
+        <h2 class="footer__label">Stichting</h2>
+        <p class="footer__text">Stichting Instituut voor Publieke Economie is aangemerkt als Algemeen Nut Beogende Instelling (ANBI).</p>
+        <p class="footer__mono">KvK 85447455<br>RSIN 8636 26 257<br>Den Haag</p>
+        <p><a class="footer__mail" href="mailto:info@ipe.nl">info@ipe.nl</a></p>
+        <ul class="footer__social">
+          <li><a href="https://twitter.com/InstituutPE" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78L17.75 3zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/instituut-voor-publieke-economie" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94zM20.44 13.4c0-3.1-1.65-5.15-4.43-5.15-1.6 0-2.62.86-3.06 1.6V8.5H9.6V20h3.38v-6.06c0-1.6.75-2.6 2.06-2.6 1.24 0 2.02.9 2.02 2.6V20h3.38v-6.6z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="/privacy/">Privacyverklaring</a>
+      <span>© 2026 Instituut voor Publieke Economie</span>
+      <a href="/copyright/">Copyright</a>
+    </div>
+  </div>
 </footer></body>
 </html>

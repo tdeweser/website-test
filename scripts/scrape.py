@@ -36,8 +36,8 @@ from markdownify import MarkdownConverter
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import (  # noqa: E402
     ASSET_HOSTS, CONTENT, DOCS, MEDIA, SITE, category_url, fetch, fetch_json,
-    is_old_site, load_config, ms_to_date, page_url, site_path, slugify, tag_url,
-    write_markdown,
+    is_old_site, load_config, ms_to_date, page_url, read_markdown, site_path, slugify,
+    tag_url, write_markdown,
 )
 
 FETCH_CACHE = True
@@ -1104,7 +1104,7 @@ def write_item(e: Entry, folder: str):
     write_markdown(CONTENT / folder / article_filename(e.path, d), front, body)
 
 
-def write_page(e: Entry):
+def write_page(e: Entry, dry_run: bool = False):
     soup = BeautifulSoup(e.html, "html.parser")
     ctx = LinkContext(e.path)
     # Blog items in collections we don't index (e.g. /auteurs/x) render as articles.
@@ -1125,7 +1125,8 @@ def write_page(e: Entry):
     desc = soup.find("meta", attrs={"name": "description"})
     if desc and desc.get("content"):
         front["description"] = re.sub(r"@(?:www\.)?instituut-pe\.nl\b", "@ipe.nl", desc["content"].strip())
-    write_markdown(CONTENT / "pages" / f"{name}.md", front, body)
+    if not dry_run:
+        write_markdown(CONTENT / "pages" / f"{name}.md", front, body)
 
 # ----------------------------------------------------------------------------- report
 
@@ -1202,16 +1203,33 @@ def main():
             INV.add(Entry(site_path(it["fullUrl"]), kind, True, item=it))
     print(f"  {sum(1 for e in INV.entries.values() if e.in_window)} items in window")
 
+    newest = cfg["scrape"].get("newest_of") or {}
+    if newest:
+        wanted = set(newest.get("categories", []))
+        picks = sorted((it for it in INV.index.values()
+                        if it["_collection"] == "highlights" and wanted & set(it.get("categories") or [])),
+                       key=lambda it: -it["publishOn"])[: newest.get("count", 4)]
+        for it in picks:
+            path = site_path(it["fullUrl"])
+            if not INV.has(path):
+                INV.add(Entry(path, "article", INV.in_window(it), item=it))
+        print(f"  newest {', '.join(sorted(wanted))}: {len(picks)} ensured")
+
     print("Discovering linked pages ...")
     discover(INV)
 
     print("Writing content ...")
-    for sub in ("pages", "highlights", "events"):
+    keep_local = {p.lower() for p in cfg["scrape"].get("keep_local", [])}
+    for sub in ("highlights", "events"):
         shutil.rmtree(CONTENT / sub, ignore_errors=True)
+    for f in (CONTENT / "pages").glob("*.md"):   # only remove what the scraper wrote
+        if read_markdown(f)[0].get("source"):
+            f.unlink()
     shutil.rmtree(MEDIA, ignore_errors=True)
     for e in sorted(INV.entries.values(), key=lambda e: e.path):
         if e.kind in ("page", "linked-page"):
-            write_page(e)
+            # Hand-maintained pages are still converted (assets, link report) but not written.
+            write_page(e, dry_run=e.path.lower() in keep_local)
         elif e.kind == "article":
             write_item(e, "highlights")
         elif e.kind == "event":
